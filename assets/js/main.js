@@ -1225,4 +1225,13 @@
 
 
 
-  
+  // ===== Infinite Scroll Cloning Script =====
+// This script duplicates the logos inside .logo-track to simulate infinite scrolling
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('logoTrack');
+  const logos = track.innerHTML;
+
+  // Duplicate the logos once
+  track.innerHTML += logos;
+});
