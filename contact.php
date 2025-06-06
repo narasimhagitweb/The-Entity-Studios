@@ -1,46 +1,75 @@
 <?php
-    /*
-    name
-    email
-    message
-    */
-    // Only process POST reqeusts.
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Get the form fields and remove whitespace.
-        $name = strip_tags(trim($_POST["name"]));
-        $name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $message = trim($_POST["message"]);
+// Step 1: Replace this with your receiving email address
+$to = "your@email.com";
 
-        
+// Step 2: Get form values
+$name = htmlspecialchars($_POST['name'] ?? '');
+$email = htmlspecialchars($_POST['email'] ?? '');
+$message = htmlspecialchars($_POST['message'] ?? '');
+$agree = $_POST['agree'] ?? null;
+$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 
-        // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
-        $recipient = "example@example.com";
+// Step 3: reCAPTCHA verification
+$recaptchaSecret = 'YOUR_RECAPTCHA_SECRET_KEY'; // Replace with your secret key
+$verifyResponse = file_get_contents(
+    "https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse"
+);
+$responseData = json_decode($verifyResponse, true);
 
-        // Build the email content.
-        $email_content = "Name $name\n";
-        $email_content .= "Email \n$message\n";
-        $email_content .= "Message \n$message\n";
+// Step 4: Check validation
+if (!$responseData['success']) {
+    echo "<script>
+        Swal.fire({
+            icon: 'error',
+            title: 'reCAPTCHA Failed',
+            text: 'Please confirm you are not a robot.'
+        }).then(() => { window.history.back(); });
+    </script>";
+    exit;
+}
 
-        // Build the email headers.
-        $email_headers = "From: $name <$email>";
+if (empty($name) || empty($email) || empty($message) || !$agree) {
+    echo "<script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Missing Information',
+            text: 'Please fill out all required fields and agree to the terms.'
+        }).then(() => { window.history.back(); });
+    </script>";
+    exit;
+}
 
-        // Send the email.
-        if (mail($recipient,  $email_content, $email_headers)) {
-            // Set a 200 (okay) response code.
-            http_response_code(200);
-            echo "Thank You! Your message has been sent.";
-        } else {
-            // Set a 500 (internal server error) response code.
-            http_response_code(500);
-            echo "Oops! Something went wrong ande we couldn't send your message.";
-        }
+// Step 5: Prepare the email
+$subject = "New Contact Form Submission";
+$body = "
+You received a new message from your website:
 
-    } else {
-        // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
-    }
+Name: $name
+Email: $email
 
+Message:
+$message
+";
+
+$headers = "From: $email\r\n";
+$headers .= "Reply-To: $email\r\n";
+
+// Step 6: Send email
+if (mail($to, $subject, $body, $headers)) {
+    echo "<script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Message Sent',
+            text: 'Thank you for contacting us!'
+        }).then(() => { window.location.href = 'thank-you.html'; });
+    </script>";
+} else {
+    echo "<script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Sending Failed',
+            text: 'Something went wrong. Please try again later.'
+        }).then(() => { window.history.back(); });
+    </script>";
+}
 ?>

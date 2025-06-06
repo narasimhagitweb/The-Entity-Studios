@@ -8,6 +8,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Gramentheme">
         <meta name="description" content="Xriders - Riders & Sports Club HTML Template">
+
+
+          <head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <!-- Bootstrap CSS (from CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google reCAPTCHA Script -->
+    <script
+      src="https://www.google.com/recaptcha/api.js"
+      async
+      defer
+    ></script>
+
+    <!-- EmailJS Library -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+
+    <!-- Bootstrap CSS (from CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google reCAPTCHA Script -->
+    <script
+      src="https://www.google.com/recaptcha/api.js"
+      async
+      defer
+    ></script>
+
+    <!-- EmailJS Library -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+  <body>
+
+
+  <body>
+
         <!-- ======== Page title ============ -->
         <title>Xports - Gaming and eSports Theme HTML Template</title>
         <!--<< Favcion >>-->
@@ -28,6 +80,8 @@
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
+
+        
                             
     </head>
     <body>
@@ -156,238 +210,273 @@
         </div>
         <div class="offcanvas__overlay"></div>
 
-        <!-- Header Section Start -->
-        <header id="header-sticky" class="header-1 header-2 header-3">
-            <div class="container-fluid">
-                <div class="mega-menu-wrapper">
-                    <div class="header-main">
-                        <div class="logo">
-                            <a href="index.html" class="header-logo">
-                                <img src="assets/img/logo/white-logo.svg" alt="logo-img">
-                            </a>
+<style>
+    /* ===== HEADER BACKGROUND CUSTOMIZATION ===== */
+    /* Base styles for the header */
+    .header-1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+
+    /* Header background when scrolled */
+    .header-1.scrolled {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .container-fluid {
+        padding: 0 15px;
+    }
+
+    .header-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* CUSTOMIZE: Initial padding for the header main content (desktop) */
+        padding: 20px 0; /* Slightly increased padding to accommodate initial larger logo */
+        transition: all 0.3s ease;
+    }
+
+    /* Header main content when scrolled - reduced padding */
+    .header-1.scrolled .header-main {
+        padding: 10px 0; /* Smaller padding when scrolled for a compact header */
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    /* ===== LOGO CUSTOMIZATION SECTION ===== */
+
+    /* Logo container - applies to both states for consistent margins and transitions */
+    .logo {
+        margin-right: 30px;
+        transition: all 0.4s ease; /* Smooth transition for logo size changes */
+        transform-origin: left center;
+    }
+
+    /* Default logo size (this is the size when scrolled or when initial-large is removed) */
+    .logo img {
+        height: 60px; /* Normal logo height (for scrolled state on desktop) */
+        width: auto;
+        transition: all 0.4s ease; /* Ensure image size changes smoothly */
+    }
+
+    /* Initial large logo state - applied only when the page is at the top */
+    .logo.initial-large img {
+        height: 90px; /* CUSTOMIZE: Initial LARGER logo size for desktop */
+    }
+
+
+    /* Navigation styles */
+    .main-menu nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    /* Utility classes for responsive display (keep these as they are) */
+    .d-none { display: none !important; }
+    .d-block { display: block !important; }
+
+    @media (min-width: 768px) {
+        .d-md-none { display: none !important; }
+        .d-md-block { display: block !important; }
+    }
+
+    @media (min-width: 992px) {
+        .d-lg-none { display: none !important; }
+        .d-lg-block { display: block !important; }
+    }
+
+    @media (min-width: 1200px) {
+        .d-xl-block {
+            display: block !important;
+        }
+        .d-xl-none {
+            display: none !important;
+        }
+        .main-menu nav ul {
+            display: flex;
+        }
+    }
+
+    /* ===== RESPONSIVE ADJUSTMENTS for Header Height and Logo Size ===== */
+    /* Tablet adjustments (max-width: 1199px) */
+    @media (max-width: 1199px) {
+        .header-main {
+            padding: 15px 0; /* Initial padding for tablets */
+        }
+        .header-1.scrolled .header-main {
+            padding: 8px 0; /* Smaller padding for tablets when scrolled */
+        }
+        .logo.initial-large img {
+            height: 70px; /* Initial LARGER logo height for tablets */
+        }
+        .logo img {
+            height: 50px; /* Normal logo height for tablets (scrolled state) */
+        }
+        .main-menu nav ul {
+            display: none;
+        }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 767px) {
+        .header-main {
+            padding: 10px 0; /* Initial padding for phones */
+        }
+        .header-1.scrolled .header-main {
+            padding: 5px 0; /* Smaller padding for phones when scrolled */
+        }
+        .logo.initial-large img {
+            height: 60px; /* Initial LARGER logo height for phones */
+        }
+        .logo img {
+            height: 40px; /* Normal logo height for phones (scrolled state) */
+        }
+        .main-menu nav ul {
+            display: none;
+        }
+    }
+
+    /* Sidebar toggle icon styling (basic for visibility) */
+    .sidebar__toggle {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Mobile menu styles when active (add or adjust as needed) */
+    .main-menu nav ul.mobile-menu-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    .main-menu nav ul.mobile-menu-active li {
+        padding: 10px 0;
+        text-align: center;
+    }
+    .main-menu nav ul.mobile-menu-active li a {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+
+<header id="header-sticky" class="header-1">
+    <div class="container-fluid">
+        <div class="mega-menu-wrapper">
+            <div class="header-main">
+                <div class="header-left">
+                    <div class="logo initial-large">
+                        <a href="index.html" class="header-logo">
+                            <img src="assets/img/logo/black-logo.png" alt="logo-img">
+                        </a>
+                    </div>
+                    <div class="mean__menu-wrapper">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li class="has-dropdown active menu-thumb d-none d-xl-block">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="d-none d-xl-block">
+                                        <a href="index.html">Company</a>
+                                    </li>
+                                    <li class="has-dropdown d-none d-xl-block">
+                                        <a href="index.html">Services</a>
+                                    </li>
+                                    <li class="d-none d-xl-block">
+                                        <a href="index.html">Projects</a>
+                                    </li>
+
+                                    <li class="has-dropdown active d-xl-none">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="d-xl-none">
+                                        <a href="index.html">Company</a>
+                                    </li>
+                                    <li class="has-dropdown d-xl-none">
+                                        <a href="index.html">Services</a>
+                                    </li>
+                                    <li class="d-xl-none">
+                                        <a href="index.html">Projects</a>
+                                    </li>
+                                    <li class="d-xl-none">
+                                        <a href="contact.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                        <div class="header-right d-flex justify-content-end align-items-center mt-0">
-                            <div class="mean__menu-wrapper">
-                                <div class="main-menu">
-                                    <nav id="mobile-menu">
-                                        <ul>
-                                            <li class="has-dropdown active menu-thumb">
-                                                <a href="index.html">
-                                                    Home 
-                                                </a>
-                                                <ul class="submenu has-homemenu">
-                                                    <li>
-                                                        <div class="homemenu-items">
-                                                            <div class="homemenu">
-                                                                <div class="homemenu-thumb">
-                                                                    <img src="assets/img/header/home-1.jpg" alt="img">
-                                                                    <div class="demo-button">
-                                                                        <a href="index.html" class="gt-theme-btn">
-                                                                            Multi Page
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="homemenu-content text-center">
-                                                                    <h4 class="homemenu-title">
-                                                                       Home 01
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu">
-                                                                <div class="homemenu-thumb mb-15">
-                                                                    <img src="assets/img/header/home-2.jpg" alt="img">
-                                                                    <div class="demo-button">
-                                                                        <a href="index-2.html" class="gt-theme-btn">
-                                                                            Multi Page
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="homemenu-content text-center">
-                                                                    <h4 class="homemenu-title">
-                                                                        Home 02
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu">
-                                                                <div class="homemenu-thumb mb-15">
-                                                                    <img src="assets/img/header/home-3.jpg" alt="img">
-                                                                    <div class="demo-button">
-                                                                        <a href="index-3.html" class="gt-theme-btn">
-                                                                            Multi Page
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="homemenu-content text-center">
-                                                                    <h4 class="homemenu-title">
-                                                                        Gaming Studio
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu">
-                                                                <div class="homemenu-thumb mb-15">
-                                                                    <img src="assets/img/header/home-4.jpg" alt="img">
-                                                                    <div class="demo-button">
-                                                                        <a href="index-4.html" class="gt-theme-btn">
-                                                                            Multi Page
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="homemenu-content text-center">
-                                                                    <h4 class="homemenu-title">
-                                                                        Gamer
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu">
-                                                                <div class="homemenu-thumb mb-15">
-                                                                    <img src="assets/img/header/home-5.jpg" alt="img">
-                                                                    <div class="demo-button">
-                                                                        <a href="index-5.html" class="gt-theme-btn">
-                                                                            Multi Page
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="homemenu-content text-center">
-                                                                    <h4 class="homemenu-title">
-                                                                        Gaming News
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="has-dropdown active d-xl-none">
-                                                <a href="index.html" class="border-none">
-                                                Home
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a href="index.html">Home 01</a></li>
-                                                    <li><a href="index-2.html">Home 02</a></li>
-                                                    <li><a href="index-3.html">Gaming Studio</a></li>
-                                                    <li><a href="index-4.html">Gamer</a></li>
-                                                    <li><a href="index-5.html">Gaming News</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="match-details.html">
-                                                    matches
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a href="match.html">matches Page</a></li>
-                                                    <li><a href="match-details.html">matches Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="has-dropdown">
-                                                <a href="news-details.html">
-                                                    Pages
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="about.html">About Us</a>
-                                                    </li>
-                                                    <li class="has-dropdown">
-                                                        <a href="service-details.html">
-                                                            Our Service
-                                                            <i class="fas fa-angle-right"></i>
-                                                        </a>
-                                                        <ul class="submenu">
-                                                            <li><a href="service.html">Our Services</a></li>
-                                                            <li><a href="service-details.html">Service Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="has-dropdown">
-                                                        <a href="game-details.html">
-                                                            Our Games
-                                                            <i class="fas fa-angle-right"></i>
-                                                        </a>
-                                                        <ul class="submenu">
-                                                            <li><a href="game.html">Our Games</a></li>
-                                                            <li><a href="game-details.html">Game Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="has-dropdown">
-                                                        <a href="team-details.html">
-                                                            Our Team
-                                                            <i class="fas fa-angle-right"></i>
-                                                        </a>
-                                                        <ul class="submenu">
-                                                            <li><a href="team.html">Our Team</a></li>
-                                                            <li><a href="team-details.html">Team Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="testimonial.html">Testimonial</a></li>
-                                                    <li><a href="gallery.html">epic gallery</a></li>
-                                                    <li><a href="pricing.html">Our Pricing</a></li>
-                                                    <li><a href="faq.html">Our Faq</a></li>
-                                                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                                                    <li><a href="404.html">404 Page</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="Shop-details.html">
-                                                    Shop
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a href="shop.html">Shop Page</a></li>
-                                                    <li><a href="shop-cart.html">Shop Cart</a></li>
-                                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                </ul>
-                                            </li>
-                                           <li>
-                                                <a href="news-details.html">
-                                                    Blog
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a href="news-grid.html">Blog Grid</a></li>
-                                                    <li><a href="news.html">Blog Standard</a></li>
-                                                    <li><a href="news-details.html">Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="contact.html">Contact Us</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="header-right-icon">
-                                <a href="#" class="main-header__search search-toggler">
-                                    <i class="fa-regular fa-magnifying-glass"></i>
-                                </a>
-                                <a href="shop-cart.html">
-                                    <i class="far fa-shopping-cart"></i>
-                                </a>
-                            </div>
-                           <div class="header-button">
-                                <a href="contact.html" class="gt-theme-btn">
-                                    get in touch
-                                </a>
-                            </div>
-                            <div class="header__hamburger d-xl-block my-auto">
-                                <div class="sidebar__toggle">
-                                    <i class="fas fa-bars"></i>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="header-right d-flex justify-content-end align-items-center">
+                    <div class="header-right-icon d-none d-xl-block">
+                        <a href="index.html" class="gt-theme-btn gt-style-border">
+                            get in touch
+                        </a>
+                    </div>
+                    <div class="header__hamburger d-xl-none my-auto">
+                        <div class="sidebar__toggle">
+                            <i class="fas fa-bars"></i>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-
-        <!-- GT Search Start -->
-        <div class="search-popup">
-            <div class="search-popup__overlay search-toggler"></div>
-            <div class="search-popup__content">
-                <form role="search" method="get" class="search-popup__form" action="#">
-                    <input type="text" id="search" name="search" placeholder="Search Here...">
-                    <button type="submit" aria-label="search submit" class="search-btn">
-                        <span><i class="fa-regular fa-magnifying-glass"></i></span>
-                    </button>
-                </form>
-            </div>
         </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const header = document.getElementById("header-sticky");
+        const logo = header.querySelector(".logo");
+        const scrollThreshold = 100; // Adjust this value as needed
+
+        function handleScroll() {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add("scrolled");
+                logo.classList.remove("initial-large"); // Remove the large logo class, so it defaults to normal size
+            } else {
+                header.classList.remove("scrolled");
+                logo.classList.add("initial-large"); // Add it back when at the top to make it large
+            }
+        }
+
+        // Initial check in case the page is loaded already scrolled
+        handleScroll();
+
+        // Listen for scroll events
+        window.addEventListener("scroll", handleScroll);
+
+        // --- Mobile menu toggle (basic functionality) ---
+        const hamburger = document.querySelector(".header__hamburger .sidebar__toggle");
+        // Ensure you target the correct mobile menu UL.
+        // If #mobile-menu contains both desktop and mobile Uls,
+        // you might need a more specific selector, e.g.,
+        // const mobileMenu = document.querySelector("#mobile-menu ul.d-xl-none");
+        const mobileMenu = document.getElementById("mobile-menu").querySelector("ul.d-xl-none"); // Targeting the specific mobile UL
+
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener("click", function() {
+                mobileMenu.classList.toggle("mobile-menu-active");
+            });
+        }
+    });
+</script>
 
         <div id="smooth-wrapper">
             <div id="smooth-content">
@@ -424,261 +513,125 @@
             </div>
         </div>
 
-         <!-- GT Contact-us Section Start -->
-         <section class="gt-contact-us-section section-padding fix">
-            <div class="container">
-                <div class="gt-contact-us-wrapper">
-                    <div class="row g-4">
-                        <div class="col-lg-8">
-                            <div class="gt-comment-form-wrap">
-                                <h4>We're Here to Help!</h4>
-                                <p>Your email address will not be published. Required fields are marked *</p>
-                                <form action="contact.php" id="contact-form" method="POST">
-                                    <div class="row g-4">
-                                        <div class="col-lg-6">
-                                            <div class="form-clt">
-                                                <span>Your Name</span>
-                                                <input type="text" name="name" id="name" placeholder="Your Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-clt">
-                                                <span>Your Email</span>
-                                                <input type="text" name="email" id="email6" placeholder="Your Email">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-clt">
-                                                <span>write message</span>
-                                                <textarea name="message" id="message" placeholder="Type your message"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <button type="submit" class="gt-theme-btn">
-                                                 post comments
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="gt-contact-bg bg-cover" style="background-image: url(assets/img/inner-page/match-details/bg.jpg);">
-                                <div class="gt-contact-content">
-                                    <h3>Need Any Help</h3>
-                                    <p>Nees Any Help, Call Us  24/7 Full Support</p>
-                                    <div class="gt-contact-item">
-                                        <div class="gt-icon">
-                                            <i class="fa-solid fa-phone"></i>
-                                        </div>
-                                        <ul class="gt-list">
-                                            <li><span>Call Us:</span></li>
-                                            <li><a href="tel:+0094382229540">+009 438 222 9540</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="gt-contact-item">
-                                        <div class="gt-icon">
-                                            <i class="fa-regular fa-envelope"></i>
-                                        </div>
-                                        <ul class="gt-list">
-                                            <li><span>Mail Us</span></li>
-                                            <li><a href="infor@xridergamil.com">
-                                                infor@xridergamil.com
-                                            </a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="gt-contact-item mb-0">
-                                        <div class="gt-icon">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                        </div>
-                                        <ul class="gt-list">
-                                            <li><span>Location:</span></li>
-                                            <li>Toronto, Montreal, City</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gt-bg-image">
-                                <img src="assets/img/inner-page/contact-bg.jpg" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- GT Contact-us Section Start -->
+<section class="gt-contact-us-section section-padding fix">
+  <div class="container">
+    <div class="gt-contact-us-wrapper">
+      <div class="row g-4">
+        <!-- Contact Form Column -->
+        <div class="col-lg-8">
+          <div class="gt-comment-form-wrap">
+            <h4>Contact Us</h4>
+            <p>Your email address will not be published. Required fields are marked *</p>
 
-        <!-- GT Map Section Start -->
-        <div class="gt-map-section section-padding fix pt-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="gt-map-items">
-                            <div class="googpemap">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
-                        </div>
-                    </div>
+            <!-- EmailJS Contact Form -->
+            <form id="contactForm" autocomplete="off">
+              <div class="row g-4">
+                <!-- First and Last Name -->
+                <div class="col-lg-6">
+                  <div class="form-clt">
+                    <span>First Name</span>
+                    <input type="text" name="name" id="nameinput1" placeholder="First name" required />
+                  </div>
                 </div>
-            </div>
+                <div class="col-lg-6">
+                  <div class="form-clt">
+                    <span>Last Name</span>
+                    <input type="text" id="nameinput2" placeholder="Last name" />
+                  </div>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="col-lg-6">
+                  <div class="form-clt">
+                    <span>Phone Number</span>
+                    <input type="number" class="i3" maxlength="10" oninput="if(this.value.length>10)this.value=this.value.slice(0,10);" placeholder="Your number" required />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-lg-6">
+                  <div class="form-clt email">
+                    <span>Email</span>
+                    <input type="email" name="to" id="emailInput" class="i4" placeholder="Your Email" required />
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="col-lg-12">
+                  <div class="form-clt">
+                    <label>Your Message
+                      <textarea name="body" id="messageInput" class="i5" placeholder="Type your message" required></textarea>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- reCAPTCHA -->
+                <div class="col-lg-12">
+                  <div class="g-recaptcha" data-sitekey="6LdhC1grAAAAALC894yNi7mK6Tg84gYsAkx1icLy"></div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-lg-6">
+                  <button type="submit" class="gt-theme-btn">
+                    <div class="but">SUBMIT</div>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+          </div>
         </div>
-       
-        <!-- GT Newsletter Section Start -->
-        <section class="gt-newsletter-section fix mb-4">
-            <div class="container">
-                <div class="gt-newsletter-wrapper bg-cover" style="background-image: url(assets/img/home-1/cta/newsletter-bg.jpg);">
-                    <div class="shape">
-                        <img src="assets/img/home-1/cta/drive.png" alt="img">
-                    </div>
-                    <h4 class="wow fadeInLeft" data-wow-delay=".3s">
-                        Sign up today to get the latest <br>
-                        inspiration & insights
-                    </h4>
-                    <form action="#" class="wow fadeInRight" data-wow-delay=".5s">
-                        <div class="form-clt">
-                            <input type="text" name="email" id="email" placeholder="Your Email Address">
-                            <button type="submit" class="gt-theme-btn">
-                                subscribe now
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- GT Contact-us Section End -->
 
-        <!-- GT Footer Section Start -->
-        <footer class="gt-footer-section section-bg">
-            <div class="container">
-                <div class="gt-footer-widget-wrapper">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-4 col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="gt-footer-widget-items">
-                                <div class="gt-widget-head">
-                                    <a href="index.html" class="gt-footer-logo">
-                                        <img src="assets/img/logo/white-logo.svg" alt="img">
-                                    </a>
-                                </div>
-                                <div class="gt-footer-content">
-                                    <p>
-                                        A game studio crafting exciting, high-quality video games, prioritizing immersive gameplay and mechanics. Hac habitasse platea
-                                    </p>
-                                    <div class="gt-social-icon d-flex align-items-center">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
-                            <div class="gt-footer-widget-items">
-                                <div class="gt-widget-head">
-                                    <h5>Our Studio</h5>
-                                </div>
-                                <ul class="gt-list-area">
-                                    <li>
-                                        <a href="about.html">
-                                            About Us
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="team.html">
-                                            our team
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="service-details.html">
-                                            Advertising
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="service-details.html">
-                                            Legal Notices
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="service-details.html">
-                                            Partnership
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 ps-lg-3 col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
-                            <div class="gt-footer-widget-items">
-                                <div class="gt-widget-head">
-                                    <h5>Utility Pages</h5>
-                                </div>
-                                <ul class="gt-list-area">
-                                    <li>
-                                        <a href="service-details.html">
-                                            Terms of Service
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">
-                                            Privacy/Terms
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="service-details.html">
-                                            Gift Cards
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="game-details.html">
-                                            Game Reviews
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">
-                                            Subscriptions
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".8s">
-                            <div class="gt-footer-widget-items">
-                                <div class="gt-widget-head">
-                                    <h5>download our games</h5>
-                                </div>
-                                <div class="gt-footer-app">
-                                    <div class="app-image">
-                                        <img src="assets/img/home-1/footer/app-1.jpg" alt="img">
-                                    </div>
-                                    <div class="app-image">
-                                        <img src="assets/img/home-1/footer/app-2.jpg" alt="img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom wow fadeInUp" data-wow-delay=".3s">
-                    <div class="footer-wrapper">
-                        <p>© 2025 xports. All Rights Reserved.</p>
-                        <ul class="gt-footer-list wow fadeInUp" data-wow-delay=".3s">
-                            <li>
-                                <a href="contact.html">Cookies</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Privacy</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Terms</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-            </div>
-        </div>
+<!-- Include EmailJS, reCAPTCHA, and JS logic -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  // Initialize EmailJS
+  (function() {
+    emailjs.init({
+      publicKey: "rYefjyypzUAM_GDuh",
+    });
+  })();
 
-        
+  // Handle form submission
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
 
-        
+      // reCAPTCHA check
+      var recaptchaResponse = grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        alert('Please complete the reCAPTCHA.');
+        return;
+      }
+
+      var templateParams = {
+        name: document.getElementById('nameinput1').value,
+        to: document.getElementById('emailInput').value,
+        body: document.getElementById('messageInput').value,
+      };
+
+      emailjs.send('service_2zs6kg2', 'template_x863nwy', templateParams)
+        .then(function (response) {
+          alert('Message sent!');
+          document.getElementById('contactForm').reset();
+          grecaptcha.reset();
+        }, function (error) {
+          alert('Failed to send message: ' + error.text);
+        });
+    });
+  });
+</script>
+
+
+
+
         
         <!--<< All JS Plugins >>-->
         <script src="assets/js/jquery-3.7.1.min.js"></script>
