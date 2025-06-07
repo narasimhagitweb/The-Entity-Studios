@@ -2,6 +2,18 @@
 <html lang="en">
     <!--<< Header Area >>-->
     <head>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TVLHYTJ8X"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9TVLHYTJ8X');
+        </script>
+
+
        <!-- ========== Meta Tags ========== -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +40,45 @@
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="assets/css/test.css">                    
+        <link rel="stylesheet" href="assets/css/test.css">  
+        
+
+        <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+            gtag('event', 'click', {
+            'event_category': 'button',
+            'event_label': 'submit_button'
+            });
+        });
+        </script>
+
+        <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission to track the event
+
+            // Track the form submission event
+            gtag('event', 'submit', {
+            'event_category': 'form',
+            'event_label': 'contact_form'
+            });
+
+            // Optional: After tracking, submit the form
+            this.submit();
+        });
+        </script>
+
+        <script>
+            window.addEventListener('scroll', function() {
+                var scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+                if (scrollPercentage > 50) { // Track when 50% of the page is scrolled
+                gtag('event', 'scroll', {
+                    'event_category': 'page',
+                    'event_label': '50_percent_scroll'
+                });
+                }
+            });
+            </script>
+
 
     </head>
     <body>
@@ -358,7 +408,7 @@
                 </div>
                 <div class="header-right d-flex justify-content-end align-items-center">
                     <div class="header-right-icon d-none d-xl-block">
-                        <button href="index.html" class="gt-theme-btn gt-style-border">
+                        <button id="submitButton" href="index.html" class="gt-theme-btn gt-style-border">
                             get in touch
                         </button>
                     </div>
@@ -945,7 +995,7 @@
           ></div>
 
           <div class="gt-hero-button wow animated-image mt-3 grid-item-8">
-            <button type="submit" class="gt-theme-btn">Submit</button>
+            <button id="submitButton" type="submit" class="gt-theme-btn">Submit</button>
           </div>
 
         </div>
@@ -959,7 +1009,7 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script>
-  emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // Replace this with your actual public key
+  emailjs.init("w8qNaOHR9Bi8IPEeC"); // Replace this with your actual public key
 
   document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -972,7 +1022,7 @@
     }
 
     // Send the form using EmailJS
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    emailjs.sendForm("The_Entity_Studios", "TES_conatct_us_tmlt_01", this)
       .then(function () {
         alert("Message sent successfully!");
         document.getElementById("contact-form").reset();
