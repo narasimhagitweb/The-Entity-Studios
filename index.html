@@ -886,7 +886,7 @@
   <div class="test-Card">
     <div class="test-left"></div>
     <div class="test-right">
-      <form action="contact.php" method="POST" class="grid-form-2" autocomplete="off">
+      <form id="contact-form" class="grid-form-2" autocomplete="off">
         <div class="grid-container">
 
           <input
@@ -938,9 +938,10 @@
             </label>
           </div>
 
+          <!-- reCAPTCHA v2 -->
           <div
             class="recaptcha-wrapper g-recaptcha mt-3 grid-item-7"
-            data-sitekey="w8qNaOHR9Bi8IPEeC"
+            data-sitekey="6LdKp1grAAAAANb7Dg8nQnEYvuQqysrPWwz8j19M"
           ></div>
 
           <div class="gt-hero-button wow animated-image mt-3 grid-item-8">
@@ -949,11 +950,39 @@
 
         </div>
       </form>
-      
     </div>
   </div>
 </section>
+
+<!-- reCAPTCHA and EmailJS scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+  emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // Replace this with your actual public key
+
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Validate reCAPTCHA
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+      alert("Please complete the reCAPTCHA.");
+      return;
+    }
+
+    // Send the form using EmailJS
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      .then(function () {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+        grecaptcha.reset(); // reset reCAPTCHA after success
+      }, function (error) {
+        alert("Sending failed. Please try again later.");
+        console.error("EmailJS error:", error);
+      });
+  });
+</script>
 
 
 
