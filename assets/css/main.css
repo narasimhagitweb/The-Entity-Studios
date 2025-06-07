@@ -5979,20 +5979,22 @@ span {
   }
 }
 
-/* Hero Section Base */
-.hero-section {
-    padding: 80px 0;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.hero-image {
+  display: flex;
+  justify-content: flex-start;  /* left align */
+  align-items: flex-end;        /* bottom align */
+  overflow: visible;
+  position: relative;
+  height: 100%; /* Ensure it takes full height of the column */
 }
 
-/* Overlay image settings */
 .hero-image .overlay-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  left: -50px;  /* shift image 50px outside left */
+  bottom: 0;
+  z-index: 10;
 }
 
 /* Responsive text alignment */
@@ -6033,7 +6035,7 @@ span {
   left: 5%;
   object-fit: cover;
   z-index: 0;
-  opacity: 1; */
+  opacity: 1;
 }
 
 /* Hide hero image on smaller screens */
@@ -11797,7 +11799,7 @@ span {
 
 /* For commitment section */
 
-    <style>
+    style
         * {
             margin: 0;
             padding: 0;
@@ -11972,7 +11974,7 @@ span {
                 font-size: 1.3rem;
             }
         }
-    </style>
+  
 
 
 

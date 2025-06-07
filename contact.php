@@ -1,51 +1,51 @@
 <?php
-// Step 1: Replace this with your receiving email address
-$to = "your@email.com";
+// ========== CONTACT FORM PROCESSING SCRIPT ==========
 
-// Step 2: Get form values
-$name = htmlspecialchars($_POST['name'] ?? '');
-$email = htmlspecialchars($_POST['email'] ?? '');
-$message = htmlspecialchars($_POST['message'] ?? '');
-$agree = $_POST['agree'] ?? null;
-$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
+// STEP 1: Set your recipient email address
+$to = "your@email.com"; // 🔧 Replace this
 
-// Step 3: reCAPTCHA verification
-$recaptchaSecret = 'YOUR_RECAPTCHA_SECRET_KEY'; // Replace with your secret key
+// STEP 2: Retrieve and sanitize form data
+$name      = htmlspecialchars($_POST['firstName'] ?? '');
+$lastName  = htmlspecialchars($_POST['lastName'] ?? '');
+$email     = htmlspecialchars($_POST['email'] ?? '');
+$phone     = htmlspecialchars($_POST['phone'] ?? '');
+$message   = htmlspecialchars($_POST['message'] ?? '');
+$agree     = isset($_POST['termsCheck']);
+$recaptcha = $_POST['g-recaptcha-response'] ?? '';
+
+// STEP 3: Verify reCAPTCHA
+$recaptchaSecret = 'YOUR_RECAPTCHA_SECRET_KEY'; // 🔧 Replace
 $verifyResponse = file_get_contents(
-    "https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse"
+    "https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptcha"
 );
 $responseData = json_decode($verifyResponse, true);
 
-// Step 4: Check validation
+// STEP 4: reCAPTCHA failure
 if (!$responseData['success']) {
     echo "<script>
-        Swal.fire({
-            icon: 'error',
-            title: 'reCAPTCHA Failed',
-            text: 'Please confirm you are not a robot.'
-        }).then(() => { window.history.back(); });
+        alert('reCAPTCHA Failed. Please confirm you are not a robot.');
+        window.history.back();
     </script>";
     exit;
 }
 
-if (empty($name) || empty($email) || empty($message) || !$agree) {
+// STEP 5: Required field validation
+if (empty($name) || empty($email) || empty($message) || empty($phone) || !$agree) {
     echo "<script>
-        Swal.fire({
-            icon: 'error',
-            title: 'Missing Information',
-            text: 'Please fill out all required fields and agree to the terms.'
-        }).then(() => { window.history.back(); });
+        alert('Please fill all required fields and agree to the terms.');
+        window.history.back();
     </script>";
     exit;
 }
 
-// Step 5: Prepare the email
+// STEP 6: Compose email
 $subject = "New Contact Form Submission";
 $body = "
-You received a new message from your website:
+New message from your website:
 
-Name: $name
+Name: $name $lastName
 Email: $email
+Phone: $phone
 
 Message:
 $message
@@ -54,22 +54,16 @@ $message
 $headers = "From: $email\r\n";
 $headers .= "Reply-To: $email\r\n";
 
-// Step 6: Send email
+// STEP 7: Send email
 if (mail($to, $subject, $body, $headers)) {
     echo "<script>
-        Swal.fire({
-            icon: 'success',
-            title: 'Message Sent',
-            text: 'Thank you for contacting us!'
-        }).then(() => { window.location.href = 'thank-you.html'; });
+        alert('Message Sent Successfully!');
+        window.location.href = 'thank-you.html';
     </script>";
 } else {
     echo "<script>
-        Swal.fire({
-            icon: 'error',
-            title: 'Sending Failed',
-            text: 'Something went wrong. Please try again later.'
-        }).then(() => { window.history.back(); });
+        alert('Sending Failed. Please try again later.');
+        window.history.back();
     </script>";
 }
 ?>

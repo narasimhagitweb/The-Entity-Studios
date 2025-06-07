@@ -631,6 +631,206 @@
 
 
 
+<!-- GT Cta Download App Section Start -->
+<section class="gt-ctsa-download-app-section pb-0 fix section-padding bg-cover" 
+    style="background-image: url('assets/img/home-2/cta/cta-bg.jpg');">
+
+    <!-- Decorative Shape -->
+    <!-- <div class="gt-x-shape">
+        <img src="assets/img/home-2/cta/x-shape.png" alt="img">
+    </div> -->
+
+    <div class="container">
+        <div class="gt-cta-download-app-wrapper">
+            <div class="row g-4 justify-content-between">
+
+<!-- ===================================== -->
+<!-- LEFT COLUMN: Contact Form Starts Here -->
+<!-- ===================================== -->
+<div class="col-xl-6 col-lg-6 order-2 order-xl-1">
+  <div class="gt-contact-us-wrapper">
+
+    <!-- Contact Form Box -->
+    <div class="gt-comment-form-wrap">
+      <!-- Heading -->
+      <h4>Let’s Collaborate!</h4>
+      <p>Reach out to The Entity Studios. Required fields are marked *</p>
+
+      <!-- Include SweetAlert2 -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <!-- Load reCAPTCHA script -->
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+      <!-- CONTACT FORM START -->
+      <form id="contactForm" autocomplete="off">
+        <div class="row g-4">
+
+          <!-- First Name -->
+          <div class="col-lg-6">
+            <div class="form-clt">
+              <span>First Name</span>
+              <input type="text" name="name" id="nameinput1" placeholder="First name" required />
+            </div>
+          </div>
+
+          <!-- Last Name -->
+          <div class="col-lg-6">
+            <div class="form-clt">
+              <span>Last Name</span>
+              <input type="text" id="nameinput2" placeholder="Last name" />
+            </div>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="col-lg-6">
+            <div class="form-clt">
+              <span>Phone Number</span>
+              <input type="number" maxlength="10" oninput="if(this.value.length>10)this.value=this.value.slice(0,10);" placeholder="Your number" required />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="col-lg-6">
+            <div class="form-clt email">
+              <span>Email</span>
+              <input type="email" name="to" id="emailInput" placeholder="Your Email" required />
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="col-lg-12">
+            <div class="form-clt">
+              <label>Your Message
+                <textarea name="body" id="messageInput" placeholder="Type your message" required></textarea>
+              </label>
+            </div>
+          </div>
+
+          <!-- Terms Checkbox (optional, add if you want) -->
+          <div class="col-lg-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="agree" name="agree" required />
+              <label class="form-check-label" for="agree">
+                I agree to the <a href="#terms" target="_blank">terms & conditions</a>.
+              </label>
+            </div>
+          </div>
+
+          <!-- reCAPTCHA -->
+          <div class="col-lg-12">
+            <div class="g-recaptcha" data-sitekey="6LdhC1grAAAAALC894yNi7mK6Tg84gYsAkx1icLy"></div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-lg-6">
+            <button type="submit" class="gt-theme-btn">
+              <div class="but">SUBMIT</div>
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- CONTACT FORM END -->
+    </div>
+    <!-- Contact Form Box End -->
+
+  </div>
+</div>
+<!-- ===================================== -->
+<!-- LEFT COLUMN: Contact Form Ends Here  -->
+<!-- ===================================== -->
+
+<!-- EmailJS and JS logic -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  emailjs.init("rYefjyypzUAM_GDuh");
+
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Check if terms checkbox exists and is checked
+    var agreeCheckbox = document.getElementById('agree');
+    if (agreeCheckbox && !agreeCheckbox.checked) {
+      alert('Please agree to the terms and conditions.');
+      return;
+    }
+
+    // reCAPTCHA check
+    var recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+      alert('Please complete the reCAPTCHA.');
+      return;
+    }
+
+    var templateParams = {
+      name: document.getElementById('nameinput1').value + ' ' + document.getElementById('nameinput2').value,
+      phone: document.querySelector('input[type="number"]').value,
+      to: document.getElementById('emailInput').value,
+      body: document.getElementById('messageInput').value,
+    };
+
+    emailjs.send('service_2zs6kg2', 'template_x863nwy', templateParams)
+      .then(function (response) {
+        alert('Message sent!');
+        document.getElementById('contactForm').reset();
+        grecaptcha.reset();
+      }, function (error) {
+        alert('Failed to send message: ' + error.text);
+      });
+  });
+</script>
+
+                <!-- =================================== -->
+                <!-- RIGHT COLUMN: App CTA Content Here -->
+                <!-- =================================== -->
+                <div class="col-xl-5 col-lg-6 order-1 order-xl-2">
+                    <div class="gt-cta-content">
+
+                        <!-- Section Title -->
+                        <div class="gt-section-title-2 mb-0">
+                            <!-- <h6 class="wow fadeInUp">Explore Our Platform</h6> -->
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                The Future of Game Design
+                            </h2>
+                        </div>
+
+                        <!-- CTA Description
+                        <p class="gt-cta-text wow fadeInUp" data-wow-delay=".5s">
+                            The Entity Studios blends design, storytelling, and innovation to deliver digital art, films, and immersive experiences. Discover our creative universe on the go.
+                        </p> -->
+
+
+                    </div>
+                </div>
+                <!-- =================================== -->
+                <!-- RIGHT COLUMN: App CTA Content Ends -->
+                <!-- =================================== -->
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- GT Cta Download App Section End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- JavaScript -->
+                <script src="script.js"></script>
+\
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
 
         
         <!--<< All JS Plugins >>-->
