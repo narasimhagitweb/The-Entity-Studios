@@ -2,6 +2,14 @@ body {
   font-family: "Chakra Petch";
 }
 
+.terms {
+  text-transform: none;
+}
+
+.terms span{
+  color: rgb(236, 62, 62);
+}
+
 .test-Card {
   display: flex;
   width: 100vw;
@@ -158,6 +166,6 @@ input[type="number"].no-arrows::-webkit-outer-spin-button {
 .recaptcha-wrapper {
   transform: scale(0.60);          /* Adjust scale as needed (e.g. 0.75, 0.9) */
   transform-origin: top left;      /* Ensures it scales from top-left corner */
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
