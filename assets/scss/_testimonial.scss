@@ -1,7 +1,7 @@
-.gt-testimonial-wrapper {
+.gt-termsandconditions-wrapper {
     margin-top: 30px;
 
-    .gt-testimonial-card-item {
+    .gt-termsandconditions-card-item {
         padding: 50px 40px;
         background-color: $gt-bg-color-2;
         clip-path: polygon(9% 0, 100% 0, 100% 100%, 75% 100%, 0 100%, 0 15%);
@@ -81,7 +81,7 @@
     }
 }
 
-.gt-testimonial-section {
+.gt-termsandconditions-section {
     position: relative;
 
     .right-shape {
@@ -96,7 +96,7 @@
     }
 }
 
-.gt-testimonial-wraper-2 {
+.gt-termsandconditions-wraper-2 {
     margin-right: -40%;
 
     @include breakpoint (max-lg){
@@ -107,7 +107,7 @@
         margin-right: 0;
     }
 
-    .gt-testimonial-card-items-2 {
+    .gt-termsandconditions-card-items-2 {
         margin-top: 30px;
         background-color: #1C1D20;
         padding: 45px 35px;
@@ -169,10 +169,10 @@
     }
 }
 
-.gt-testimonial-section-2 {
+.gt-termsandconditions-section-2 {
     position: relative;
 
-    .gt-testimonial-image {
+    .gt-termsandconditions-image {
         position: absolute;
         bottom: 80px;
         left: 0;
@@ -183,11 +183,11 @@
     }
 }
 
-.gt-testimonial-wrapper-3 {
+.gt-termsandconditions-wrapper-3 {
 
-    .testimonial-content {
+    .termsandconditions-content {
 
-        .gt-testimonial-card-item {
+        .gt-termsandconditions-card-item {
             padding: 50px 40px;
             background-color: $gt-bg-color-2;
             clip-path: polygon(9% 0, 100% 0, 100% 100%, 75% 100%, 0 100%, 0 15%);
@@ -240,7 +240,7 @@
     }
     
 
-    .gt-testimonial-image {
+    .gt-termsandconditions-image {
         position: relative;
 
         img {

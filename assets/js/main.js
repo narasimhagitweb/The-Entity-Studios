@@ -221,9 +221,9 @@
       });
       }
 
-    //>> Gt-Testimonial-slider Slider Start <<//
-    if ($('.gt-testimonial-slider').length > 0) {
-      const gtTestimonialSliders = new Swiper('.gt-testimonial-slider', {
+    //>> Gt-termsandconditions-slider Slider Start <<//
+    if ($('.gt-termsandconditions-slider').length > 0) {
+      const gttermsandconditionsSliders = new Swiper('.gt-termsandconditions-slider', {
         spaceBetween: 30,
         speed: 2000,
         loop: true,
@@ -314,8 +314,8 @@
     }
 
     //>> Gt Testimonail Slider Start <<//
-    if($('.gt-testimonial-slider-2').length > 0) {
-      const gtTestimonialSlider2 = new Swiper(".gt-testimonial-slider-2", {
+    if($('.gt-termsandconditions-slider-2').length > 0) {
+      const gttermsandconditionsSlider2 = new Swiper(".gt-termsandconditions-slider-2", {
           spaceBetween: 30,
           speed: 1300,
           loop: true,

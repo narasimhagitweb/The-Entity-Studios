@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+       <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Sudhakar">
+        <meta name="description" content="The Entity Studios">
+        <!-- ======== Page title ============ -->
+        <title>The Entity Studios</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets/img/favicon.svg">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/test.css">                    
+
+    </head>
+    <body>
+
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="N" class="letters-loading">
+                        N
+                    </span>
+                    <span data-text-preloader="T" class="letters-loading">
+                        T
+                    </span>
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                    <span data-text-preloader="T" class="letters-loading">
+                        T
+                    </span>
+                    <span data-text-preloader="Y" class="letters-loading">
+                        Y
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!-- GT Back To Top Start -->
+        <button id="gt-back-top" class="gt-back-to-top show">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
+
+        <!-- GT MouseCursor Start -->
+        <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner"></div>
+
+        <!-- Offcanvas Area Start -->
+ <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/black-logo.svg" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block">
+                            The Entity Studios
+                        </p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">UK EU IN</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:contact@entity.ltd"><span class="mailto:info@example.com">contact@entity.ltd</span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+
+
+<style>
+    /* ===== HEADER BACKGROUND CUSTOMIZATION ===== */
+    /* Base styles for the header */
+    .header-1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+
+    /* Header background when scrolled */
+    .header-1.scrolled {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .container-fluid {
+        padding: 0 15px;
+    }
+
+    .header-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* CUSTOMIZE: Initial padding for the header main content (desktop) */
+        padding: 20px 0; /* Slightly increased padding to accommodate initial larger logo */
+        transition: all 0.3s ease;
+    }
+
+    /* Header main content when scrolled - reduced padding */
+    .header-1.scrolled .header-main {
+        padding: 10px 0; /* Smaller padding when scrolled for a compact header */
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    /* ===== LOGO CUSTOMIZATION SECTION ===== */
+
+    /* Logo container - applies to both states for consistent margins and transitions */
+    .logo {
+        margin-right: 30px;
+        transition: all 0.4s ease; /* Smooth transition for logo size changes */
+        transform-origin: left center;
+    }
+
+    /* Default logo size (this is the size when scrolled or when initial-large is removed) */
+    .logo img {
+        height: 60px; /* Normal logo height (for scrolled state on desktop) */
+        width: auto;
+        transition: all 0.4s ease; /* Ensure image size changes smoothly */
+    }
+
+    /* Initial large logo state - applied only when the page is at the top */
+    .logo.initial-large img {
+        height: 90px; /* CUSTOMIZE: Initial LARGER logo size for desktop */
+    }
+
+
+    /* Navigation styles */
+    .main-menu nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    /* Utility classes for responsive display (keep these as they are) */
+    .d-none { display: none !important; }
+    .d-block { display: block !important; }
+
+    @media (min-width: 768px) {
+        .d-md-none { display: none !important; }
+        .d-md-block { display: block !important; }
+    }
+
+    @media (min-width: 992px) {
+        .d-lg-none { display: none !important; }
+        .d-lg-block { display: block !important; }
+    }
+
+    @media (min-width: 1200px) {
+        .d-xl-block {
+            display: block !important;
+        }
+        .d-xl-none {
+            display: none !important;
+        }
+        .main-menu nav ul {
+            display: flex;
+        }
+    }
+
+    /* ===== RESPONSIVE ADJUSTMENTS for Header Height and Logo Size ===== */
+    /* Tablet adjustments (max-width: 1199px) */
+    @media (max-width: 1199px) {
+        .header-main {
+            padding: 15px 0; /* Initial padding for tablets */
+        }
+        .header-1.scrolled .header-main {
+            padding: 8px 0; /* Smaller padding for tablets when scrolled */
+        }
+        .logo.initial-large img {
+            height: 70px; /* Initial LARGER logo height for tablets */
+        }
+        .logo img {
+            height: 50px; /* Normal logo height for tablets (scrolled state) */
+        }
+        .main-menu nav ul {
+            display: none;
+        }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 767px) {
+        .header-main {
+            padding: 10px 0; /* Initial padding for phones */
+        }
+        .header-1.scrolled .header-main {
+            padding: 5px 0; /* Smaller padding for phones when scrolled */
+        }
+        .logo.initial-large img {
+            height: 60px; /* Initial LARGER logo height for phones */
+        }
+        .logo img {
+            height: 40px; /* Normal logo height for phones (scrolled state) */
+        }
+        .main-menu nav ul {
+            display: none;
+        }
+    }
+
+    /* Sidebar toggle icon styling (basic for visibility) */
+    .sidebar__toggle {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Mobile menu styles when active (add or adjust as needed) */
+    .main-menu nav ul.mobile-menu-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    .main-menu nav ul.mobile-menu-active li {
+        padding: 10px 0;
+        text-align: center;
+    }
+    .main-menu nav ul.mobile-menu-active li a {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+
+<header id="header-sticky" class="header-1">
+    <div class="container-fluid">
+        <div class="mega-menu-wrapper">
+            <div class="header-main">
+                <div class="header-left">
+                    <div class="logo initial-large">
+                        <a href="index.html" class="header-logo">
+                            <img src="assets/img/logo/black-logo.png" alt="logo-img">
+                        </a>
+                    </div>
+                    <div class="mean__menu-wrapper">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li class="has-dropdown active menu-thumb d-none d-xl-block">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="d-none d-xl-block">
+                                        <a href="index.html">Company</a>
+                                    </li>
+                                    <li class="has-dropdown d-none d-xl-block">
+                                        <a href="index.html">Services</a>
+                                    </li>
+                                    <li class="d-none d-xl-block">
+                                        <a href="index.html">Projects</a>
+                                    </li>
+
+                                    <li class="has-dropdown active d-xl-none">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="d-xl-none">
+                                        <a href="index.html">Company</a>
+                                    </li>
+                                    <li class="has-dropdown d-xl-none">
+                                        <a href="index.html">Services</a>
+                                    </li>
+                                    <li class="d-xl-none">
+                                        <a href="index.html">Projects</a>
+                                    </li>
+                                    <li class="d-xl-none">
+                                        <a href="contact.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right d-flex justify-content-end align-items-center">
+                    <div class="header-right-icon d-none d-xl-block">
+                        <button href="index.html" class="gt-theme-btn gt-style-border">
+                            get in touch
+                        </button>
+                    </div>
+                    <div class="header__hamburger d-xl-none my-auto">
+                        <div class="sidebar__toggle">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const header = document.getElementById("header-sticky");
+        const logo = header.querySelector(".logo");
+        const scrollThreshold = 100; // Adjust this value as needed
+
+        function handleScroll() {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add("scrolled");
+                logo.classList.remove("initial-large"); // Remove the large logo class, so it defaults to normal size
+            } else {
+                header.classList.remove("scrolled");
+                logo.classList.add("initial-large"); // Add it back when at the top to make it large
+            }
+        }
+
+        // Initial check in case the page is loaded already scrolled
+        handleScroll();
+
+        // Listen for scroll events
+        window.addEventListener("scroll", handleScroll);
+
+        // --- Mobile menu toggle (basic functionality) ---
+        const hamburger = document.querySelector(".header__hamburger .sidebar__toggle");
+        // Ensure you target the correct mobile menu UL.
+        // If #mobile-menu contains both desktop and mobile Uls,
+        // you might need a more specific selector, e.g.,
+        // const mobileMenu = document.querySelector("#mobile-menu ul.d-xl-none");
+        const mobileMenu = document.getElementById("mobile-menu").querySelector("ul.d-xl-none"); // Targeting the specific mobile UL
+
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener("click", function() {
+                mobileMenu.classList.toggle("mobile-menu-active");
+            });
+        }
+    });
+</script>
+
+
+
+   
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+
+  <!-- Custom CSS -->
+  <style>
+    /* Add top space */
+    .cookie-section {
+      padding-top: 100px;
+      background-color: #f8f9fa00;
+    }
+
+    /* Spacing for headings */
+    .cookie-section h2 {
+      margin-top: 2.5rem;
+    }
+
+    /* Style lists */
+    .cookie-section ul {
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+
+  <section class="cookie-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h1 class="mb-3">Cookie Policy</h1>
+          <p class="text">Last Updated: 15-March-2025</p>
+          <p>
+            The Entity OÜ (EU), The-Entity Ltd. (UK), and The Entity Studios Private Ltd. (India), hereafter referred to as <strong>"The Entity Ltd,"</strong>
+            are committed to protecting your privacy and ensuring transparency in how we use cookies and similar tracking technologies on our website.
+          </p>
+
+          <h2>1. What Are Cookies?</h2>
+          <p>
+            Cookies are small text files stored on your device when you visit a website. They help us recognize your device, remember your preferences,
+            and enhance your browsing experience.
+          </p>
+
+          <h2>2. Why Do We Use Cookies?</h2>
+          <p>We use cookies to:</p>
+          <ul>
+            <li>Ensure website functionality and security</li>
+            <li>Improve user experience and website performance</li>
+            <li>Analyze website traffic and interactions</li>
+            <li>Provide personalized content and advertisements (where applicable)</li>
+          </ul>
+
+          <h2>3. Types of Cookies We Use</h2>
+          <ul>
+            <li><strong>Essential Cookies:</strong> These cookies are necessary for website functionality, such as security, accessibility, and session management.</li>
+            <li><strong>Analytics Cookies:</strong> We use these cookies to understand user behaviour and improve our website. For instance, we analyze visitor interactions using Google Analytics or similar tools.</li>
+            <li><strong>Functional Cookies:</strong> These cookies enable us to remember your preferences, such as language settings or login details, for a smoother user experience.</li>
+            <li><strong>Advertising and Tracking Cookies:</strong> Where applicable, we may use cookies to deliver targeted advertising based on your browsing behaviour. These may be set by third-party advertisers.</li>
+          </ul>
+
+          <h2>4. Third-Party Cookies</h2>
+          <p>
+            Our website may include cookies from third-party services such as Google, LinkedIn, and other analytics or marketing tools. These third parties may collect data to provide insights and relevant advertisements.
+            For more details, refer to the respective third-party privacy policies.
+          </p>
+
+          <h2>5. How to Manage Cookies?</h2>
+          <p>
+            You can manage or disable cookies through your browser settings. Note that blocking essential cookies may impact website functionality. Most browsers allow you to:
+          </p>
+          <ul>
+            <li>View stored cookies</li>
+            <li>Delete cookies</li>
+            <li>Block cookies by default</li>
+            <li>Set notifications for cookie requests</li>
+          </ul>
+          <p>For instructions, refer to your browser’s help section.</p>
+
+          <h2>6. Data Security & Compliance</h2>
+          <p>
+            We follow industry best practices, including Trusted Partner Network (TPN) Gold security standards, to protect collected data. This includes:
+          </p>
+          <ul>
+            <li>Secure data encryption</li>
+            <li>Limited data access</li>
+            <li>Regular security audits</li>
+          </ul>
+          <p>
+            Additionally, we comply with GDPR (General Data Protection Regulation) for users in the EU, the UK Data Protection Act,
+            and relevant data privacy regulations in India.
+          </p>
+
+          <h2>7. Changes to This Policy</h2>
+          <p>
+            We may update this policy periodically to reflect changes in laws, technologies, or business practices.
+            The latest version will always be available on our website.
+          </p>
+
+          <h2>8. Contact Us</h2>
+          <p>If you have any questions about our Cookie Policy, contact us at:</p>
+          <p><strong>The Entity Ltd</strong> (Registered as The Entity OÜ in the EU, The-Entity Ltd. in the UK, and The Entity Studios Private Ltd. in India)</p>
+          <p>Email: <a href="mailto:contact@entity.ltd">contact@entity.ltd</a></p>
+
+          <p class="mt-4">By continuing to use our website, you agree to our use of cookies as outlined in this policy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Styles -->
+<style>
+/* Footer-specific styles only - won't affect your existing website */
+.entity-footer {
+    background-color: #1c1d20;
+    text-transform: none;
+    color: #ffffff;
+}
+
+.entity-footer .footer-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+.entity-footer .contact-info {
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.entity-footer .contact-info div {
+    margin-bottom: 8px;
+}
+
+.entity-footer .country {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+.entity-footer .footer-links-section {
+    text-align: right;
+}
+
+.entity-footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.entity-footer .footer-links li {
+    margin-bottom: 8px;
+}
+
+.entity-footer .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.entity-footer .footer-links a:hover {
+    color: #dc3545;
+}
+
+.entity-footer .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: flex-end;
+}
+
+.entity-footer .social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.entity-footer .social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.entity-footer .social-icons a.linkedin {
+    background-color: #727272;
+}
+
+.entity-footer .social-icons a.facebook {
+    background-color: #727272;
+}
+
+.entity-footer .social-icons a.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+.entity-footer .social-icons a.twitter {
+    background-color: #727272;
+}
+
+.entity-footer .trust-center {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.entity-footer .trust-center h6 {
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+.entity-footer .trust-center a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: none;
+    transition: color 0.3s;
+}
+
+.entity-footer .trust-center a:hover {
+    color: #dc3545;
+}
+
+.entity-footer .trust-center p {
+    color: #999;
+    font-size: 12px;
+    margin: 0;
+}
+
+.entity-footer .bottom-footer {
+    padding: 15px 0;
+    border-top: 0px solid #333;
+}
+
+.entity-footer .bottom-footer .copyright {
+    color: #999;
+    
+    font-size: 12px;
+    margin: 0;
+}
+
+.entity-footer .bottom-footer .footer-bottom-links {
+    text-align: center;
+    text-transform: none;
+}
+
+.entity-footer .bottom-footer .footer-bottom-links a {
+    color: #999;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 8px;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.entity-footer .bottom-footer .footer-bottom-links a:hover {
+    color: #dc3545;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .entity-footer .footer-links-section {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .entity-footer .social-icons {
+        justify-content: center;
+    }
+    .entity-footer .col-lg-6.col-md-6.d-flex {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .entity-footer {
+        padding: 30px 0 20px 0;
+    }
+    .entity-footer .footer-description {
+        font-size: 13px;
+        text-align: center;
+    }
+    .entity-footer .contact-info {
+        text-align: center;
+        font-size: 12px;
+    }
+    .entity-footer .footer-links-section {
+        text-align: center;
+        margin-top: 25px;
+    }
+    .entity-footer .footer-links a {
+        font-size: 13px;
+    }
+    .entity-footer .social-icons {
+        justify-content: center;
+        gap: 15px;
+    }
+    .entity-footer .bottom-footer .footer-bottom-links {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .entity-footer .bottom-footer .footer-bottom-links a {
+        margin: 0 8px;
+        font-size: 11px;
+    }
+    .entity-footer .trust-center h6 {
+        font-size: 14px;
+    }
+    .entity-footer .trust-center p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 576px) {
+    .entity-footer {
+        padding: 25px 0 15px 0;
+    }
+    .entity-footer .footer-description {
+        font-size: 12px;
+        max-width: 100%;
+    }
+    .entity-footer .contact-info {
+        font-size: 11px;
+    }
+    .entity-footer .social-icons a {
+        width: 32px;
+        height: 32px;
+    }
+    .entity-footer .bottom-footer .footer-bottom-links a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+.entity-footer .bottom-footer p,
+.entity-footer .bottom-footer a,
+.entity-footer .bottom-footer h3,
+.entity-footer .bottom-footer .small {
+    font-size: 12px !important;
+
+    
+}
+
+</style>
+
+<!-- GT Footer Section Start -->
+<footer class="entity-footer gt-footer-section">
+    <div class="container">
+
+
+        <!-- Main Footer Row -->
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-lg-8 col-md-8">
+                <div class="d-flex align-items-center mb-3">
+                    <a href="index.html" class="header-logo">
+                        <img src="assets/img/logo/black-logo.png" alt="logo-img">
+                    </a>
+                </div>
+                <p class="footer-description py-3">
+                    The Entity Studios is a next-generation game animation studio founded in 2024 by industry veterans.
+                    With global operations across the UK, EU, and India, we deliver world-class animation and character
+                    setup services through flexible, scalable teams that support studios of all sizes.                </p>
+                <div class="contact-info mb-3">
+                    <h6 style="display: inline-flex; align-items: center; white-space: nowrap; margin: 0;">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:contact@entity.ltd" style="text-decoration: none; color: inherit;">contact@entity.ltd</a>
+                    </h6>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+<div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end">
+    <div class="footer-links-section text-end">
+        <ul class="footer-links list-unstyled mb-4">
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+        <div class="social-icons d-flex justify-content-end gap-3">
+            <a href="https://vimeo.com/showcase/11651929" target="_blank" class="twitter">
+                <i class="fab fa-vimeo"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/entitystudios/" target="_blank" class="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+        <!-- Bottom Footer -->
+        <div class="bottom-footer pt-5">
+            <div class="container text-white">
+                <div class="row align-items-end text-center text-md-start">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <p class="mb-0">© 2024–25 The Entity Studios</p>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0 d-flex flex-column align-items-center">
+                        <h3 class="d-flex align-items-center mb-1" style="font-size: 1.25rem; gap: 0.5rem;">
+                            <img src="assets/img/home-1/icon/icon-5.png" alt="Trust Center" style="transform: scale(0.8);">
+                            <a href="https://trust.entity.ltd/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-white">Trust Center</a>
+                        </h3>
+                        <p class="mb-0">TPN Aligned | ISO/IEC 27001:2022 CERTIFIED</p>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center justify-content-md-end gap-3 flex-wrap small">
+                        <a href="#terms" class="text-decoration-none text-white">Terms and Conditions</a>
+                        <a href="#privacy" class="text-decoration-none text-white">Privacy Policy</a>
+                        <a href="#cookie" class="text-decoration-none text-white">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+                    <!-- Footer Bottom Section -->
+<div class="footer-bottom wow fadeInUp" data-wow-delay=".3s" style="padding: 20px 0; text-align: center;">
+  <div class="footer-wrapper justify-content-center">
+    <div class="contact-info">
+      <!-- Company Registration Details with Centered Text -->
+      <div class="justify-content-center flex-wrap gap-3 align-items-center" style="font-size: 12px;">
+        <span class="country">UK:</span> 
+        <span class="ms-1 me-1">THE-ENTITY LTD</span> [Reg No: 15518633]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+
+        <span class="country">EU:</span> 
+        <span class="ms-1 me-1">The Entity OÜ</span>  [Reg No: 16925243]<span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+
+        <span class="country">India:</span> 
+        <span class="ms-1 me-1">Entity Studios Private Limited</span> Reg No: [U62010KA2025PTC199909]
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</footer>
+
+        
+         
+        <!--<< All JS Plugins >>-->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <!--<< Viewport Js >>-->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <!--<< Counterup Js >>-->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        
+        <!--<< Gsap Animation Js >>-->
+        <script src="assets/js/gsap.js"></script>
+        <script src="assets/js/gsap-scroll-to-plugin.js"></script>
+        <script src="assets/js/gsap-scroll-smoother.js"></script>
+        <script src="assets/js/gsap-scroll-trigger.js"></script>
+        <!--<< SplitText Js >>-->
+        <script src="assets/js/SplitText.min.js"></script>
+        <!--<< splitType Js >>-->
+        <script src="assets/js/splitType.js"></script>
+        <!--<< script-gsap Js >>-->
+        <script src="assets/js/script-gsap.js"></script>
+        
+        <!--<< Wow Animation Js >>-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/main.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    </body>
+</html>

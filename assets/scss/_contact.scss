@@ -482,14 +482,14 @@
 	.modal-dialog {
 		max-width: 850px;
 
-        &.style-shop-details {
+        &.style-cookie-policy {
             max-width: 1480px;
 
             .modal-header {
                 background-color: $gt-bg-color;
             }
 
-            .shop-details-wrapper {
+            .cookie-policy-wrapper {
                 padding: 30px;
             }
         }
