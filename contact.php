@@ -2,7 +2,7 @@
 // ========== CONTACT FORM PROCESSING SCRIPT ==========
 
 // STEP 1: Set your recipient email address
-$to = "your@email.com"; // 🔧 Replace this
+$to = "contact@entity.ltd"; // 🔧 Replace this
 
 // STEP 2: Retrieve and sanitize form data
 $name      = htmlspecialchars($_POST['firstName'] ?? '');
@@ -14,7 +14,7 @@ $agree     = isset($_POST['termsCheck']);
 $recaptcha = $_POST['g-recaptcha-response'] ?? '';
 
 // STEP 3: Verify reCAPTCHA
-$recaptchaSecret = 'YOUR_RECAPTCHA_SECRET_KEY'; // 🔧 Replace
+$recaptchaSecret = '4HyhrC88UzCxA1eZd5mdm'; // 🔧 Replace
 $verifyResponse = file_get_contents(
     "https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptcha"
 );
