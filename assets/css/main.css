@@ -6034,16 +6034,17 @@ span {
   width: auto;
   height: auto;
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 5%;
   object-fit: cover;
   z-index: 0;
   opacity: 1;
+
 }
 
-@media (max-width: 1430px) {
+@media (max-width: 1451px) {
   .hero-1 .hero-image {
-  transform: translate(-200px, -50px) scale(1);
+  transform: translate(-200px, -20px) scale(1);
   }
 }
 
