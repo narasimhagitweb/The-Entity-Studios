@@ -5980,22 +5980,25 @@ span {
 }
 
 .hero-image {
-  display: flex;
-  justify-content: flex-start;  /* left align */
-  align-items: flex-end;        /* bottom align */
-  overflow: visible;
   position: relative;
-  height: 100%; /* Ensure it takes full height of the column */
+  width: 100%;
+  height: auto; /* Let it grow with image */
+  overflow: hidden;
 }
 
-.hero-image .overlay-img {
-  max-width: 100%;
-  height: auto;
-  position: relative;
-  left: -50px;  /* shift image 50px outside left */
-  bottom: 0;
-  z-index: 10;
+.overlay-img {
+  position: relative;       /* No absolute positioning */
+  width: 100%;              /* Scales with container */
+  height: auto;             /* Maintains aspect ratio */
+  max-width: none;          /* Prevent Bootstrap img-fluid limiting it */
+  object-fit: contain;      /* Fit entire image without cropping */
+  object-position: left top;/* Align image to left */
+  display: block;
+  transform: translate(-100px, -500px) scale(0.5);
 }
+
+
+
 
 /* Responsive text alignment */
 @media (max-width: 991.98px) {
@@ -6036,6 +6039,12 @@ span {
   object-fit: cover;
   z-index: 0;
   opacity: 1;
+}
+
+@media (max-width: 1430px) {
+  .hero-1 .hero-image {
+  transform: translate(-200px, -50px) scale(1);
+  }
 }
 
 /* Hide hero image on smaller screens */
