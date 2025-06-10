@@ -180,7 +180,7 @@
 
 
 
-.gt-match-details-wrapper {
+.gt-projects-wrapper {
 
     .gt-details-post {
 
@@ -364,7 +364,7 @@
             }
         }
 
-        .gt-match-details-box {
+        .gt-projects-box {
             padding: 30px;
             background-color: $gt-bg-color-2;
             @include flex;
@@ -576,7 +576,7 @@
                     background-position: center !important;
                     background-repeat: no-repeat !important;
                     background-size: cover;
-                    background: url("../../assets/img/inner-page/match-details/post-1.jpg");
+                    background: url("../../assets/img/inner-page/projects/post-1.jpg");
                     @include transition;
                      z-index: -1;
                     
