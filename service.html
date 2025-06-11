@@ -41,6 +41,8 @@
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/test.css">  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
         
 
         <!-- <script>
@@ -379,7 +381,7 @@
                                         <a href="index.html">Home</a>
                                     </li>
                                     <li class="d-none d-xl-block">
-                                        <a href="index.html">Company</a>
+                                        <a href="company.html">Company</a>
                                     </li>
                                     <li class="has-dropdown d-none d-xl-block">
                                         <a href="service.html">Services</a>
@@ -392,7 +394,7 @@
                                         <a href="index.html">Home</a>
                                     </li>
                                     <li class="d-xl-none">
-                                        <a href="index.html">Company</a>
+                                        <a href="company.html">Company</a>
                                     </li>
                                     <li class="has-dropdown d-xl-none">
                                         <a href="service.html">Services</a>
@@ -465,46 +467,35 @@
 
 
 
-    
-
-
 
 
         <div id="smooth-wrapper">
             <div id="smooth-content">
 
-<section class="hero-section hero-1 fix bg-cover" style="background-image: url('assets/img/home-1/hero/services-bg.jpg');">
-    <div class="container">
-        <div class="row">
-
-        </div>
-    </div>
+<section class="hero-section hero-1" style=" min-height: 800px; background-image: url('assets/img/home-1/hero/services-bg.jpg');">
 </section>
 
-            
 
-        <!-- GT Service-title Section Start -->
-        <section class="gt-service-title-section section-padding fix">
-            <div class="container">
-                <div class="gt-section-title-area mb-0">
-                    <div class="gt-section-title text-center">
-                        <h3 class="tx-title sec_title  tz-itm-title tz-itm-anim">
-                            At <span style="color: red; text-transform: uppercase;">The Entity Studios,</span> we offer a comprehensive range of services tailored to meet the unique needs of game developers. From concept design to motion capture, our expertise ensures your project achieves its full potential.
-                            services for you!
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+<section>
+    <div class="d-flex justify-content-center align-items-center p-5">
+  <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;" />
+    <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
+      style="fill:none;stroke:#ffffff79;stroke-width:20px;" />
+  </svg>
+  <p>&nbsp;&nbsp;&nbsp;Scroll down</p>
+  </div>
+</section>
 
        <!-- GT Gaming Feature Section Start -->
-       <section class="gt-gaming-feature-section section-bg fix section-padding">
+       <section class="gt-gaming-feature-section fix section-padding">
         <div class="container">
             <div class="gt-gaming-feature-wrapper">
                 <div class="row g-4">
                     <div class="col-lg-6">
-                        <div class="gt-gaming-left-item">
+                        <div class="gt-gaming-left-item align-items-center justify-content-center">
                             <div class="gt-gaming-feature-image wow img-custom-anim-top" data-wow-duration="1.3s" data-wow-delay="0.3s">
                                 <img src="assets/img/home-2/man.png" alt="img">
                             </div>
@@ -515,17 +506,19 @@
                             <div class="gt-section-title-2 mb-0">
                                 <h6 class="wow fadeInUp">The Entity Studios</h6>
                                 <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                                    Trusted by Industry Leaders</h2>
+                                    Animation Services Built for Game Studios</h2>
                             </div>
-                            <h3 class="gt-gaming-text">
-                                Our reputation is built on delivering exceptional results for some of the biggest names in the industry.
+                            <h4 class="gt-gaming-text">
+                                <span class="mb-4"> The Entity Studios, we deliver animation pipelines that fit directly into your development workflow.
+                                From high-end rigging to engine integration, our services are crafted by industry veterans to support AAA precision and indie flexibility alike.
+                                    </span><div style="height: 10px;"></div>
                                 <br>
-                                Partnering with The Entity Studios means working with a team that understands the demands of AAA game development.
-                            </h3>
+                                Whether you need full production support or specialized tasks, we operate as an extension of your team, scalable, reliable, and production-ready.
+                            </h4>
 
-                            <a href="#" class="gt-theme-btn gt-style-border">
+                            <!-- <a href="company.html" class="gt-theme-btn gt-style-border">
                                 read more
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -534,27 +527,120 @@
        </section>
 
 
+       
+
+
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script to auto-hide See More after expand -->
+  <script>
+    const seeMoreLinks = document.querySelectorAll('.see-more');
+
+    seeMoreLinks.forEach(link => {
+      const targetId = link.getAttribute('href').replace('#', '');
+      const targetCollapse = document.getElementById(targetId);
+
+      targetCollapse.addEventListener('show.bs.collapse', () => {
+        link.style.display = 'none';
+        link.setAttribute('aria-expanded', 'true');
+      });
+
+      targetCollapse.addEventListener('hide.bs.collapse', () => {
+        link.style.display = 'inline-block';
+        link.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+
+
+        <!-- GT About Section Start -->
+        <section class="gt-about-section fix section-padding">
+            <h2 class="text">
+                The Entity <br>
+                Studios
+            </h2>
+            <div class="left-shape">
+                <img src="assets/img/home-1/about/shape-1.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="gt-about-wrapper">
+                    <div class="row g-4 align-items-center justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="gt-about-content">
+                                <div class="gt-section-title mb-0">
+                                    <h2 class="text-start tx-title sec_title  tz-itm-title tz-itm-anim">
+                                        <span class="color-red">Precision </span> Meets
+                                    </h2>
+                                    <h2 class="text-end"> <span class="color-red">Production</span> </h2>
+                                </div>
+                               <div class="gt-about-box-wrapper top_view_2 item-hover">
+                                    <div class="gt-about-box-item">
+                                    <div class="gt-about-box bg-color">
+                                        <div class="icon">
+                                            <img src="assets/img/home-1/icon/icon-5.svg" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>Scalable teams</h5>
+                                            <p>
+                                                that plug directly into your pipeline
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gt-about-box border-none">
+                                        <div class="icon">
+                                            <img src="assets/img/home-1/icon/icon-2.svg" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>Engine-native expertise</h5>
+                                            <p>
+                                                across Unreal and Unity
+                                            </p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                   <div class="gt-about-box-item">
+                                    <div class="gt-about-box">
+                                        <div class="icon">
+                                            <img src="assets/img/home-1/icon/icon-3.svg" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>Proven track record</h5>
+                                            <p>
+                                                with top studios and publishers
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gt-about-box border-none bg-color">
+                                        <div class="icon">
+                                            <img src="assets/img/home-1/icon/icon-8.svg" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>Secure global operations </h5>
+                                            <p>
+                                                built for compliance and delivery
+                                            </p>
+                                        </div>
+                                    </div>
+                                   </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <!-- GT Top Feature Section Start -->
-        <section class="gt-top-feature-section fix section-padding pt-0">
+        <!-- <section class="gt-top-feature-section fix section-padding pt-0">
             <div class="container">
                 <div class="gt-top-feature-wrapper">
                     <div class="row g-4 align-items-center">
                         <div class="col-lg-6">
-                            <div class="gt-top-feature-image rotatedscal">
-                                <img src="assets/img/home-3/top-feature.jpg" alt="img">
-                                <div class="gt-bg-shape">
-                                    <img src="assets/img/home-3/ellipse-bg.png" alt="img">
-                                </div>
-                                                                    <div class="gt-section-title mb-0">
-                                    <h6 class="subtitle tz-sub-tilte tz-sub-anim tx-subTitle">Top Features</h6>
-                                    <p class="gt-feature-text">
-                                    <span class="text-danger">High-quality cinematic cutscenes</span> <br>
-                                    Dynamic gameplay animations <br>
-                                    <span class="text-danger">Seamless transitions between gameplay and cinematics</span>
-                                </p>
-                            </div>
-                            </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="gt-top-feature-content">
@@ -604,16 +690,16 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
 
                 <!-- GT Gaming Feature Section Start -->
-        <section class="gt-gaming-feature-section fix section-padding">
+        <!-- <section class="gt-gaming-feature-section fix section-padding">
             <div class="container">
                 <div class="gt-gaming-feature-wrapper">
                     <div class="row g-4">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="gt-gaming-feature-content">
                                 <div class="gt-section-title-2 mb-0">
                                     <h2 class="tx-title sec_title  tz-itm-title tz-itm-anim">
@@ -659,121 +745,212 @@
                                     </h5>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="gt-gaming-left-item">
-                                <div class="gt-gaming-feature-image wow img-custom-anim-top" data-wow-duration="1.3s" data-wow-delay="0.3s">
-                                    <img src="assets/img/home-3/rigging.png" alt="img">
-                                </div>
-                            </div>
-                        </div>
+                        
                         
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+<!-- GT Newsletter Section Start -->
+<section class="gt-newsletter-section fix mb-4 position-relative">
+  <div class="container">
+    <div class="gt-newsletter-wrapper bg-cover position-relative d-flex justify-content-end text-end p-5"
+         style="background-image: url(assets/img/home-1/cta/newsletter-bg.jpg);">
+
+      <!-- Bottom-center aligned drive image -->
+      <div class="shape position-absolute bottom-0 start-50 translate-middle-x">
+        <img src="assets/img/home-1/cta/drive.png" alt="img">
+      </div>
+
+      <!-- Right-aligned heading and button -->
+      <div class="gt-games-content" style="max-width: 500px;">
+        <h3 class="text-white tx-title sec_title tz-itm-title tz-itm-anim">
+          Learn more about
+        </h3>
+
+        <div class="gt-button top_view_2 item-hover mt-3">
+          <a href="projects.html" class="gt-theme-btn gt-style-border">
+            Our Projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
 
-        <!-- GT Service-details Section Start -->
-        <section class="gt-service-details-section section-padding fix">
-            <div class="container">
-                <div class="gt-service-details-wrapper">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-12">
-                        </div>
-                    </div>
-                    <div class="tab-content">
-                        <div id="technical" class="tab-pane fade show active">
-                            <div class="row justify-content-center">
-                                <div class="col-xl-10">
-                                    <div class="gt-details-post-item">
 
-                                <div class="gt-list-wrapper">
-                                    <div class="row g-4 align-items-center">
-                                        <div class="col-lg-12">
-                                            <div class="gt-section-title-2 mb-0">
-                                    <h2 class="tx-title sec_title  tz-itm-title tz-itm-anim text-end my-3">
-                                        Motion Capture
-                                    </h2>
-                                </div>
-                                            <div class="gt-list-item text-end">
-                                                <h4>
-                                                    Our motion capture services are designed to bring your characters to life with unparalleled
-                                                    realism <br> and precision. We utilize state-of-the-art technology to ensure every movement is
-                                                    captured with <br> accuracy, delivering animations that resonate with your audience.
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+<style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 0;
+      margin: 0;
+    }
 
-                                        <div class="gt-details-image">
-                                            <img src="assets/img/inner-page/service-details/details-1.jpg" alt="img">
-                                        </div>
-                                        <div class="gt-details-content">
-                                            <h3>
-                                                Why Choose Our Motion Capture Services?
-                                            </h3>
-                                            <p><i class="fa-solid fa-check"></i>
-                                                <span class="fw-bold text-danger">High Precision:</span> Advanced motion capture systems ensure every detail is captured.
-                                            </p>
-                                            <p><i class="fa-solid fa-check"></i>
-                                                <span class="fw-bold text-danger">Seamless Integration:</span> Our pipelines are optimized for smooth integration into your game development process.
-                                            </p>
-                                            <p><i class="fa-solid fa-check"></i>
-                                                <span class="fw-bold text-danger">Custom Solutions:</span> Tailored motion capture setups to meet your unique project requirements.
-                                            </p>
-                                            <h3 class="text">
-                                                Applications of Motion Capture:
-                                            </h3>
-                                            <div class="gt-service-feature-wrapper">
-                                                <div class="gt-feature-item">
-                                                    <h5 class="number">01</h5>
-                                                    <div class="gt-content">
-                                                        <h5>
-                                                            Game <br>development
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="gt-feature-item">
-                                                    <h5 class="number">02</h5>
-                                                    <div class="gt-content">
-                                                        <h5>
-                                                            Film and <br>
-                                                            cinematic production
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="gt-feature-item">
-                                                    <h5 class="number">03</h5>
-                                                    <div class="gt-content">
-                                                        <h5>
-                                                            Virtual reality (VR) and <br>
-                                                            augmented reality (AR) experiences
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="gt-feature-item">
-                                                    <h5 class="number">04</h5>
-                                                    <div class="gt-content">
-                                                        <h5>
-                                                            Training simulations and <br>
-                                                            educational content
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    .services-section {
+      padding: 80px 20px;
+    }
 
+    .services-section h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 60px;
+      color: #ffffff;
+    }
+
+    .service-card {
+      background-color: #1a1a1a;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .service-card h4 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #ff4040;
+      margin-bottom: 25px;
+      text-transform: capitalize;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .service-list li {
+      margin-bottom: 16px;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      text-transform: capitalize;
+    }
+
+    .service-list i.fa-check {
+      color: #ff4c4c;
+      font-size: 1rem;
+      margin-right: 10px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .subsection-title {
+      font-weight: 600;
+      color: #c78181;
+      margin: 25px 0 10px;
+      text-transform: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="services-section" id="services">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="col-lg-8 mx-auto">
+
+      <!-- Service 1 -->
+      <div class="col-lg-12">
+        <div class="service-card">
+          <h4><i class="fa-solid fa-screwdriver-wrench me-2 text-info"></i> Rigging & character setup</h4>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Custom skeleton creation tailored for game-ready characters</li>
+            <li><i class="fa-solid fa-check"></i> Advanced deformation setup for natural and dynamic movement</li>
+            <li><i class="fa-solid fa-check"></i> Facial rigging for expressive performances</li>
+            <li><i class="fa-solid fa-check"></i> Modular rigs optimized for animation pipelines</li>
+            <li><i class="fa-solid fa-check"></i> Physics-based rigging for cloth, hair, and props</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-lg-12">
+        <div class="service-card">
+          <h4><i class="fa-solid fa-code-branch me-2 text-warning"></i> Technical integration for unreal & unity</h4>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Animation implementation and state machine setup</li>
+            <li><i class="fa-solid fa-check"></i> IK/FK blending and procedural animation workflows</li>
+            <li><i class="fa-solid fa-check"></i> Retargeting and optimizing animation for game engines</li>
+            <li><i class="fa-solid fa-check"></i> Blueprint and animation graph setup for seamless interactions</li>
+            <li><i class="fa-solid fa-check"></i> Root motion and physics-based movement integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-lg-12">
+        <div class="service-card">
+          <h4><i class="fa-solid fa-film me-2 text-danger"></i> Cinematic & gameplay animation</h4>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> High-quality keyframe and mocap-driven animations</li>
+            <li><i class="fa-solid fa-check"></i> Stylized and realistic animation styles tailored for your game</li>
+            <li><i class="fa-solid fa-check"></i> Cinematic sequences for trailers, cutscenes, and in-game storytelling</li>
+            <li><i class="fa-solid fa-check"></i> Combat, locomotion, and interaction animations for immersive gameplay</li>
+            <li><i class="fa-solid fa-check"></i> Polishing and refining animations for final implementation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-lg-12">
+        <div class="service-card">
+          <h4><i class="fa-solid fa-person-running me-2 text-success"></i> Motion capture</h4>
+          <ul class="service-list">
+            <li class="subsection-title">Motion capture cleanup & processing</li>
+            <li><i class="fa-solid fa-check"></i> High-precision marker data cleanup (optical & inertial)</li>
+            <li><i class="fa-solid fa-check"></i> Addressing jitter, occlusion, and marker swaps for flawless data</li>
+            <li><i class="fa-solid fa-check"></i> Stringent quality control for accuracy and consistency</li>
+
+            <li class="subsection-title">Retargeting & motion editing</li>
+            <li><i class="fa-solid fa-check"></i> Seamless retargeting of mocap data to various character rigs</li>
+            <li><i class="fa-solid fa-check"></i> Motion refinement for natural and realistic movements</li>
+            <li><i class="fa-solid fa-check"></i> Custom locomotion sets, loops, and transitions</li>
+
+            <li class="subsection-title">Facial motion capture & animation</li>
+            <li><i class="fa-solid fa-check"></i> Facial data tracking and solving for expressive performances</li>
+            <li><i class="fa-solid fa-check"></i> Retargeting and refining facial motion for cinematic and in-game use</li>
+            <li><i class="fa-solid fa-check"></i> Enhanced realism through detailed facial animation processing</li>
+            <li><i class="fa-solid fa-check"></i> Ensuring precise facial performance capture for lifelike character expressions</li>
+
+            <li class="subsection-title">Cinematic & gameplay animation</li>
+            <li><i class="fa-solid fa-check"></i> Mocap-driven animation for in-game cinematics and cutscenes</li>
+            <li><i class="fa-solid fa-check"></i> Custom gameplay animations (locomotion, interactions, action sequences)</li>
+            <li><i class="fa-solid fa-check"></i> Integration-ready animation tailored to game engines</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
   <style>
@@ -1274,11 +1451,11 @@
 <div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end">
     <div class="footer-links-section text-end">
         <ul class="footer-links list-unstyled mb-4">
-            <li><a href="#about">About us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#contact">Contact us</a></li>
+            <li><a href="company.html">About us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <!-- <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact us</a></li> -->
         </ul>
         <div class="social-icons d-flex justify-content-end gap-3">
             <a href="https://vimeo.com/showcase/11651929" target="_blank" class="twitter">
