@@ -12192,3 +12192,15 @@ svg #wheel {
     transform: translateY(20px); /* smaller translate so it looks smooth */
   }
 }
+
+
+/* Custom yellow tooltip */
+.tooltip-inner {
+  background-color: #333; /* or keep Bootstrap default */
+  color: #fff59b; /* soft yellow */
+  font-size: 0.875rem;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: #333;
+}
