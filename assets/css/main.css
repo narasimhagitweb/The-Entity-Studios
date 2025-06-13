@@ -12204,3 +12204,133 @@ svg #wheel {
 .tooltip.bs-tooltip-top .tooltip-arrow::before {
   border-top-color: #333;
 }
+
+
+
+/* ===========================
+   Cookie Consent Banner Styles
+   =========================== */
+
+/* Container banner styling */
+.cookie-banner {
+  position: fixed;             /* Fix it at bottom */
+  bottom: 1.5rem;              /* Space from bottom */
+  left: 50%;                  /* Center horizontally */
+  transform: translateX(-50%);
+  max-width: 600px;            /* Max width of banner */
+  width: 90%;                 /* Responsive width */
+  background-color: #0000002c!important;  /* Light background */
+  border: 1px solid #6e6e6e5b!important;     /* Subtle border */
+  padding: 1rem 1.5rem;       /* Padding inside */
+  border-radius: 0.5rem;      /* Rounded corners */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Soft shadow */
+  z-index: 1055;              /* Above most elements */
+  color: #333;
+  display: flex;              /* Flex layout for text & buttons */
+  flex-direction: column;     /* Stack text and buttons vertically on small screens */
+  gap: 1rem;                  /* Spacing between items */
+  backdrop-filter: blur(10px); /* blur behind the element */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+}
+
+/* Text paragraph inside banner */
+.cookie-banner p {
+  margin: 0;                  /* Remove default margin */
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Link style inside banner */
+.cookie-banner a {
+  color: #0d6efd;             /* Bootstrap primary blue */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Container for buttons */
+.cookie-banner .d-flex {
+  justify-content: flex-end;  /* Right align buttons */
+  gap: 0.5rem;                /* Space between buttons */
+}
+
+/* Individual buttons in banner */
+.cookie-banner button {
+  min-width: 100px;
+  font-weight: 600;
+}
+
+/* Accept all button - green */
+.cookie-banner #accept-all {
+  background-color: #094bff;  /* Bootstrap success */
+  border-color: #0486ff;
+  color: white;
+}
+
+/* Decline all button - red outline */
+.cookie-banner #decline-all {
+  border-color: #dc3545;      /* Bootstrap danger */
+  color: #dc3545;
+  background: transparent;
+}
+
+/* Customize button - primary outline */
+.cookie-banner #customize {
+  border-color: #0d6efd;      /* Bootstrap primary */
+  color: #0d6efd;
+  background: transparent;
+}
+
+/* Responsive: side-by-side buttons on larger screens */
+@media (min-width: 576px) {
+  .cookie-banner {
+    flex-direction: row;      /* Horizontal layout */
+    align-items: center;
+  }
+  .cookie-banner p {
+    flex: 1;                  /* Take remaining space */
+  }
+}
+
+/* ===========================
+   Cookie Preferences Modal Styles
+   =========================== */
+
+/* Optional: Override Bootstrap modal content background */
+.modal-content {
+  background-color: #000000bb;     /* White background */
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  backdrop-filter: blur(100px); /* blur behind the element */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+}
+
+/* Modal header */
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Modal footer */
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+/* Form check (checkboxes) */
+.form-check-label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Disabled checkbox label styling */
+.form-check-input:disabled + .form-check-label {
+  color: #6c757d; /* Bootstrap muted */
+  font-style: italic;
+}
+
+/* ===========================
+   Utility Classes
+   =========================== */
+
+/* Hide element (Bootstrap class) */
+.d-none {
+  display: none !important;
+}
