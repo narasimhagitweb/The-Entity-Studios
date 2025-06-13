@@ -4,90 +4,86 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = new bootstrap.Modal(modalElement);
   const CONSENT_KEY = "cookieConsent";
   const DECLINE_TIMESTAMP_KEY = "cookieDeclineTimestamp";
-  const FIVE_MINUTES = 5 * 60 * 1000; // 5 minutes in milliseconds
+  const FIVE_MINUTES = 5 * 60 * 1000; // 5 minutes in ms
 
-  // Check if consent is given permanently (accepted)
+  // Retrieve consent & decline timestamp from localStorage
   const consent = localStorage.getItem(CONSENT_KEY);
   const declineTimestamp = localStorage.getItem(DECLINE_TIMESTAMP_KEY);
 
-  // Function to show banner
+  // Show banner function
   function showBanner() {
     banner.classList.remove("d-none");
   }
 
-  // Show banner logic:
+  // Banner display logic
   if (consent) {
-    // Consent exists - if accepted, do nothing (banner hidden)
+    // Consent exists - do nothing (banner hidden)
     console.log("Consent already given");
   } else if (declineTimestamp) {
-    // Check if 5 minutes passed since decline
+    // Show banner only if 5 minutes passed since decline
     const now = Date.now();
-    const timePassed = now - parseInt(declineTimestamp, 10);
-    if (timePassed > FIVE_MINUTES) {
+    if (now - parseInt(declineTimestamp, 10) > FIVE_MINUTES) {
       showBanner();
     } else {
-      // less than 5 minutes, keep banner hidden
       console.log("Declined recently, banner hidden");
     }
   } else {
-    // No consent, no decline timestamp — show banner
+    // No consent or decline record - show banner
     showBanner();
   }
 
-  // Accept All
+  // Accept All button handler
   document.getElementById("accept-all").onclick = () => {
-    saveConsent({ necessary: true, analytics: true, marketing: true });
+    saveConsent({ necessary: true }); // Necessary includes analytics
     banner.classList.add("d-none");
-    localStorage.removeItem(DECLINE_TIMESTAMP_KEY); // remove decline timestamp on accept
+    localStorage.removeItem(DECLINE_TIMESTAMP_KEY);
   };
 
-  // Decline All
+  // Decline All button handler
   document.getElementById("decline-all").onclick = () => {
     localStorage.setItem(DECLINE_TIMESTAMP_KEY, Date.now().toString());
-    localStorage.removeItem(CONSENT_KEY); // clear consent
+    localStorage.removeItem(CONSENT_KEY);
     banner.classList.add("d-none");
   };
 
-  // Customize Button (show modal)
+  // Customize button shows modal
   document.getElementById("customize").onclick = () => {
     modal.show();
   };
 
-  // Save Preferences from modal
+  // Save preferences from modal (only necessary here)
   document.getElementById("cookie-form").onsubmit = function (e) {
     e.preventDefault();
-    const analytics = document.getElementById("analytics").checked;
-    const marketing = document.getElementById("marketing").checked;
-    saveConsent({ necessary: true, analytics, marketing });
+    saveConsent({ necessary: true }); // Only one option, always true
     modal.hide();
     banner.classList.add("d-none");
-    localStorage.removeItem(DECLINE_TIMESTAMP_KEY); // clear decline timestamp on save
+    localStorage.removeItem(DECLINE_TIMESTAMP_KEY);
   };
 
-  // Store and apply consent
+  // Save consent and load GA if allowed
   function saveConsent(consent) {
     localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
     handleConsent(consent);
   }
 
-  // Load Google Analytics if allowed
+  // Load Google Analytics only if consent given
   function handleConsent(consent) {
-    if (consent.analytics) {
+    if (consent.necessary) {
       loadGoogleAnalytics();
     }
   }
 
-  // Google Analytics Loader
+  // GA loader function
   function loadGoogleAnalytics() {
     if (window.gaLoaded) {
-      console.log("GA script already loaded");
+      console.log("GA already loaded");
       return;
     }
-    const gaID = "G-9TVLHYTJ8X"; // your GA4 ID here
-    const scriptTag = document.createElement("script");
-    scriptTag.src = `https://www.googletagmanager.com/gtag/js?id=${gaID}`;
-    scriptTag.async = true;
-    document.head.appendChild(scriptTag);
+    const gaID = "G-9TVLHYTJ8X"; // Replace with your GA4 ID
+    const script = document.createElement("script");
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaID}`;
+    script.async = true;
+    document.head.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -98,11 +94,16 @@ document.addEventListener("DOMContentLoaded", function () {
     gtag("config", gaID);
 
     window.gaLoaded = true;
-    console.log("Loading Google Analytics");
+    console.log("Google Analytics loaded");
   }
 
-  // Load GA if consent was already given
+  // Load GA if consent already present on page load
   if (consent) {
     handleConsent(JSON.parse(consent));
   }
 });
+
+
+
+
+
