@@ -358,9 +358,9 @@
                 </div>
                 <div class="header-right d-flex justify-content-end align-items-center">
                     <div class="header-right-icon d-none d-xl-block">
-                        <button href="index.html" class="gt-theme-btn gt-style-border">
+                        <a href="contact.html" class="gt-theme-btn gt-style-border">
                             get in touch
-                        </button>
+                        </a>
                     </div>
                     <div class="header__hamburger d-xl-none my-auto">
                         <div class="sidebar__toggle">
@@ -421,6 +421,14 @@
 
   <!-- Custom CSS -->
   <style>
+
+    h2 {
+        text-transform: none;
+        font-size: 6dvh;
+    }
+
+
+
 
 
     li {
@@ -516,7 +524,7 @@
         <p>For questions or concerns, feel free to reach out:</p>
         <p>Email: <a href="mailto:contact@entity.ltd">contact@entity.ltd</a></p>
 
-        <p class="mt-4">By continuing to browse our website, you consent to our limited and transparent use of cookies.</p>
+        <p class="mt-4 mb-4">By continuing to browse our website, you consent to our limited and transparent use of cookies.</p>
       </div>
     </div>
   </div>
@@ -526,7 +534,6 @@
 
     <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 
 
 
@@ -549,7 +556,7 @@
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 25px;
-    max-width: 500px;
+    max-width: 658px;
 }
 
 .entity-footer .contact-info {
@@ -776,8 +783,9 @@
 </style>
 
 <!-- GT Footer Section Start -->
-<footer class="entity-footer gt-footer-section">
+<footer class="entity-footer gt-footer-section" style="padding-top: 8dvh;">
     <div class="container">
+
 
 
         <!-- Main Footer Row -->
@@ -805,11 +813,12 @@
 <div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end">
     <div class="footer-links-section text-end">
         <ul class="footer-links list-unstyled mb-4">
-            <li><a href="#about">About us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="company.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="#careers">Careers</a></li>
-            <li><a href="#contact">Contact us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
         </ul>
         <div class="social-icons d-flex justify-content-end gap-3">
             <a href="https://vimeo.com/showcase/11651929" target="_blank" class="twitter">
@@ -831,7 +840,9 @@
                     </div>
                     <div class="col-md-4 mb-3 mb-md-0 d-flex flex-column align-items-center">
                         <h3 class="d-flex align-items-center mb-1" style="font-size: 1.25rem; gap: 0.5rem;">
-                            <img src="assets/img/home-1/icon/icon-5.png" alt="Trust Center" style="transform: scale(0.8);">
+                            <a href="https://trust.the-entity.studio/" target="_blank" rel="noopener noreferrer"> 
+                                <img src="assets/img/home-1/icon/icon-5.png" alt="Trust Center" style="transform: scale(0.8);">
+                            </a>
                             <a href="https://trust.the-entity.studio/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-white">Trust Center</a>
                         </h3>
                         <a href="https://trust.the-entity.studio/" target="_blank" rel="noopener noreferrer" class="mb-0">TPN Aligned | ISO/IEC 27001:2022 CERTIFIED</a>
@@ -855,13 +866,13 @@
       <!-- Company Registration Details with Centered Text -->
       <div class="justify-content-center flex-wrap gap-3 align-items-center" style="font-size: 12px;">
         <span class="country">UK:</span> 
-        <span class="ms-1 me-1">THE-ENTITY LTD</span> [Reg No: 15518633]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+        <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
 
         <span class="country">EU:</span> 
         <span class="ms-1 me-1">The Entity OÜ</span>  [Reg No: 16925243]<span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
 
         <span class="country">India:</span> 
-        <span class="ms-1 me-1">Entity Studios Private Limited</span> Reg No: [U62010KA2025PTC199909]
+        <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
       </div>
     </div>
   </div>
@@ -869,6 +880,10 @@
 
 
 </footer>
+
+
+
+
 
         
          
@@ -909,6 +924,102 @@
         <script src="assets/js/main.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const consent = JSON.parse(localStorage.getItem("cookieConsent"));
+    if (consent) {
+      const submitButton = document.getElementById('submitButton');
+      if (submitButton) {
+        submitButton.addEventListener('click', function () {
+          gtag('event', 'click', {
+            'event_category': 'button',
+            'event_label': 'submit_button'
+          });
+        });
+      }
+
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          gtag('event', 'submit', {
+            'event_category': 'form',
+            'event_label': 'contact_form'
+          });
+          this.submit();
+        });
+      }
+
+      window.addEventListener('scroll', function () {
+        var scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+        if (scrollPercentage > 50) {
+          gtag('event', 'scroll', {
+            'event_category': 'page',
+            'event_label': '50_percent_scroll'
+          });
+        }
+      });
+    }
+  });
+</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const consent = JSON.parse(localStorage.getItem("cookieConsent"));
+
+  if (consent && consent.analytics && typeof gtag === 'function') {
+
+    const submitButton = document.getElementById('submitButton');
+    if (submitButton) {
+      submitButton.addEventListener('click', function () {
+        gtag('event', 'click', {
+          'event_category': 'button',
+          'event_label': 'submit_button'
+        });
+      });
+    }
+
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        gtag('event', 'submit', {
+          'event_category': 'form',
+          'event_label': 'contact_form'
+        });
+
+        this.submit();
+      });
+    }
+
+    window.addEventListener('scroll', function scrollHandler() {
+      const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+      if (scrollPercentage > 50) {
+        gtag('event', 'scroll', {
+          'event_category': 'page',
+          'event_label': '50_percent_scroll'
+        });
+        window.removeEventListener('scroll', scrollHandler);
+      }
+    });
+
+  }
+});
+</script>
+
+
+<!-- Bootstrap Bundle (for modal support) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- ✅ Your JS file: use correct path -->
+        <script src="assets/js/cookie-consent.js"></script>
 
     </body>
 </html>
