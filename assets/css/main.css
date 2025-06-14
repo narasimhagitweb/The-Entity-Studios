@@ -12321,3 +12321,22 @@ svg #wheel {
 
 
 
+.cookie-types-box {
+  margin: 2dvh;
+  border: 1px solid #363636;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #00000000;
+  margin-bottom: 20px;
+}
+
+.cookie-type {
+  margin-bottom: 12px;
+}
+
+.cookie-type h4 {
+  margin-bottom: 4px;
+  color: #cfcfcf;
+}
+
+
