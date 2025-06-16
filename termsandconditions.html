@@ -450,6 +450,25 @@
     .terms-section ul {
       padding-left: 1.5rem;
     }
+
+.terms-section p,
+.terms-section ul,
+.terms-section li {
+  padding-left: 90px;
+  text-align: left;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.terms-section h1,
+.terms-section h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 0; /* Keep headings flush left */
+}
+
+
   </style>
 </head>
 <body>
@@ -458,7 +477,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10">
-        <h1 class="mb-3">Terms and Conditions</h1>
+        <h1 class="mb-3 mt-5 pt-5">Terms and Conditions</h1>
         <p class="text">Last Updated: 14-June-2025</p>
         <p>
           Welcome to <strong>The Entity Studios.</strong> (registered as The Entity OÜ in the EU, The-Entity Ltd. in the UK, and The Entity Studios Pvt. Ltd. in India). 
@@ -814,23 +833,44 @@
         <!-- Main Footer Row -->
         <div class="row">
             <!-- Left Column -->
-            <div class="col-lg-8 col-md-8">
-                <div class="d-flex align-items-center mb-3">
-                    <a href="index.html" class="header-logo">
-                        <img src="assets/img/logo/black-logo.png" alt="logo-img">
-                    </a>
-                </div>
-                <p class="footer-description py-3">
-                    The Entity Studios is a next-generation game animation studio founded in 2024 by industry veterans.
-                    With global operations across the UK, EU, and India, we deliver world-class animation and character
-                    setup services through flexible, scalable teams that support studios of all sizes.                </p>
-                <div class="contact-info mb-3">
-                    <h6 style="display: inline-flex; align-items: center; white-space: nowrap; margin: 0;">
-                        <i class="fas fa-envelope me-2"></i>
-                        <a href="mailto:contact@entity.ltd" style="text-decoration: none; color: inherit;">contact@entity.ltd</a>
-                    </h6>
-                </div>
-            </div>
+<div class="col-lg-8 col-md-8">
+    <div class="d-flex align-items-center mb-3">
+        <a href="index.html" class="header-logo">
+            <img src="assets/img/logo/black-logo.png" alt="logo-img">
+        </a>
+    </div>
+    <p class="footer-description py-3">
+        The Entity Studios is a next-generation game animation studio founded in 2024 by industry veterans.
+        With global operations across the UK, EU, and India, we deliver world-class animation and character
+        setup services through flexible, scalable teams that support studios of all sizes.
+    </p>
+    <div class="contact-info mb-3">
+        <h6 style="display: inline-flex; align-items: center; white-space: nowrap; margin: 0;">
+            <i class="fas fa-envelope me-2"></i>
+            <span style="text-decoration: none; color: inherit; cursor: pointer;"
+                  onclick="copyToClipboard('contact@entity.ltd')">
+                contact@entity.ltd
+            </span>
+        </h6>
+        <span id="email-copied-toast" style="display: none; color: green; font-size: 0.875rem; margin-left: 10px;">
+            Copied!
+        </span>
+    </div>
+</div>
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById('email-copied-toast');
+            toast.style.display = 'inline';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 1500);
+        }).catch(err => {
+            console.error('Clipboard copy failed:', err);
+        });
+    }
+</script>
 
             <!-- Right Column -->
 <div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end">
@@ -840,7 +880,7 @@
             <li><a href="company.html">About us</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="#careers">Careers</a></li>
+            <li><a href="coming-soon.html">Careers</a></li>
             <li><a href="contact.html">Contact us</a></li>
         </ul>
         <div class="social-icons d-flex justify-content-end gap-3">
@@ -856,10 +896,10 @@
 
         <!-- Bottom Footer -->
         <div class="bottom-footer pt-5">
-            <div class="container text-white">
+            <div class="container">
                 <div class="row align-items-end text-center text-md-start">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <p class="mb-0">© 2024–25 The Entity Studios</p>
+                    <div class="col-md-4 mb-3 mb-md-0 darkgrey">
+                        <p class="mb-0" style="color: #999999;">© 2024–25 The Entity Studios</p>
                     </div>
                     <div class="col-md-4 mb-3 mb-md-0 d-flex flex-column align-items-center">
                         <h3 class="d-flex align-items-center mb-1" style="font-size: 1.25rem; gap: 0.5rem;">
@@ -870,10 +910,10 @@
                         </h3>
                         <a href="https://trust.the-entity.studio/" target="_blank" rel="noopener noreferrer" class="mb-0">TPN Aligned | ISO/IEC 27001:2022 CERTIFIED</a>
                     </div>
-                    <div class="col-md-4 d-flex justify-content-center justify-content-md-end gap-3 flex-wrap small">
-                        <a href="termsandconditions.html" target="_blank" class="text-decoration-none text-white">Terms and Conditions</a>
-                        <a href="privacy-policy.html" target="_blank" class="text-decoration-none text-white">Privacy Policy</a>
-                        <a href="cookie-policy.html" target="_blank" class="text-decoration-none text-white">Cookie Policy</a>
+                    <div class="col-md-4 d-flex justify-content-center justify-content-md-end gap-3 flex-wrap small darkgrey">
+                        <a href="termsandconditions.html" target="_blank" class="text-decoration-none" style="color: #999999;">Terms and Conditions</a>
+                        <a href="privacy-policy.html" target="_blank" class="text-decoration-none" style="color: #999999;">Privacy Policy</a>
+                        <a href="cookie-policy.html" target="_blank" class="text-decoration-none" style="color: #999999;">Cookie Policy</a>
                     </div>
                 </div>
             </div>
@@ -887,7 +927,7 @@
   <div class="footer-wrapper justify-content-center">
     <div class="contact-info">
       <!-- Company Registration Details with Centered Text -->
-      <div class="justify-content-center flex-wrap gap-3 align-items-center" style="font-size: 12px;">
+      <div class="justify-content-center flex-wrap gap-3 align-items-center" style="font-size: 12px; color: #999999;">
         <span class="country">UK:</span> 
         <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
 
@@ -903,7 +943,6 @@
 
 
 </footer>
-
 
 
 

@@ -354,10 +354,11 @@ span {
 }
 .gt-about-wrapper .gt-about-content .gt-about-box-wrapper .gt-about-box-item .gt-about-box {
   display: flex;
-  max-width: 500px;
-  justify-content: center;
-  gap: 10px;
-  padding: 22px 10px;
+  max-width: 555px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 62px;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 1199px) {
@@ -9297,7 +9298,7 @@ span {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 0px 0;
 }
 @media (max-width: 1199px) {
   .section-padding {
@@ -12340,3 +12341,6 @@ svg #wheel {
 }
 
 
+.shadow-text {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
