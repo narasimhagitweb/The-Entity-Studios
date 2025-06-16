@@ -12344,3 +12344,21 @@ svg #wheel {
 .shadow-text {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
+
+
+
+
+.gt-service-details-section {
+  overflow: hidden;
+}
+
+.gt-service-details-wrapper {
+  min-height: 1000px; /* This ensures it doesn't shrink */
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .gt-service-details-wrapper {
+    min-height: 1200px; /* slightly more for stacked mobile layout */
+  }
+}
