@@ -511,13 +511,29 @@
     });
 </script>
 
+<style>
+    .responsive-hero {
+  background-image: url('assets/img/home-1/hero/project-bg.jpg'); /* Adjust if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 30vh; /* Mobile default */
+}
+
+/* For tablets and up (768px+) */
+@media (min-width: 768px) {
+  .responsive-hero {
+    min-height: 70vh;
+  }
+}
+
+</style>
+
         <div id="smooth-wrapper">
             <div id="smooth-content">
-<section class="hero-section hero-1" style=" min-height: 800px; background-image: url('assets/img/home-1/hero/project-bg.jpg');">
-</section>
+<section class="hero-section hero-1 responsive-hero"></section>
 
-
-<section>
+<section class="hide-on-small">
     <div class="d-flex justify-content-center align-items-center p-5">
   <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -531,20 +547,30 @@
 </section>
 
 <section>
-<div class="container py-5">
+  <div class="container py-5">
     <div class="gt-section-title-2 text-center">
-      <h6 class="subtitle tz-sub-tilte tz-sub-anim text-uppercase tx-subTitle">OUR</h6>
-      <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">PORTFOLIO</h2>
+      <h6 class="subtitle text-uppercase tx-subTitle mb-2">OUR</h6>
+      <h2 class="tx-title sec_title mb-4">PORTFOLIO</h2>
+
       <div class="gt-section-title">
-                        <h4 class="tx-title sec_title tz-itm-title tz-itm-anim">
-                            The Entity’s expert animators and technical artists specialize in <br>Maya, MotionBuilder, Blender, Unreal Engine,
-                            and Unity, delivering both stylized and realistic animations. <br>Our services include game-ready character animation,
-                            hand-keyed and motion-captured performances, <br>advanced rigging, and technical setups, enhanced by high-quality hair, cloth, and physics simulations.
-                        </h4>
-                        <a href="termsandconditions.html" style="font-size: 12px; text-transform: none; color: rgb(255, 255, 209);" class="py-4 text-center text-transform scale align-items-cen"><i class="fa-solid fa-circle-exclamation"></i>&nbsp;&nbsp;<span class="text-danger">T&C </span> This showreel highlights Entity Studios' work alongside our team’s prior industry experience.</a>
-                    </div>
+        <h4 class="tx-title sec_title mb-4" style="line-height: 1.7; font-weight: 400;">
+          The Entity’s expert animators and technical artists specialize in
+          Maya, MotionBuilder, Blender, Unreal Engine, and Unity, delivering both stylized and realistic animations.
+          <br class="d-none d-sm-block">
+          Our services include game-ready character animation, hand-keyed and motion-captured performances,
+          <br class="d-none d-sm-block">
+          advanced rigging, and technical setups, enhanced by high-quality hair, cloth, and physics simulations.
+        </h4>
+
+        <a href="termsandconditions.html"
+           class="d-block text-center"
+           style="font-size: 13px; text-transform: none; color: rgb(255, 255, 209);">
+          <i class="fa-solid fa-circle-exclamation"></i>&nbsp;&nbsp;
+          <span class="text-danger">T&amp;C</span> This showreel highlights Entity Studios' work alongside our team’s prior industry experience.
+        </a>
+      </div>
     </div>
-</div>
+  </div>
 </section>
 
 
@@ -749,7 +775,7 @@
 </style>
 
 <!-- GT Service-details Section Start -->
-<section class="gt-service-details-section section-padding fix">
+<section class="gt-service-details-section section-padding fix text-center">
   <div class="container">
     <div class="gt-service-details-wrapper">
 
@@ -757,7 +783,7 @@
       <div class="row justify-content-center">
         <div class="col-xl-12">
           <div class="gt-nav-items">
-            <ul class="nav" role="tablist">
+            <ul class="nav justify-content-center flex-wrap" role="tablist">
               <li class="nav-item">
                 <a href="#technical" data-bs-toggle="tab" class="nav-link active" role="tab">All</a>
               </li>
@@ -779,153 +805,125 @@
       </div>
 
       <!-- Tab Content -->
-      <div class="tab-content">
+      <div class="tab-content mt-4">
 
-        <!-- All Videos Grid: 2 Columns -->
+        <!-- All Videos -->
         <div id="technical" class="tab-pane fade show active">
           <div class="row justify-content-center">
             <div class="col-xl-12">
-              <div class="row">
-                <!-- Use col-md-6 for 2 columns -->
-                <!-- <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Cinematics And Gameplay.jpg');">
-                    <a href="https://player.vimeo.com/video/1072208957" class="video-btn ripple video-popup">
-                      <i class="fa-solid fa-play"></i>
-                    </a>
-                  </div>
-                </div> -->
-
-                <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Gameplay.jpg');">
+              <div class="row justify-content-center">
+                <!-- Each video column -->
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-4">
+                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Gameplay.jpg');">
                     <a href="https://player.vimeo.com/video/1072208625" class="video-btn ripple video-popup">
                       <i class="fa-solid fa-play"></i>
                     </a>
                   </div>
                 </div>
 
-                <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Cinematics And Facial.jpg');">
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-4">
+                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Cinematics And Facial.jpg');">
                     <a href="https://player.vimeo.com/video/1072208033" class="video-btn ripple video-popup">
                       <i class="fa-solid fa-play"></i>
                     </a>
                   </div>
                 </div>
 
-                <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Creature.jpg');">
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-4">
+                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Creature.jpg');">
                     <a href="https://player.vimeo.com/video/1072208221" class="video-btn ripple video-popup">
                       <i class="fa-solid fa-play"></i>
                     </a>
                   </div>
                 </div>
 
-                <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Mocap.jpg');">
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-4">
+                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Mocap.jpg');">
                     <a href="https://player.vimeo.com/video/1072208837" class="video-btn ripple video-popup">
                       <i class="fa-solid fa-play"></i>
                     </a>
                   </div>
                 </div>
 
-                <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/First Person.jpg');">
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-4">
+                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/First Person.jpg');">
                     <a href="https://player.vimeo.com/video/1072208380" class="video-btn ripple video-popup">
                       <i class="fa-solid fa-play"></i>
                     </a>
                   </div>
                 </div>
 
-
-                <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Tech.jpg');">
+                <div class="col-sm-12 col-md-6 col-lg-6 mb-4">
+                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Tech.jpg');">
                     <a href="https://player.vimeo.com/video/1072209213" class="video-btn ripple video-popup">
                       <i class="fa-solid fa-play"></i>
                     </a>
                   </div>
                 </div>
 
-
-                <!-- <div class="col-xl-12 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Tech.jpg');">
-                    <a href="https://player.vimeo.com/video/1072209213" class="video-btn ripple video-popup">
-                      <i class="fa-solid fa-play"></i>
-                    </a>
-                  </div>
-                </div> -->
-              </div> <!-- End .row -->
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- cinematics Placeholder -->
+        <!-- Cinematics -->
         <div id="cinematics" class="tab-pane fade">
           <div class="row justify-content-center">
-            <div class="col-xl-10">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Cinematics And Facial.jpg');">
-                    <a href="https://player.vimeo.com/video/1072208033" class="video-btn ripple video-popup">
-                      <i class="fa-solid fa-play"></i>
-                    </a>
-                  </div>
-                </div>
+            <div class="col-md-10">
+              <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Cinematics And Facial.jpg');">
+                <a href="https://player.vimeo.com/video/1072208033" class="video-btn ripple video-popup">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
 
-        <!-- Motion Capture Placeholder -->
+        <!-- Mocap -->
         <div id="work" class="tab-pane fade">
           <div class="row justify-content-center">
-            <div class="col-xl-10">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Mocap.jpg');">
-                    <a href="https://player.vimeo.com/video/1072208837" class="video-btn ripple video-popup">
-                      <i class="fa-solid fa-play"></i>
-                    </a>
-                  </div>
+            <div class="col-md-10">
+              <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Mocap.jpg');">
+                <a href="https://player.vimeo.com/video/1072208837" class="video-btn ripple video-popup">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Gameplay Placeholder -->
+        <!-- Gameplay -->
         <div id="ambition" class="tab-pane fade">
           <div class="row justify-content-center">
-                <!-- Use col-md-6 for 2 columns -->
-                <!-- <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Cinematics And Gameplay.jpg');">
-                    <a href="https://player.vimeo.com/video/1072208957" class="video-btn ripple video-popup">
-                      <i class="fa-solid fa-play"></i>
-                    </a>
-                  </div>
-                </div> -->
-
-                <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Gameplay.jpg');">
-                    <a href="https://player.vimeo.com/video/1072208625" class="video-btn ripple video-popup">
-                      <i class="fa-solid fa-play"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Creature.jpg');">
-                    <a href="https://player.vimeo.com/video/1072208221" class="video-btn ripple video-popup">
-                      <i class="fa-solid fa-play"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-md-6 mb-4">
-                  <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/First Person.jpg');">
-                    <a href="https://player.vimeo.com/video/1072208380" class="video-btn ripple video-popup">
-                      <i class="fa-solid fa-play"></i>
-                    </a>
-                  </div>
-                </div>
+            <div class="col-md-6 mb-4">
+              <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Gameplay.jpg');">
+                <a href="https://player.vimeo.com/video/1072208625" class="video-btn ripple video-popup">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Creature.jpg');">
+                <a href="https://player.vimeo.com/video/1072208221" class="video-btn ripple video-popup">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/First Person.jpg');">
+                <a href="https://player.vimeo.com/video/1072208380" class="video-btn ripple video-popup">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Tech Art Tab with Single Video -->
+        <!-- Tech Art -->
         <div id="skill" class="tab-pane fade">
           <div class="row justify-content-center">
-            <div class="col-xl-10">
-              <div class="gt-video-wrapper" style="background-image: url('assets/img/inner-page/thumbnails/Tech.jpg');">
+            <div class="col-md-10">
+              <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Tech.jpg');">
                 <a href="https://player.vimeo.com/video/1072209213" class="video-btn ripple video-popup">
                   <i class="fa-solid fa-play"></i>
                 </a>
@@ -934,7 +932,7 @@
           </div>
         </div>
 
-      </div> <!-- End Tab Content -->
+      </div> <!-- End .tab-content -->
 
     </div>
   </div>
@@ -1340,7 +1338,7 @@
         <div class="row">
             <!-- Left Column -->
 <div class="col-lg-8 col-md-8">
-    <div class="d-flex align-items-center mb-3">
+    <div class="d-flex justify-content-center justify-content-md-start align-items-center mb-3">
         <a href="home.html" class="header-logo">
             <img src="assets/img/logo/black-logo.png" alt="logo-img">
         </a>
@@ -1353,8 +1351,7 @@
     <div class="contact-info mb-3">
         <h6 style="display: inline-flex; align-items: center; white-space: nowrap; margin: 0;">
             <i class="fas fa-envelope me-2"></i>
-            <span style="text-decoration: none; color: inherit; cursor: pointer;"
-                  onclick="copyToClipboard('contact@entity.ltd')">
+            <span style="text-decoration: none; color: inherit; cursor: pointer;" onclick="copyToClipboard('contact@entity.ltd')">
                 contact@entity.ltd
             </span>
         </h6>
@@ -1379,8 +1376,8 @@
 </script>
 
             <!-- Right Column -->
-<div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end">
-    <div class="footer-links-section text-end">
+<div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end justify-content-md-end justify-content-center">
+    <div class="footer-links-section text-end text-md-end text-center w-100">
         <ul class="footer-links list-unstyled mb-4">
             <li><a href="home.html">Home</a></li>
             <li><a href="company.html">About us</a></li>
@@ -1389,7 +1386,7 @@
             <li><a href="coming-soon.html">Careers</a></li>
             <li><a href="contact.html">Contact us</a></li>
         </ul>
-        <div class="social-icons d-flex justify-content-end gap-3">
+        <div class="social-icons d-flex justify-content-end justify-content-md-end justify-content-center gap-3">
             <a href="https://vimeo.com/showcase/11651929" target="_blank" class="twitter">
                 <i class="fab fa-vimeo"></i>
             </a>
@@ -1399,6 +1396,7 @@
         </div>
     </div>
 </div>
+
 
         <!-- Bottom Footer -->
         <div class="bottom-footer pt-5">
@@ -1428,20 +1426,37 @@
 
     </div>
 
-                    <!-- Footer Bottom Section -->
+<!-- Footer Bottom Section -->
 <div class="footer-bottom wow fadeInUp" data-wow-delay=".3s" style="padding: 20px 0; text-align: center;">
   <div class="footer-wrapper justify-content-center">
     <div class="contact-info">
-      <!-- Company Registration Details with Centered Text -->
-      <div class="justify-content-center flex-wrap gap-3 align-items-center" style="font-size: 12px; color: #999999;">
-        <span class="country">UK:</span> 
-        <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+      <!-- Force column on mobile, row on md+ -->
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2" style="font-size: 12px; color: #999999;">
+        
+        <!-- UK -->
+        <div>
+          <span class="country">UK:</span> 
+          <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]
+        </div>
 
-        <span class="country">EU:</span> 
-        <span class="ms-1 me-1">The Entity OÜ</span>  [Reg No: 16925243]<span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
 
-        <span class="country">India:</span> 
-        <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        <!-- EU -->
+        <div>
+          <span class="country">EU:</span> 
+          <span class="ms-1 me-1">The Entity OÜ</span> [Reg No: 16925243]
+        </div>
+
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
+
+        <!-- India -->
+        <div>
+          <span class="country">India:</span> 
+          <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        </div>
+
       </div>
     </div>
   </div>

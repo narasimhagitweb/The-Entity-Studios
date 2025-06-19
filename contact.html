@@ -707,6 +707,7 @@ At The Entity Studios, we’re not just vendors, we’re creative partners. Whet
     background-color: #1c1d20;
     text-transform: none;
     color: #ffffff;
+    padding-top: 3dvh;
 }
 
 .entity-footer .footer-description {
@@ -940,9 +941,8 @@ At The Entity Studios, we’re not just vendors, we’re creative partners. Whet
 </style>
 
 <!-- GT Footer Section Start -->
-<footer class="entity-footer gt-footer-section" style="padding-top: 8dvh;">
+<footer class="entity-footer gt-footer-section">
     <div class="container">
-
 
 
 
@@ -950,7 +950,7 @@ At The Entity Studios, we’re not just vendors, we’re creative partners. Whet
         <div class="row">
             <!-- Left Column -->
 <div class="col-lg-8 col-md-8">
-    <div class="d-flex align-items-center mb-3">
+    <div class="d-flex justify-content-center justify-content-md-start align-items-center mb-3">
         <a href="home.html" class="header-logo">
             <img src="assets/img/logo/black-logo.png" alt="logo-img">
         </a>
@@ -963,8 +963,7 @@ At The Entity Studios, we’re not just vendors, we’re creative partners. Whet
     <div class="contact-info mb-3">
         <h6 style="display: inline-flex; align-items: center; white-space: nowrap; margin: 0;">
             <i class="fas fa-envelope me-2"></i>
-            <span style="text-decoration: none; color: inherit; cursor: pointer;"
-                  onclick="copyToClipboard('contact@entity.ltd')">
+            <span style="text-decoration: none; color: inherit; cursor: pointer;" onclick="copyToClipboard('contact@entity.ltd')">
                 contact@entity.ltd
             </span>
         </h6>
@@ -989,8 +988,8 @@ At The Entity Studios, we’re not just vendors, we’re creative partners. Whet
 </script>
 
             <!-- Right Column -->
-<div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end">
-    <div class="footer-links-section text-end">
+<div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end justify-content-md-end justify-content-center">
+    <div class="footer-links-section text-end text-md-end text-center w-100">
         <ul class="footer-links list-unstyled mb-4">
             <li><a href="home.html">Home</a></li>
             <li><a href="company.html">About us</a></li>
@@ -999,7 +998,7 @@ At The Entity Studios, we’re not just vendors, we’re creative partners. Whet
             <li><a href="coming-soon.html">Careers</a></li>
             <li><a href="contact.html">Contact us</a></li>
         </ul>
-        <div class="social-icons d-flex justify-content-end gap-3">
+        <div class="social-icons d-flex justify-content-end justify-content-md-end justify-content-center gap-3">
             <a href="https://vimeo.com/showcase/11651929" target="_blank" class="twitter">
                 <i class="fab fa-vimeo"></i>
             </a>
@@ -1009,6 +1008,7 @@ At The Entity Studios, we’re not just vendors, we’re creative partners. Whet
         </div>
     </div>
 </div>
+
 
         <!-- Bottom Footer -->
         <div class="bottom-footer pt-5">
@@ -1038,20 +1038,37 @@ At The Entity Studios, we’re not just vendors, we’re creative partners. Whet
 
     </div>
 
-                    <!-- Footer Bottom Section -->
+<!-- Footer Bottom Section -->
 <div class="footer-bottom wow fadeInUp" data-wow-delay=".3s" style="padding: 20px 0; text-align: center;">
   <div class="footer-wrapper justify-content-center">
     <div class="contact-info">
-      <!-- Company Registration Details with Centered Text -->
-      <div class="justify-content-center flex-wrap gap-3 align-items-center" style="font-size: 12px; color: #999999;">
-        <span class="country">UK:</span> 
-        <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+      <!-- Force column on mobile, row on md+ -->
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2" style="font-size: 12px; color: #999999;">
+        
+        <!-- UK -->
+        <div>
+          <span class="country">UK:</span> 
+          <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]
+        </div>
 
-        <span class="country">EU:</span> 
-        <span class="ms-1 me-1">The Entity OÜ</span>  [Reg No: 16925243]<span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
 
-        <span class="country">India:</span> 
-        <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        <!-- EU -->
+        <div>
+          <span class="country">EU:</span> 
+          <span class="ms-1 me-1">The Entity OÜ</span> [Reg No: 16925243]
+        </div>
+
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
+
+        <!-- India -->
+        <div>
+          <span class="country">India:</span> 
+          <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        </div>
+
       </div>
     </div>
   </div>
@@ -1059,6 +1076,7 @@ At The Entity Studios, we’re not just vendors, we’re creative partners. Whet
 
 
 </footer>
+
 <div style="padding: 50px;">
 
 </div>

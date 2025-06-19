@@ -511,16 +511,32 @@
 
 
 
+<style>
+    .responsive-hero {
+  background-image: url('assets/img/home-1/hero/services-bg.jpg'); /* Adjust if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 30vh; /* Mobile default */
+}
 
+/* For tablets and up (768px+) */
+@media (min-width: 768px) {
+  .responsive-hero {
+    min-height: 70vh;
+  }
+}
+
+</style>
 
         <div id="smooth-wrapper">
             <div id="smooth-content">
-
-<section class="hero-section hero-1" style=" min-height: 800px; background-image: url('assets/img/home-1/hero/services-bg.jpg');">
-</section>
+<section class="hero-section hero-1 responsive-hero"></section>
 
 
-<section>
+
+
+<section class="hide-on-small">
     <div class="d-flex justify-content-center align-items-center p-5">
   <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -600,82 +616,98 @@
 
 
 
-        <!-- GT About Section Start -->
-        <section class="gt-about-section fix section-padding py-3">
-            <h2 class="text">
-                The Entity <br>
-                Studios
-            </h2>
-            <div class="left-shape">
-                <img src="assets/img/home-1/about/shape-1.png" alt="img">
-            </div>
-            <div class="container py-5">
-                <div class="gt-about-wrapper">
-                    <div class="row g-4 align-items-center justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="gt-about-content">
-                                <div class="gt-section-title mb-0">
-                                    <h2 class="text-start tx-title sec_title  tz-itm-title tz-itm-anim">
-                                        <span class="color-red">Precision </span> Meets
-                                    </h2>
-                                    <h2 class="text-start" style="padding-left: 25dvh;"> <span class="color-red">Production</span> </h2>
-                                </div>
-                               <div class="gt-about-box-wrapper top_view_2 item-hover">
-                                    <div class="gt-about-box-item">
-                                    <div class="gt-about-box bg-color">
-                                        <div class="icon">
-                                            <img src="assets/img/home-1/icon/icon-5.svg" alt="img">
+<!-- GT About Section Start -->
+<section class="gt-about-section fix section-padding py-3 position-relative overflow-hidden text-center">
+    <!-- Main Heading -->
+    <h2 class="text px-3 mb-4">
+        The Entity <br> Studios
+    </h2>
+
+    <!-- Decorative Shape -->
+    <div class="left-shape position-absolute bottom-0 start-0 z-n1 d-none d-md-block">
+        <img src="assets/img/home-1/about/shape-1.png" alt="img" class="img-fluid">
+    </div>
+
+    <!-- Content Container -->
+    <div class="container py-5">
+        <div class="gt-about-wrapper">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-10">
+                    <div class="gt-about-content">
+                        <!-- Section Title -->
+                        <div class="gt-section-title mb-5">
+                            <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">
+                                <span class="color-red">Precision</span> Meets
+                            </h2>
+                            <h2 class="mt-2">
+                                <span class="color-red">Production</span>
+                            </h2>
+                        </div>
+
+                        <!-- About Boxes Wrapper -->
+                        <div class="gt-about-box-wrapper top_view_2 item-hover">
+                            <!-- Row 1 -->
+                            <div class="gt-about-box-item row g-4 justify-content-center">
+                                <!-- Box 1 -->
+                                <div class="col-md-6">
+                                    <div class="gt-about-box bg-color p-4 h-100 rounded">
+                                        <div class="icon mb-3">
+                                            <img src="assets/img/home-1/icon/icon-5.svg" alt="Scalable teams" class="img-fluid">
                                         </div>
                                         <div class="content">
                                             <h5>Scalable teams</h5>
-                                            <p>
-                                                that plug directly into your pipeline
-                                            </p>
+                                            <p>that plug directly into your pipeline</p>
                                         </div>
                                     </div>
-                                    <div class="gt-about-box border-none">
-                                        <div class="icon">
-                                            <img src="assets/img/home-1/icon/icon-2.svg" alt="img">
+                                </div>
+                                <!-- Box 2 -->
+                                <div class="col-md-6">
+                                    <div class="gt-about-box border-none p-4 h-100 rounded">
+                                        <div class="icon mb-3">
+                                            <img src="assets/img/home-1/icon/icon-2.svg" alt="Engine-native expertise" class="img-fluid">
                                         </div>
                                         <div class="content">
                                             <h5>Engine-native expertise</h5>
-                                            <p>
-                                                across Unreal and Unity
-                                            </p>
+                                            <p>across Unreal and Unity</p>
                                         </div>
                                     </div>
-                                    </div>
-                                   <div class="gt-about-box-item">
-                                    <div class="gt-about-box">
-                                        <div class="icon">
-                                            <img src="assets/img/home-1/icon/icon-3.svg" alt="img">
+                                </div>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="gt-about-box-item row g-4 justify-content-center mt-3">
+                                <!-- Box 3 -->
+                                <div class="col-md-6">
+                                    <div class="gt-about-box p-4 h-100 rounded">
+                                        <div class="icon mb-3">
+                                            <img src="assets/img/home-1/icon/icon-3.svg" alt="Proven track record" class="img-fluid">
                                         </div>
                                         <div class="content">
                                             <h5>Proven track record</h5>
-                                            <p>
-                                                with top studios and publishers
-                                            </p>
+                                            <p>with top studios and publishers</p>
                                         </div>
                                     </div>
-                                    <div class="gt-about-box border-none bg-color">
-                                        <div class="icon">
-                                            <img src="assets/img/home-1/icon/icon-8.svg" alt="img">
+                                </div>
+                                <!-- Box 4 -->
+                                <div class="col-md-6">
+                                    <div class="gt-about-box border-none bg-color p-4 h-100 rounded">
+                                        <div class="icon mb-3">
+                                            <img src="assets/img/home-1/icon/icon-8.svg" alt="Secure global operations" class="img-fluid">
                                         </div>
                                         <div class="content">
-                                            <h5>Secure global operations </h5>
-                                            <p>
-                                                built for compliance and delivery
-                                            </p>
+                                            <h5>Secure global operations</h5>
+                                            <p>built for compliance and delivery</p>
                                         </div>
                                     </div>
-                                   </div>
-                               </div>
+                                </div>
                             </div>
-                        </div>
+                        </div> <!-- Wrapper End -->
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
 
 
@@ -1476,7 +1508,7 @@
         <div class="row">
             <!-- Left Column -->
 <div class="col-lg-8 col-md-8">
-    <div class="d-flex align-items-center mb-3">
+    <div class="d-flex justify-content-center justify-content-md-start align-items-center mb-3">
         <a href="home.html" class="header-logo">
             <img src="assets/img/logo/black-logo.png" alt="logo-img">
         </a>
@@ -1489,8 +1521,7 @@
     <div class="contact-info mb-3">
         <h6 style="display: inline-flex; align-items: center; white-space: nowrap; margin: 0;">
             <i class="fas fa-envelope me-2"></i>
-            <span style="text-decoration: none; color: inherit; cursor: pointer;"
-                  onclick="copyToClipboard('contact@entity.ltd')">
+            <span style="text-decoration: none; color: inherit; cursor: pointer;" onclick="copyToClipboard('contact@entity.ltd')">
                 contact@entity.ltd
             </span>
         </h6>
@@ -1515,8 +1546,8 @@
 </script>
 
             <!-- Right Column -->
-<div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end">
-    <div class="footer-links-section text-end">
+<div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end justify-content-md-end justify-content-center">
+    <div class="footer-links-section text-end text-md-end text-center w-100">
         <ul class="footer-links list-unstyled mb-4">
             <li><a href="home.html">Home</a></li>
             <li><a href="company.html">About us</a></li>
@@ -1525,7 +1556,7 @@
             <li><a href="coming-soon.html">Careers</a></li>
             <li><a href="contact.html">Contact us</a></li>
         </ul>
-        <div class="social-icons d-flex justify-content-end gap-3">
+        <div class="social-icons d-flex justify-content-end justify-content-md-end justify-content-center gap-3">
             <a href="https://vimeo.com/showcase/11651929" target="_blank" class="twitter">
                 <i class="fab fa-vimeo"></i>
             </a>
@@ -1535,6 +1566,7 @@
         </div>
     </div>
 </div>
+
 
         <!-- Bottom Footer -->
         <div class="bottom-footer pt-5">
@@ -1564,20 +1596,37 @@
 
     </div>
 
-                    <!-- Footer Bottom Section -->
+<!-- Footer Bottom Section -->
 <div class="footer-bottom wow fadeInUp" data-wow-delay=".3s" style="padding: 20px 0; text-align: center;">
   <div class="footer-wrapper justify-content-center">
     <div class="contact-info">
-      <!-- Company Registration Details with Centered Text -->
-      <div class="justify-content-center flex-wrap gap-3 align-items-center" style="font-size: 12px; color: #999999;">
-        <span class="country">UK:</span> 
-        <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+      <!-- Force column on mobile, row on md+ -->
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2" style="font-size: 12px; color: #999999;">
+        
+        <!-- UK -->
+        <div>
+          <span class="country">UK:</span> 
+          <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]
+        </div>
 
-        <span class="country">EU:</span> 
-        <span class="ms-1 me-1">The Entity OÜ</span>  [Reg No: 16925243]<span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
 
-        <span class="country">India:</span> 
-        <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        <!-- EU -->
+        <div>
+          <span class="country">EU:</span> 
+          <span class="ms-1 me-1">The Entity OÜ</span> [Reg No: 16925243]
+        </div>
+
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
+
+        <!-- India -->
+        <div>
+          <span class="country">India:</span> 
+          <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        </div>
+
       </div>
     </div>
   </div>

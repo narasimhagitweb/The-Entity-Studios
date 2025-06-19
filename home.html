@@ -371,7 +371,7 @@
             padding: 5px 0; /* Smaller padding for phones when scrolled */
         }
         .logo.initial-large img {
-            height: 60px; /* Initial LARGER logo height for phones */
+            height: 85px; /* Initial LARGER logo height for phones */
         }
         .logo img {
             height: 40px; /* Normal logo height for phones (scrolled state) */
@@ -521,28 +521,85 @@
 
         <div id="smooth-wrapper">
             <div id="smooth-content">
-<section class="hero-section hero-1 fix bg-cover" style="background-image: url('assets/img/home-1/hero/hero-bg.jpg');">
+<section class="hero-section hero-1 fix bg-cover" style="background-image: url('assets/img/home-1/hero/hero-bg.jpg'); background-size: cover; background-position: center;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Hero Image Section -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0 d-flex justify-content-center justify-content-lg-start">
+        <div class="hero-image wow animated-image text-center w-100">
+          <img src="assets/img/home-1/hero/hammer.png" alt="overlay" class="overlay-img img-fluid" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <!-- Hero Text Content -->
+      <div class="col-lg-8 col-md-6 text-center text-lg-start">
+        <div class="hero-content">
+          <h1 class="wow animated-image fs-2 fs-md-1">
+            Bring the Best and Brightest to Your Game
+          </h1>
+          <h6 class="wow animated-image fs-5 fs-md-4 mt-3">
+            Let’s collaborate to accelerate your game development with confidence and unmatched flexibility.
+          </h6>
+          <div class="gt-hero-button wow animated-image mt-4">
+            <a href="company.html" class="gt-theme-btn btn px-4 py-2">
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- GT About Section Start -->
+
+<section class="gt-about-section fix section-padding py-5">
+    <h2 class="text">
+        The <br>
+        Entity
+    </h2>
+    <div class="left-shape">
+        <img src="assets/img/home-1/about/shape-1.png" alt="img">
+    </div>
     <div class="container">
-        <div class="row align-items-center">
-            <!-- Hero Image Section -->
-            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex align-items-end">
-                <div class="hero-image wow animated-image text-center text-lg-start w-100">
-                    <img src="assets/img/home-1/hero/hammer.png" alt="overlay" class="overlay-img">
+        <div class="gt-about-wrapper">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="gt-about-content">
+                        <div class="gt-section-title mb-0">
+                            <h6 class="subtitle tz-sub-tilte tz-sub-anim  text-uppercase tx-subTitle">
+                               about us
+                            </h6>
+                            <h2 class="tx-title sec_title  tz-itm-title tz-itm-anim">
+                                AAA VETERANS<br>
+                                <span>ELITE GAME ANIMATION</span>
+                            </h2>
+                        </div>
+                        <h5 class="gt-about-text top_view_2 item-hover">
+                            The Entity Studios delivers production-ready animation pipelines for some of the world’s leading
+                            game developers. We specialize in character setup, motion capture, and full-stack animation workflows
+                            that integrate directly into your development pipeline, delivering consistent, scalable results at studio-grade quality.
+                        </h5>
+                    </div>
                 </div>
-            </div>
-
-
-            <!-- Hero Text Content -->
-            <div class="col-lg-8 col-md-6">
-                <div class="hero-content">
-                    <h1 class="wow animated-image">
-                        Bring the Best and Brightest to Your Game
-                    </h1>
-                    <h6 class="wow animated-image fs-4">
-                        Let’s collaborate to accelerate your game development with confidence and unmatched flexibility.
-                    </h6>
-                    <div class="gt-hero-button wow animated-image mt-3">
-                        <a href="company.html" class="gt-theme-btn">Learn more</a>
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-xl-7 col-lg-12 col-md-7">
+                           <div class="fix">
+                             <div class="gt-about-image left_view">
+                                <img src="assets/img/home-1/about/about-1.png" alt="img">
+                            </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-12 col-md-5">
+                            <div class="gt-about-image gt-about-image-2 top_view">
+                                <img src="assets/img/home-1/about/about-2.png" alt="img">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -550,60 +607,36 @@
     </div>
 </section>
 
+<style>
+  @media (max-width: 991.98px) {
+    /* Make the main row stack vertically */
+    .gt-about-wrapper > .row.g-4 {
+      display: flex;
+      flex-direction: column;
+    }
 
+    /* Text content in the middle */
+    .gt-about-wrapper > .row.g-4 > .col-lg-5 {
+      order: 2;
+    }
 
+    /* Right column as flex column to stack images */
+    .gt-about-wrapper > .row.g-4 > .col-lg-7 {
+      display: flex;
+      flex-direction: column;
+    }
 
-        <!-- GT About Section Start -->
+    /* Image 1 on top */
+    .gt-about-wrapper > .row.g-4 > .col-lg-7 > .row > .col-xl-7 {
+      order: 1;
+    }
 
-        <section class="gt-about-section fix section-padding py-5">
-            <h2 class="text">
-                The <br>
-                Entity
-            </h2>
-            <div class="left-shape">
-                <img src="assets/img/home-1/about/shape-1.png" alt="img">
-            </div>
-            <div class="container">
-                <div class="gt-about-wrapper">
-                    <div class="row g-4">
-                        <div class="col-lg-5">
-                            <div class="gt-about-content">
-                                <div class="gt-section-title mb-0">
-                                    <h6 class="subtitle tz-sub-tilte tz-sub-anim  text-uppercase tx-subTitle">
-                                       about us
-                                    </h6>
-                                    <h2 class="tx-title sec_title  tz-itm-title tz-itm-anim">
-                                        AAA VETERANS<br>
-                                        <span>ELITE GAME ANIMATION</span>
-                                    </h2>
-                                </div>
-                                <h5 class="gt-about-text top_view_2 item-hover">
-                                    The Entity Studios delivers production-ready animation pipelines for some of the world’s leading
-                                    game developers. We specialize in character setup, motion capture, and full-stack animation workflows
-                                    that integrate directly into your development pipeline, delivering consistent, scalable results at studio-grade quality.
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="row g-4">
-                                <div class="col-xl-7 col-lg-12 col-md-7">
-                                   <div class="fix">
-                                     <div class="gt-about-image left_view">
-                                        <img src="assets/img/home-1/about/about-1.png" alt="img">
-                                    </div>
-                                   </div>
-                                </div>
-                                <div class="col-xl-5 col-lg-12 col-md-5">
-                                    <div class="gt-about-image gt-about-image-2 top_view">
-                                        <img src="assets/img/home-1/about/about-2.png" alt="img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    /* Image 2 below */
+    .gt-about-wrapper > .row.g-4 > .col-lg-7 > .row > .col-xl-5 {
+      order: 3;
+    }
+  }
+</style>
 
 
 
@@ -651,24 +684,25 @@
             </div>
         </div>
 
-                       <!-- GT Game Section Start -->
-       <section class="gt-game-section section-padding fix">
-            <div class="container p-5">
-                <div class="gt-section-title-2 text-center">
-                    <h6 class="subtitle tz-sub-tilte tz-sub-anim  text-uppercase tx-subTitle">The Entity Studios</h6>
-                    <h2 class="tx-title sec_title  tz-itm-title tz-itm-anim">
-                        Origins
-                    </h2>
-                </div>
-                <div class="gt-about-text top_view_2 item-hover">
-                    <h4 class="text-center mt-4">
-                        The Entity Studios is a newly established game animation studio, founded by AAA veterans </h4>
-                    <h4 class="text-center"> a vision to bring top-tier animation to game developers worldwide. While we are young as a company,</h4>
-                    <h4 class="text-center"> our team has decades of experience working on industry-leading titles.</h4>
+<!-- GT Game Section Start -->
+<section class="gt-game-section section-padding fix">
+  <div class="container p-3 p-md-5">
+    <div class="gt-section-title-2 text-center">
+      <h6 class="subtitle tz-sub-tilte tz-sub-anim text-uppercase tx-subTitle fs-6 fs-md-4">
+        The Entity Studios
+      </h6>
+      <h2 class="tx-title sec_title tz-itm-title tz-itm-anim fs-4 fs-md-2 py-3">
+        Origins
+      </h2>
+    </div>
+    <div class="gt-about-text top_view_2 item-hover">
+      <h4 class="text-center mx-auto" style="width: 80vw; max-width: 100%; font-size: 1rem; font-size: 1.25rem;">
+        The Entity Studios is a newly established game animation studio, founded by AAA veterans — a vision to bring top-tier animation to game developers worldwide. While we are young as a company, our team has decades of experience working on industry-leading titles.
+      </h4>
+    </div>
+  </div>
+</section>
 
-                </div>
-            </div>
-       </section>
 
 
 <!-- GT Game-bg Section Start -->
@@ -721,83 +755,87 @@
 
 
 
-         <!-- GT Approach Section Start -->
-                 <section class="gt-game-section section-padding fix">
-            <div class="container p-5">
-                <div class="gt-section-title-2 text-center">
-                    <h6 class="subtitle tz-sub-tilte tz-sub-anim  text-uppercase tx-subTitle">Our</h6>
-                    <h2 class="tx-title sec_title tz-itm-title tz-itm-anim" style="padding-bottom: 4dvh;">
-                        Approach
-                    </h2>
-                    <section class=" gt-about-section ">
-                        <div class="container">
-                            <div class="gt-about-wrapper">
-                                <div class="row g-4 justify-content-center">
-                                    <div class="col-lg-12">
-                                        <div class="gt-about-content">
-                                            <div class="gt-about-box-wrapper top_view_2 item-hovefr">
-                                                <div class="gt-about-box-item">
-                                                    <div class="gt-about-box bg-color">
-                                                        <div class="icon">
-                                                            <img src="assets/img/home-1/icon/icon-1.svg" alt="img">
-                                                        </div>
-                                                        <div class="content">
-                                                            <h3 class="py-3">Share Your Vision</h3>
-                                                            <p>
-                                                                Start by sharing your project goals, style, and animation needs.
-                                                                We take time to fully understand your creative direction and production scope.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="gt-about-box border-none">
-                                                        <div class="icon">
-                                                            <img src="assets/img/home-1/icon/icon-2.svg" alt="img">
-                                                        </div>
-                                                        <div class="content">
-                                                            <h3 class="py-3">We Assemble Your Team</h3>
-                                                            <p>
-                                                                We build a flexible production team with the right mix of experienced animators,
-                                                                mocap specialists, and technical artists tailored specifically for your project.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gt-about-box-item">
-                                                    <div class="gt-about-box">
-                                                        <div class="icon">
-                                                            <img src="assets/img/home-1/icon/icon-3.svg" alt="img">
-                                                        </div>
-                                                        <div class="content">
-                                                            <h3 class="py-3">Development</h3>
-                                                            <p>
-                                                                From mocap cleanup to keyframe animation and rigging, our team works closely with your
-                                                                studio to ensure smooth production and creative alignment at every stage.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="gt-about-box border-none bg-color">
-                                                        <div class="icon">
-                                                            <img src="assets/img/home-1/icon/icon-4.svg" alt="img">
-                                                        </div>
-                                                        <div class="content">
-                                                            <h3 class="py-3">Seamless Delivery</h3>
-                                                            <p>
-                                                                We deliver polished, production-ready assets on schedule and fully integrated with your
-                                                                pipeline — keeping your project on track.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- End of gt-about-box-wrapper -->
-                                        </div> <!-- End of gt-about-content -->
-                                    </div> <!-- End of col-lg-5 -->
-                                </div> <!-- End of row -->
-                            </div> <!-- End of gt-about-wrapper -->
-                        </div> <!-- End of container -->
-                    </section>
-                </div>
+<!-- GT Approach Section Start -->
+<section class="gt-game-section section-padding fix">
+  <div class="container py-5">
+    <div class="gt-section-title-2 text-center">
+      <h6 class="subtitle text-uppercase tx-subTitle mb-2">Our</h6>
+      <h2 class="tx-title sec_title mb-5">Approach</h2>
+    </div>
+
+    <div class="gt-about-wrapper">
+      <div class="gt-about-box-wrapper top_view_2 item-dhover">
+        <div class="row gy-4 text-center">
+
+          <!-- Box 1 -->
+          <div class="col-md-6">
+            <div class="gt-about-box bg-color h-100 p-4">
+              <div class="icon mb-3">
+                <img src="assets/img/home-1/icon/icon-1.svg" alt="Share Your Vision" class="img-fluid mx-auto d-block">
+              </div>
+              <div class="content">
+                <h3 class="py-3">Share Your Vision</h3>
+                <p>
+                  Start by sharing your project goals, style, and animation needs.
+                  We take time to fully understand your creative direction and production scope.
+                </p>
+              </div>
             </div>
-       </section>
+          </div>
+
+          <!-- Box 2 -->
+          <div class="col-md-6">
+            <div class="gt-about-box border-none h-100 p-4">
+              <div class="icon mb-3">
+                <img src="assets/img/home-1/icon/icon-2.svg" alt="We Assemble Your Team" class="img-fluid mx-auto d-block">
+              </div>
+              <div class="content">
+                <h3 class="py-3">We Assemble Your Team</h3>
+                <p>
+                  We build a flexible production team with the right mix of experienced animators,
+                  mocap specialists, and technical artists tailored specifically for your project.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box 3 -->
+          <div class="col-md-6">
+            <div class="gt-about-box h-100 p-4">
+              <div class="icon mb-3">
+                <img src="assets/img/home-1/icon/icon-3.svg" alt="Development" class="img-fluid mx-auto d-block">
+              </div>
+              <div class="content">
+                <h3 class="py-3">Development</h3>
+                <p>
+                  From mocap cleanup to keyframe animation and rigging, our team works closely with your
+                  studio to ensure smooth production and creative alignment at every stage.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box 4 -->
+          <div class="col-md-6">
+            <div class="gt-about-box border-none bg-color h-100 p-4">
+              <div class="icon mb-3">
+                <img src="assets/img/home-1/icon/icon-4.svg" alt="Seamless Delivery" class="img-fluid mx-auto d-block">
+              </div>
+              <div class="content">
+                <h3 class="py-3">Seamless Delivery</h3>
+                <p>
+                  We deliver polished, production-ready assets on schedule and fully integrated with your
+                  pipeline — keeping your project on track.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- End .row -->
+      </div> <!-- End .gt-about-box-wrapper -->
+    </div> <!-- End .gt-about-wrapper -->
+  </div>
+</section>
 
 
                      <!-- GT Commitment Section Start -->
@@ -1364,7 +1402,7 @@
         <div class="row">
             <!-- Left Column -->
 <div class="col-lg-8 col-md-8">
-    <div class="d-flex align-items-center mb-3">
+    <div class="d-flex justify-content-center justify-content-md-start align-items-center mb-3">
         <a href="home.html" class="header-logo">
             <img src="assets/img/logo/black-logo.png" alt="logo-img">
         </a>
@@ -1377,8 +1415,7 @@
     <div class="contact-info mb-3">
         <h6 style="display: inline-flex; align-items: center; white-space: nowrap; margin: 0;">
             <i class="fas fa-envelope me-2"></i>
-            <span style="text-decoration: none; color: inherit; cursor: pointer;"
-                  onclick="copyToClipboard('contact@entity.ltd')">
+            <span style="text-decoration: none; color: inherit; cursor: pointer;" onclick="copyToClipboard('contact@entity.ltd')">
                 contact@entity.ltd
             </span>
         </h6>
@@ -1453,20 +1490,37 @@
 
     </div>
 
-                    <!-- Footer Bottom Section -->
+<!-- Footer Bottom Section -->
 <div class="footer-bottom wow fadeInUp" data-wow-delay=".3s" style="padding: 20px 0; text-align: center;">
   <div class="footer-wrapper justify-content-center">
     <div class="contact-info">
-      <!-- Company Registration Details with Centered Text -->
-      <div class="justify-content-center flex-wrap gap-3 align-items-center" style="font-size: 12px; color: #999999;">
-        <span class="country">UK:</span> 
-        <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+      <!-- Force column on mobile, row on md+ -->
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2" style="font-size: 12px; color: #999999;">
+        
+        <!-- UK -->
+        <div>
+          <span class="country">UK:</span> 
+          <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]
+        </div>
 
-        <span class="country">EU:</span> 
-        <span class="ms-1 me-1">The Entity OÜ</span>  [Reg No: 16925243]<span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
 
-        <span class="country">India:</span> 
-        <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        <!-- EU -->
+        <div>
+          <span class="country">EU:</span> 
+          <span class="ms-1 me-1">The Entity OÜ</span> [Reg No: 16925243]
+        </div>
+
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
+
+        <!-- India -->
+        <div>
+          <span class="country">India:</span> 
+          <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        </div>
+
       </div>
     </div>
   </div>

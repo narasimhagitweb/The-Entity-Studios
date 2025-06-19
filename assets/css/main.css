@@ -247,7 +247,7 @@ h2 {
 }
 @media (max-width: 470px) {
   h2 {
-    font-size: 25px;
+    font-size: 35px;
   }
 }
 
@@ -531,7 +531,7 @@ span {
   right: -130px;
   opacity: 0.3;
   transform: rotate(-90deg);
-  font-size: 128px;
+  font-size: 80px;
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
@@ -9183,7 +9183,7 @@ span {
   }
 }
 .gt-section-title-2 h6 {
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: -0.32px;
   line-height: 1;
@@ -12047,6 +12047,7 @@ span {
             
             .section-description {
                 font-size: 1.1rem;
+                padding-top: 3dvh;
             }
             
             .service-card {
@@ -12369,6 +12370,5 @@ svg #wheel {
     display: none;
   }
 }
-
 
 

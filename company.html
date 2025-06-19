@@ -521,12 +521,27 @@
     
 
 
+<style>
+    .responsive-hero {
+  background-image: url('assets/img/home-1/hero/company-bg.jpg'); /* Adjust if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 30vh; /* Mobile default */
+}
 
+/* For tablets and up (768px+) */
+@media (min-width: 768px) {
+  .responsive-hero {
+    min-height: 70vh;
+  }
+}
+
+</style>
 
         <div id="smooth-wrapper">
             <div id="smooth-content">
-<section class="hero-section hero-1" style=" min-height: 800px; background-image: url('assets/img/home-1/hero/company-bg.jpg');">
-</section>
+<section class="hero-section hero-1 responsive-hero"></section>
 
 
 
@@ -534,7 +549,7 @@
 
 
 
-<section>
+<section class="hide-on-small">
     <div class="d-flex justify-content-center align-items-center p-5">
   <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -628,148 +643,149 @@
         </section>
 
 
-         <!-- GT Approach Section Start -->
-                 <section class="gt-game-section py-5">
-            <div class="container">
-                <div class="gt-section-title-2 text-center">
-                    <h2 class="tx-title sec_title tz-itm-title tz-itm-anim" style="padding-bottom: 6dvh;">
-                        Operating Principles
-                    </h2>
-                    <section class=" gt-about-section ">
-                        <div class="container">
-                            <div class="gt-about-wrapper">
-                                <div class="row g-4 justify-content-center">
-                                    <div class="col-lg-12">
-                                        <div class="gt-about-content">
-                                            <div class="gt-about-box-wrapper top_view_2 item-hover">
-                                                <div class="gt-about-box-item">
-                                                    <div class="gt-about-box bg-color">
-                                                        <div class="icon">
-                                                            <img src="assets/img/home-1/icon/icon-7.svg" alt="img">
-                                                        </div>
-                                                        <div class="content text-start">
-                                                            <h3 class="">Precision Craft & Delivery</h3>
-                                                        </div>
-                                                    </div>
-                                                    <div class="gt-about-box border-none">
-                                                        <div class="icon">
-                                                            <img src="assets/img/home-1/icon/icon-2.svg" alt="img">
-                                                        </div>
-                                                        <div class="content text-start">
-                                                            <h3 class="">Scalable Production Pipelines</h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gt-about-box-item">
-                                                    <div class="gt-about-box">
-                                                        <div class="icon">
-                                                            <img src="assets/img/home-1/icon/icon-3.svg" alt="img">
-                                                        </div>
-                                                        <div class="content text-start">
-                                                            <h3 class="">Integrated Global Operations</h3>
-                                                        </div>
-                                                    </div>
-                                                    <div class="gt-about-box border-none bg-color">
-                                                        <div class="icon">
-                                                            <img src="assets/img/home-1/icon/icon-6.svg" alt="img">
-                                                        </div>
-                                                        <div class="content text-start">
-                                                            <h3 class="">Secure & Compliant IP Protection</h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- End of gt-about-box-wrapper -->
-                                        </div> <!-- End of gt-about-content -->
-                                    </div> <!-- End of col-lg-5 -->
-                                </div> <!-- End of row -->
-                            </div> <!-- End of gt-about-wrapper -->
-                        </div> <!-- End of container -->
-                    </section>
-                </div>
-            </div>
-       </section>
+<!-- GT Approach Section Start -->
+<section class="gt-game-section py-5">
+  <div class="container">
 
+    <!-- Section Title -->
+    <div class="gt-section-title-2 text-center mb-5">
+      <h2 class="tx-title sec_title tz-itm-title tz-itm-anim" style="padding-bottom: 6dvh;">
+        Operating Principles
+      </h2>
+    </div>
+
+    <!-- About Section Content -->
+    <div class="gt-about-wrapper">
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-12">
+          <div class="gt-about-content">
+            <div class="gt-about-box-wrapper top_view_2 item-hsover">
+
+              <!-- First Row -->
+              <div class="gt-about-box-item">
+                <div class="gt-about-box bg-color">
+                  <div class="icon">
+                    <img src="assets/img/home-1/icon/icon-7.svg" alt="Precision Craft Icon">
+                  </div>
+                  <div class="content text-start">
+                    <h3>Precision Craft and Delivery</h3>
+                  </div>
+                </div>
+
+                <div class="gt-about-box border-none">
+                  <div class="icon">
+                    <img src="assets/img/home-1/icon/icon-2.svg" alt="Scalable Pipelines Icon">
+                  </div>
+                  <div class="content text-start">
+                    <h3>Scalable Production Pipelines</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second Row -->
+              <div class="gt-about-box-item">
+                <div class="gt-about-box">
+                  <div class="icon">
+                    <img src="assets/img/home-1/icon/icon-3.svg" alt="Global Operations Icon">
+                  </div>
+                  <div class="content text-start">
+                    <h3>Integrated Global Operations</h3>
+                  </div>
+                </div>
+
+                <div class="gt-about-box border-none bg-color">
+                  <div class="icon">
+                    <img src="assets/img/home-1/icon/icon-6.svg" alt="IP Protection Icon">
+                  </div>
+                  <div class="content text-start">
+                    <h3>Secure & Compliant IP Protection</h3>
+                  </div>
+                </div>
+              </div>
+
+            </div> <!-- End of gt-about-box-wrapper -->
+          </div> <!-- End of gt-about-content -->
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End of container -->
+</section>
 
 
 
 <section class="container py-5 my-5">
-  <div class="d-flex justify-content-center mx-auto">
+  <div class="row align-items-center justify-content-center">
     
     <!-- Left Content -->
-    <div class="col-lg-8" style="text-transform: none;">
+    <div class="col-lg-8 col-12 text-center text-lg-start">
       <h2 class="fw-bold mb-3">Security & Compliance</h2>
       <h4 class="text-shape mb-4">
         We adhere to internationally recognized security and compliance standards to meet the needs of game studios, publishers, and production partners.
       </h4>
 
-      <div style="padding: 1.8rem;"></div>
-<!-- Certifications -->
-<div class="d-flex align-items-center justify-content-evenly mt-5 mb-5 flex-wrap" style="min-height: 50px;">
-  <!-- ISO Certification -->
-  <div class="d-flex align-items-center gap-2" style="flex: 1 1 250px; min-width: 200px; padding-left: 2dvh;">
-    <img src="assets/img/inner-page/team-details/iso.png" alt="ISO/IEC 27001" class="img-fluid" style="max-height: 50px;">
-    <div>
-      <h6 class="mb-0 fw-semibold" style="font-size: 1rem;">
-        ISO/IEC 27001
-        <i class="bi bi-info-circle-fill text-primary"
-           data-bs-toggle="tooltip"
-           data-bs-placement="top"
-           title="Global standard for information security management systems."></i>
-      </h6>
-      <small class="text">Certified</small>
+      <!-- Spacer -->
+      <div class="py-3 py-lg-4"></div>
+
+      <!-- Certifications -->
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-evenly gap-4">
+        
+        <!-- ISO Certification -->
+        <div class="d-flex align-items-center gap-3 text-start" style="min-width: 220px;">
+          <img src="assets/img/inner-page/team-details/iso.png" alt="ISO/IEC 27001" class="img-fluid" style="max-height: 50px;">
+          <div>
+            <h6 class="mb-0 fw-semibold">
+              ISO/IEC 27001
+              <i class="bi bi-info-circle-fill text-primary"
+                 data-bs-toggle="tooltip"
+                 data-bs-placement="top"
+                 title="Global standard for information security management systems."></i>
+            </h6>
+            <small class="text" style="text-transform: none;" >Certified</small>
+          </div>
+        </div>
+
+        <!-- TPN Certification -->
+        <div class="d-flex align-items-center gap-3 text-start" style="min-width: 220px;">
+          <img src="assets/img/inner-page/team-details/tpn.png" alt="TPN" class="img-fluid" style="max-height: 50px;">
+          <div>
+            <h6 class="mb-0 fw-semibold">
+              TPN
+              <i class="bi bi-info-circle-fill text-primary"
+                 data-bs-toggle="tooltip"
+                 data-bs-placement="top"
+                 title="Certified with the Trusted Partner Network’s highest security tier."></i>
+            </h6>
+            <small class="text" style="text-transform: none;">Certified</small>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- TPN Certification -->
-  <div class="d-flex align-items-center gap-2" style="flex: 1 1 250px; min-width: 200px;">
-    <img src="assets/img/inner-page/team-details/tpn.png" alt="TPN" class="img-fluid" style="max-height: 50px;">
-    <div>
-      <h6 class="mb-0 fw-semibold" style="font-size: 1rem;">
-        TPN
-        <i class="bi bi-info-circle-fill text-primary"
-           data-bs-toggle="tooltip"
-           data-bs-placement="top"
-           title="Certified with the Trusted Partner Network’s highest security tier."></i>
-      </h6>
-      <small class="text-none">Certified</small>
+    <!-- Right Image & Button -->
+    <div class="col-lg-4 col-12 mt-5 mt-lg-0">
+      <div class="d-flex justify-content-center align-items-center mb-4">
+        <img src="assets/img/trust.svg" alt="Compliance Icon" class="img-fluid" style="max-height: 300px;">
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <a href="https://trust.the-entity.studio/" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4 py-2">
+          Visit Trust Center
+        </a>
+      </div>
     </div>
+
   </div>
-</div>
 
-
-
-        <!-- Initialize tooltips -->
-        <script>
-        // Enable all tooltips on the page
-        document.addEventListener("DOMContentLoaded", function () {
-            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-            tooltipTriggerList.forEach(tooltipTriggerEl => {
-            new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-        });
-        </script>
-      
-  </div>
-      <div class="col-lg-4">
-
-
-
-<!-- Right Image -->
-<div class="d-flex justify-content-center align-items-center mt-4 mt-lg-0">
-  <img src="assets/img/trust.svg" alt="Compliance Icon" style="max-height: 300px;">
-</div>
-
-<!-- Trust Center Button (Centered) -->
-<div class="d-flex justify-content-center align-items-center" style="min-height: 100px;">
-  <a href="https://trust.the-entity.studio/" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4 py-2">
-    Visit Trust Center
-  </a>
-</div>
-
-
-
-
-</div>
+  <!-- Initialize Bootstrap tooltips -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      tooltipTriggerList.forEach(tooltipTriggerEl => {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
 </section>
 
 
@@ -1275,7 +1291,7 @@
 
         <!-- Logo Carousel Section -->
         <div class="logo-carousel-wrapper">
-            <div class="logo-track" id="logoTrack">
+            <div class="logo-track" id="logoTrack2">
           <!-- Initial Logos -->
           <div class="logo-item"><img src="assets\img\home-1\icon\icon-10.png" alt="Logo 1"></div>
           <div class="logo-item"><img src="assets\img\home-1\icon\icon-11.png" alt="Logo 2"></div>
@@ -1299,7 +1315,7 @@
         <div class="row">
             <!-- Left Column -->
 <div class="col-lg-8 col-md-8">
-    <div class="d-flex align-items-center mb-3">
+    <div class="d-flex justify-content-center justify-content-md-start align-items-center mb-3">
         <a href="home.html" class="header-logo">
             <img src="assets/img/logo/black-logo.png" alt="logo-img">
         </a>
@@ -1312,8 +1328,7 @@
     <div class="contact-info mb-3">
         <h6 style="display: inline-flex; align-items: center; white-space: nowrap; margin: 0;">
             <i class="fas fa-envelope me-2"></i>
-            <span style="text-decoration: none; color: inherit; cursor: pointer;"
-                  onclick="copyToClipboard('contact@entity.ltd')">
+            <span style="text-decoration: none; color: inherit; cursor: pointer;" onclick="copyToClipboard('contact@entity.ltd')">
                 contact@entity.ltd
             </span>
         </h6>
@@ -1338,8 +1353,8 @@
 </script>
 
             <!-- Right Column -->
-<div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end">
-    <div class="footer-links-section text-end">
+<div class="col-lg-4 col-md-4 d-flex align-items-end justify-content-end justify-content-md-end justify-content-center">
+    <div class="footer-links-section text-end text-md-end text-center w-100">
         <ul class="footer-links list-unstyled mb-4">
             <li><a href="home.html">Home</a></li>
             <li><a href="company.html">About us</a></li>
@@ -1348,7 +1363,7 @@
             <li><a href="coming-soon.html">Careers</a></li>
             <li><a href="contact.html">Contact us</a></li>
         </ul>
-        <div class="social-icons d-flex justify-content-end gap-3">
+        <div class="social-icons d-flex justify-content-end justify-content-md-end justify-content-center gap-3">
             <a href="https://vimeo.com/showcase/11651929" target="_blank" class="twitter">
                 <i class="fab fa-vimeo"></i>
             </a>
@@ -1358,6 +1373,7 @@
         </div>
     </div>
 </div>
+
 
         <!-- Bottom Footer -->
         <div class="bottom-footer pt-5">
@@ -1387,27 +1403,46 @@
 
     </div>
 
-                    <!-- Footer Bottom Section -->
+<!-- Footer Bottom Section -->
 <div class="footer-bottom wow fadeInUp" data-wow-delay=".3s" style="padding: 20px 0; text-align: center;">
   <div class="footer-wrapper justify-content-center">
     <div class="contact-info">
-      <!-- Company Registration Details with Centered Text -->
-      <div class="justify-content-center flex-wrap gap-3 align-items-center" style="font-size: 12px; color: #999999;">
-        <span class="country">UK:</span> 
-        <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+      <!-- Force column on mobile, row on md+ -->
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2" style="font-size: 12px; color: #999999;">
+        
+        <!-- UK -->
+        <div>
+          <span class="country">UK:</span> 
+          <span class="ms-1 me-1">The-Entity Ltd</span> [Reg No: 15518633]
+        </div>
 
-        <span class="country">EU:</span> 
-        <span class="ms-1 me-1">The Entity OÜ</span>  [Reg No: 16925243]<span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
 
-        <span class="country">India:</span> 
-        <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        <!-- EU -->
+        <div>
+          <span class="country">EU:</span> 
+          <span class="ms-1 me-1">The Entity OÜ</span> [Reg No: 16925243]
+        </div>
+
+        <!-- Divider for desktop only -->
+        <div class="d-none d-md-block px-2">|</div>
+
+        <!-- India -->
+        <div>
+          <span class="country">India:</span> 
+          <span class="ms-1 me-1">Entity Studios Private Limited</span> [Reg No: U62010KA2025PTC199909]
+        </div>
+
       </div>
     </div>
   </div>
 </div>
 
 
-</footer>        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</footer>
+
+
 
         
          
