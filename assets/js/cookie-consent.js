@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.removeItem(DECLINE_TIMESTAMP_KEY);
   };
 
+  
   // Decline All button handler
   document.getElementById("decline-all").onclick = () => {
     localStorage.setItem(DECLINE_TIMESTAMP_KEY, Date.now().toString());
@@ -86,16 +87,26 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    window.gtag = gtag;
+      window.gtag = function gtag() {
+        dataLayer.push(arguments);
+      };
     gtag("js", new Date());
     gtag("config", gaID);
 
     window.gaLoaded = true;
     console.log("Google Analytics loaded");
   }
+
+    try {
+      const consentObj = JSON.parse(consent);
+      handleConsent(consentObj);
+    } catch (e) {
+      console.error("Invalid consent data. Clearing.");
+      localStorage.removeItem(CONSENT_KEY);
+      showBanner();
+    }
+
+
 
   // Load GA if consent already present on page load
   if (consent) {

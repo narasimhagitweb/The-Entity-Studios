@@ -528,7 +528,7 @@ span {
 .gt-about-section .text {
   position: absolute;
   top: 245px;
-  right: -130px;
+  right: 0px;
   opacity: 0.3;
   transform: rotate(-90deg);
   font-size: 80px;
@@ -12372,3 +12372,51 @@ svg #wheel {
 }
 
 
+
+
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        opacity: .5;
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(0, 255, 148, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+        opacity: 1;
+    }
+    100% {
+        text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        opacity: .5;
+    }
+}
+
+.glow-highlight {
+    animation: glowText 2.5s ease-in-out infinite;
+}
+
+
+
+/* Default: hide both to prevent flicker before media query kicks in */
+.hide-mobile,
+.hide-desktop {
+  display: none;
+}
+
+/* Mobile: show Section One (mobile) only */
+@media (max-width: 899px) {
+  .hide-desktop {
+    display: block;
+  }
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* Desktop: show Section Two (desktop) only */
+@media (min-width: 900px) {
+  .hide-desktop {
+    display: none;
+  }
+  .hide-mobile {
+    display: block;
+  }
+}

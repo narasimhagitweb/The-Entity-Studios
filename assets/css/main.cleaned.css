@@ -516,7 +516,7 @@ span {
 .gt-about-section .text {
   position: absolute;
   top: 245px;
-  right: -130px;
+  right: 0px;
   opacity: 0.3;
   transform: rotate(-90deg);
   font-size: 128px;
