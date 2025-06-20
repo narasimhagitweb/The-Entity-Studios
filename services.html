@@ -3,23 +3,31 @@
     <!--<< Header Area >>-->
     <head>
 
-        <!-- Google tag (gtag.js)
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TVLHYTJ8X"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-9TVLHYTJ8X');
-        </script> -->
-
-
        <!-- ========== Meta Tags ========== -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Sudhakar">
         <meta name="description" content="The Entity Studios">
+
+        
+        <!-- Open Graph Meta Tags -->
+         <meta property="og:locale" content="en_US">
+        <meta property="og:title" content="The Entity Studios">
+        <meta property="og:description" content="AAA Veterans delivering elite game animation and production pipelines.">
+        <meta property="og:image" content="https://the-entity.studio/assets/img/meta/og-image.avif">
+        <meta property="og:url" content="https://the-entity.studio/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="The Entity Studios">
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="The Entity Studios">
+        <meta name="twitter:description" content="AAA Veterans delivering elite game animation and production pipelines.">
+        <meta name="twitter:image" content="https://the-entity.studio/assets/img/meta/og-image.avif">
+
+
+
         <!-- ======== Page title ============ -->
         <title>The Entity Studios</title>
         <!--<< Favcion >>-->
@@ -43,43 +51,6 @@
         <link rel="stylesheet" href="assets/css/test.css">  
 
         
-
-        <!-- <script>
-        document.getElementById('submitButton').addEventListener('click', function() {
-            gtag('event', 'click', {
-            'event_category': 'button',
-            'event_label': 'submit_button'
-            });
-        });
-        </script>
-
-        <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent form submission to track the event
-
-            // Track the form submission event
-            gtag('event', 'submit', {
-            'event_category': 'form',
-            'event_label': 'contact_form'
-            });
-
-            // Optional: After tracking, submit the form
-            this.submit();
-        });
-        </script>
-
-        <script>
-            window.addEventListener('scroll', function() {
-                var scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
-                if (scrollPercentage > 50) { // Track when 50% of the page is scrolled
-                gtag('event', 'scroll', {
-                    'event_category': 'page',
-                    'event_label': '50_percent_scroll'
-                });
-                }
-            });
-            </script> -->
-
 
     </head>
     <body>
@@ -471,43 +442,6 @@
     </div>
 </header>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const header = document.getElementById("header-sticky");
-        const logo = header.querySelector(".logo");
-        const scrollThreshold = 100; // Adjust this value as needed
-
-        function handleScroll() {
-            if (window.scrollY > scrollThreshold) {
-                header.classList.add("scrolled");
-                logo.classList.remove("initial-large"); // Remove the large logo class, so it defaults to normal size
-            } else {
-                header.classList.remove("scrolled");
-                logo.classList.add("initial-large"); // Add it back when at the top to make it large
-            }
-        }
-
-        // Initial check in case the page is loaded already scrolled
-        handleScroll();
-
-        // Listen for scroll events
-        window.addEventListener("scroll", handleScroll);
-
-        // --- Mobile menu toggle (basic functionality) ---
-        const hamburger = document.querySelector(".header__hamburger .sidebar__toggle");
-        // Ensure you target the correct mobile menu UL.
-        // If #mobile-menu contains both desktop and mobile Uls,
-        // you might need a more specific selector, e.g.,
-        // const mobileMenu = document.querySelector("#mobile-menu ul.d-xl-none");
-        const mobileMenu = document.getElementById("mobile-menu").querySelector("ul.d-xl-none"); // Targeting the specific mobile UL
-
-        if (hamburger && mobileMenu) {
-            hamburger.addEventListener("click", function() {
-                mobileMenu.classList.toggle("mobile-menu-active");
-            });
-        }
-    });
-</script>
 
 
 
@@ -590,9 +524,6 @@
        
 
 
-
-  <!-- Bootstrap Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Script to auto-hide See More after expand -->
   <script>
@@ -802,127 +733,8 @@
 </section>
 
 
-        <!-- GT Top Feature Section Start -->
-        <!-- <section class="gt-top-feature-section fix section-padding pt-0">
-            <div class="container">
-                <div class="gt-top-feature-wrapper">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-6">
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="gt-top-feature-content">
-                                <div class="gt-section-title mb-0">
-                                    <h2 class="tx-title sec_title  tz-itm-title tz-itm-anim">
-                                        Cinematic & Gameplay Animation
-                                    </h2>
-                                </div>
-                                <p class="gt-feature-text">
-                                    Our cinematic and gameplay animation services are crafted to elevate the emotional and visual impact of your game. We deliver animations that enhance storytelling and immerse players in your game world.
-                                </p>
-                                <ul class="gt-feature-icon">
-                                    <li>
-                                        <div class="gt-icon">
-                                            <img src="assets/img/home-1/icon/icon-20.svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                                                <path d="M47.1491 12.8939H6.45117V9.77124C6.45117 9.33979 6.10137 8.98999 5.66992 8.98999H0.78125C0.349805 8.98999 0 9.33979 0 9.77124C0 10.2027 0.349805 10.5525 0.78125 10.5525H4.88867V16.0792H3.06123C2.62979 16.0792 2.27998 16.429 2.27998 16.8604V23.0802C2.27998 23.5117 2.62979 23.8615 3.06123 23.8615H4.88867V25.7375H3.06123C2.62979 25.7375 2.27998 26.0873 2.27998 26.5187V32.7385C2.27998 33.17 2.62979 33.5198 3.06123 33.5198H4.88867V40.2287C4.88867 40.6601 5.23848 41.0099 5.66992 41.0099C6.10137 41.0099 6.45117 40.6601 6.45117 40.2287V36.7051H9.45918V39.8797C9.45918 40.3112 9.80898 40.661 10.2404 40.661H21.1381C21.5695 40.661 21.9193 40.3112 21.9193 39.8797V36.7051H24.4962V39.8797C24.4962 40.3112 24.846 40.661 25.2774 40.661H44.6483C45.0798 40.661 45.4296 40.3112 45.4296 39.8797V36.7051H47.1491C48.7211 36.7051 50 35.4262 50 33.8542V15.7449C50 14.1728 48.7211 12.8939 47.1491 12.8939ZM3.84248 22.2991V17.6417H4.88867V22.299H3.84248V22.2991ZM3.84248 31.9574V27.3H4.88867V31.9574H3.84248ZM20.3568 39.0985H18.2867V38.1119C18.2867 37.6804 17.9369 37.3306 17.5055 37.3306C17.074 37.3306 16.7242 37.6804 16.7242 38.1119V39.0985H14.6542V38.1119C14.6542 37.6804 14.3044 37.3306 13.8729 37.3306C13.4415 37.3306 13.0917 37.6804 13.0917 38.1119V39.0985H11.0217V36.7051H20.3568V39.0985ZM43.8671 39.0985H42.2009V38.1119C42.2009 37.6804 41.8511 37.3306 41.4196 37.3306C40.9882 37.3306 40.6384 37.6804 40.6384 38.1119V39.0985H38.9725V38.1119C38.9725 37.6804 38.6227 37.3306 38.1912 37.3306C37.7598 37.3306 37.41 37.6804 37.41 38.1119V39.0985H35.7439V38.1119C35.7439 37.6804 35.3941 37.3306 34.9627 37.3306C34.5312 37.3306 34.1814 37.6804 34.1814 38.1119V39.0985H32.5155V38.1119C32.5155 37.6804 32.1657 37.3306 31.7343 37.3306C31.3028 37.3306 30.953 37.6804 30.953 38.1119V39.0985H29.2871V38.1119C29.2871 37.6804 28.9373 37.3306 28.5059 37.3306C28.0744 37.3306 27.7246 37.6804 27.7246 38.1119V39.0985H26.0586V36.7051H43.867V39.0985H43.8671ZM48.4375 33.8542C48.4375 34.5646 47.8596 35.1426 47.1491 35.1426H6.45117V32.7396C6.45117 32.7393 6.45117 32.7389 6.45117 32.7386C6.45117 32.7383 6.45117 32.738 6.45117 32.7376V26.5197C6.45117 26.5194 6.45117 26.519 6.45117 26.5187C6.45117 26.5184 6.45117 26.5181 6.45117 26.5177V23.0812C6.45117 23.0809 6.45117 23.0805 6.45117 23.0802C6.45117 23.0799 6.45117 23.0796 6.45117 23.0792V16.8614C6.45117 16.8611 6.45117 16.8607 6.45117 16.8604C6.45117 16.8601 6.45117 16.8598 6.45117 16.8594V14.4564H47.1491C47.8596 14.4564 48.4375 15.0344 48.4375 15.7448V33.8542ZM37.5986 15.7388C32.6025 15.7388 28.5379 19.8034 28.5379 24.7995C28.5379 29.7956 32.6025 33.8601 37.5986 33.8601C42.5947 33.8601 46.6593 29.7956 46.6593 24.7995C46.6593 19.8034 42.5947 15.7388 37.5986 15.7388ZM33.5148 31.0832C35.2147 30.5731 36.6805 29.4066 37.5465 27.8336C37.5639 27.8339 37.5812 27.835 37.5986 27.835C37.8375 27.835 38.0696 27.8064 38.2927 27.754C38.6396 29.3403 38.2299 31.0343 37.1681 32.2844C35.8259 32.2081 34.5778 31.7763 33.5148 31.0832ZM30.2629 26.351C31.2669 26.8927 32.3938 27.1759 33.5296 27.1759C34.1633 27.1759 34.7994 27.0872 35.418 26.9078C35.5919 27.0875 35.7874 27.246 36.0009 27.3788C35.1253 28.7449 33.6395 29.6527 32.0064 29.7873C31.1513 28.8295 30.5378 27.6523 30.2629 26.351ZM41.6825 18.516C39.9825 19.026 38.5168 20.1925 37.6508 21.7655C37.6334 21.7652 37.6161 21.7641 37.5986 21.7641C37.3598 21.7641 37.1276 21.7927 36.9046 21.8451C36.5576 20.2586 36.9675 18.5646 38.0293 17.3145C39.3716 17.391 40.6195 17.8227 41.6825 18.516ZM37.5986 26.2724C36.7864 26.2724 36.1257 25.6116 36.1257 24.7995C36.1257 23.9874 36.7864 23.3266 37.5986 23.3266C38.4107 23.3266 39.0716 23.9874 39.0716 24.7995C39.0716 25.6116 38.4108 26.2724 37.5986 26.2724ZM35.4904 22.6187C35.3106 22.7926 35.1521 22.9882 35.0193 23.2016C33.6532 22.326 32.7454 20.8403 32.6108 19.2071C33.5682 18.3524 34.7449 17.7391 36.0455 17.464C35.202 19.0282 34.9896 20.8919 35.4904 22.6187ZM34.5646 24.7475C34.5643 24.7649 34.5632 24.7821 34.5632 24.7996C34.5632 25.0384 34.5918 25.2706 34.6442 25.4937C33.0578 25.8406 31.3638 25.4307 30.1137 24.369C30.19 23.0267 30.6218 21.7788 31.315 20.7157C31.8251 22.4156 32.9916 23.8814 34.5646 24.7475ZM39.7068 26.9803C39.8866 26.8064 40.0452 26.6109 40.1779 26.3974C41.544 27.273 42.4519 28.7587 42.5863 30.3919C41.629 31.2466 40.4522 31.8599 39.1518 32.135C39.9953 30.5709 40.2077 28.707 39.7068 26.9803ZM40.6327 24.8516C40.633 24.8342 40.6341 24.8169 40.6341 24.7995C40.6341 24.5607 40.6055 24.3286 40.5531 24.1055C42.1396 23.7586 43.8336 24.1685 45.0836 25.2302C45.0072 26.5724 44.5755 27.8205 43.8822 28.8834C43.3722 27.1834 42.2057 25.7177 40.6327 24.8516ZM39.7795 22.6915C39.6056 22.5116 39.41 22.3531 39.1966 22.2204C40.0722 20.8542 41.5579 19.9463 43.1911 19.8119C44.0458 20.7692 44.6591 21.9459 44.9342 23.2465C43.37 22.4028 41.5062 22.1905 39.7795 22.6915ZM17.2901 15.7388C12.294 15.7388 8.22949 19.8034 8.22949 24.7995C8.22949 29.7956 12.2941 33.8601 17.2901 33.8601C22.2861 33.8601 26.3508 29.7956 26.3508 24.7995C26.3508 19.8034 22.2861 15.7388 17.2901 15.7388ZM13.2063 31.0831C14.9062 30.573 16.372 29.4065 17.238 27.8335C17.2554 27.8338 17.2727 27.8349 17.2901 27.8349C17.529 27.8349 17.7611 27.8063 17.9842 27.754C18.3312 29.3403 17.9214 31.0343 16.8596 32.2844C15.5173 32.2081 14.2693 31.7763 13.2063 31.0831ZM9.95439 26.3511C10.9584 26.8928 12.0854 27.1759 13.221 27.1759C13.8547 27.1759 14.4908 27.0872 15.1094 26.9078C15.2832 27.0875 15.4788 27.246 15.6922 27.3788C14.8166 28.7449 13.3309 29.6527 11.6978 29.7873C10.8428 28.8295 10.2293 27.6523 9.95439 26.3511ZM21.374 18.516C19.674 19.026 18.2083 20.1925 17.3422 21.7655C17.3248 21.7652 17.3075 21.7641 17.29 21.7641C17.0513 21.7641 16.819 21.7927 16.5961 21.8451C16.2491 20.2586 16.659 18.5646 17.7208 17.3145C19.063 17.391 20.3109 17.8227 21.374 18.516ZM17.29 26.2724C16.4779 26.2724 15.8171 25.6116 15.8171 24.7995C15.8171 23.9874 16.4778 23.3266 17.29 23.3266C18.1022 23.3266 18.763 23.9874 18.763 24.7995C18.763 25.6116 18.1022 26.2724 17.29 26.2724ZM15.1819 22.6187C15.0021 22.7926 14.8436 22.9882 14.7108 23.2017C13.3448 22.3261 12.4369 20.8404 12.3024 19.2072C13.2598 18.3525 14.4365 17.7392 15.7371 17.4641C14.8935 19.0282 14.6811 20.8919 15.1819 22.6187ZM14.256 24.7475C14.2557 24.7649 14.2547 24.7821 14.2547 24.7996C14.2547 25.0384 14.2833 25.2706 14.3357 25.4937C12.7493 25.8406 11.0554 25.4307 9.80527 24.3691C9.88164 23.0268 10.3134 21.7788 11.0066 20.7158C11.5166 22.4157 12.683 23.8814 14.256 24.7475ZM19.3982 26.9803C19.578 26.8064 19.7366 26.6108 19.8693 26.3974C21.2355 27.273 22.1433 28.7587 22.2778 30.3919C21.3205 31.2466 20.1437 31.8599 18.8432 32.135C19.6868 30.5709 19.8991 28.707 19.3982 26.9803ZM20.3241 24.8516C20.3244 24.8342 20.3255 24.817 20.3255 24.7996C20.3255 24.5608 20.2969 24.3287 20.2445 24.1056C21.831 23.7587 23.525 24.1686 24.7751 25.2303C24.6986 26.5725 24.267 27.8206 23.5737 28.8835C23.0636 27.1834 21.8971 25.7176 20.3241 24.8516ZM19.471 22.6915C19.2971 22.5116 19.1015 22.3531 18.888 22.2204C19.7636 20.8542 21.2494 19.9463 22.8826 19.8119C23.7373 20.7692 24.3506 21.9459 24.6256 23.2466C23.0615 22.4029 21.1978 22.1906 19.471 22.6915Z" fill="#FF0808"/>
-                                              </img>
-                                        </div>
-                                        <div class="gt-content">
-                                            <h3>Experienced animators with a passion for storytelling</h3>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="gt-icon">
-                                            <img src="assets/img/home-1/icon/icon-22.svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                                                <path d="M47.1491 12.8939H6.45117V9.77124C6.45117 9.33979 6.10137 8.98999 5.66992 8.98999H0.78125C0.349805 8.98999 0 9.33979 0 9.77124C0 10.2027 0.349805 10.5525 0.78125 10.5525H4.88867V16.0792H3.06123C2.62979 16.0792 2.27998 16.429 2.27998 16.8604V23.0802C2.27998 23.5117 2.62979 23.8615 3.06123 23.8615H4.88867V25.7375H3.06123C2.62979 25.7375 2.27998 26.0873 2.27998 26.5187V32.7385C2.27998 33.17 2.62979 33.5198 3.06123 33.5198H4.88867V40.2287C4.88867 40.6601 5.23848 41.0099 5.66992 41.0099C6.10137 41.0099 6.45117 40.6601 6.45117 40.2287V36.7051H9.45918V39.8797C9.45918 40.3112 9.80898 40.661 10.2404 40.661H21.1381C21.5695 40.661 21.9193 40.3112 21.9193 39.8797V36.7051H24.4962V39.8797C24.4962 40.3112 24.846 40.661 25.2774 40.661H44.6483C45.0798 40.661 45.4296 40.3112 45.4296 39.8797V36.7051H47.1491C48.7211 36.7051 50 35.4262 50 33.8542V15.7449C50 14.1728 48.7211 12.8939 47.1491 12.8939ZM3.84248 22.2991V17.6417H4.88867V22.299H3.84248V22.2991ZM3.84248 31.9574V27.3H4.88867V31.9574H3.84248ZM20.3568 39.0985H18.2867V38.1119C18.2867 37.6804 17.9369 37.3306 17.5055 37.3306C17.074 37.3306 16.7242 37.6804 16.7242 38.1119V39.0985H14.6542V38.1119C14.6542 37.6804 14.3044 37.3306 13.8729 37.3306C13.4415 37.3306 13.0917 37.6804 13.0917 38.1119V39.0985H11.0217V36.7051H20.3568V39.0985ZM43.8671 39.0985H42.2009V38.1119C42.2009 37.6804 41.8511 37.3306 41.4196 37.3306C40.9882 37.3306 40.6384 37.6804 40.6384 38.1119V39.0985H38.9725V38.1119C38.9725 37.6804 38.6227 37.3306 38.1912 37.3306C37.7598 37.3306 37.41 37.6804 37.41 38.1119V39.0985H35.7439V38.1119C35.7439 37.6804 35.3941 37.3306 34.9627 37.3306C34.5312 37.3306 34.1814 37.6804 34.1814 38.1119V39.0985H32.5155V38.1119C32.5155 37.6804 32.1657 37.3306 31.7343 37.3306C31.3028 37.3306 30.953 37.6804 30.953 38.1119V39.0985H29.2871V38.1119C29.2871 37.6804 28.9373 37.3306 28.5059 37.3306C28.0744 37.3306 27.7246 37.6804 27.7246 38.1119V39.0985H26.0586V36.7051H43.867V39.0985H43.8671ZM48.4375 33.8542C48.4375 34.5646 47.8596 35.1426 47.1491 35.1426H6.45117V32.7396C6.45117 32.7393 6.45117 32.7389 6.45117 32.7386C6.45117 32.7383 6.45117 32.738 6.45117 32.7376V26.5197C6.45117 26.5194 6.45117 26.519 6.45117 26.5187C6.45117 26.5184 6.45117 26.5181 6.45117 26.5177V23.0812C6.45117 23.0809 6.45117 23.0805 6.45117 23.0802C6.45117 23.0799 6.45117 23.0796 6.45117 23.0792V16.8614C6.45117 16.8611 6.45117 16.8607 6.45117 16.8604C6.45117 16.8601 6.45117 16.8598 6.45117 16.8594V14.4564H47.1491C47.8596 14.4564 48.4375 15.0344 48.4375 15.7448V33.8542ZM37.5986 15.7388C32.6025 15.7388 28.5379 19.8034 28.5379 24.7995C28.5379 29.7956 32.6025 33.8601 37.5986 33.8601C42.5947 33.8601 46.6593 29.7956 46.6593 24.7995C46.6593 19.8034 42.5947 15.7388 37.5986 15.7388ZM33.5148 31.0832C35.2147 30.5731 36.6805 29.4066 37.5465 27.8336C37.5639 27.8339 37.5812 27.835 37.5986 27.835C37.8375 27.835 38.0696 27.8064 38.2927 27.754C38.6396 29.3403 38.2299 31.0343 37.1681 32.2844C35.8259 32.2081 34.5778 31.7763 33.5148 31.0832ZM30.2629 26.351C31.2669 26.8927 32.3938 27.1759 33.5296 27.1759C34.1633 27.1759 34.7994 27.0872 35.418 26.9078C35.5919 27.0875 35.7874 27.246 36.0009 27.3788C35.1253 28.7449 33.6395 29.6527 32.0064 29.7873C31.1513 28.8295 30.5378 27.6523 30.2629 26.351ZM41.6825 18.516C39.9825 19.026 38.5168 20.1925 37.6508 21.7655C37.6334 21.7652 37.6161 21.7641 37.5986 21.7641C37.3598 21.7641 37.1276 21.7927 36.9046 21.8451C36.5576 20.2586 36.9675 18.5646 38.0293 17.3145C39.3716 17.391 40.6195 17.8227 41.6825 18.516ZM37.5986 26.2724C36.7864 26.2724 36.1257 25.6116 36.1257 24.7995C36.1257 23.9874 36.7864 23.3266 37.5986 23.3266C38.4107 23.3266 39.0716 23.9874 39.0716 24.7995C39.0716 25.6116 38.4108 26.2724 37.5986 26.2724ZM35.4904 22.6187C35.3106 22.7926 35.1521 22.9882 35.0193 23.2016C33.6532 22.326 32.7454 20.8403 32.6108 19.2071C33.5682 18.3524 34.7449 17.7391 36.0455 17.464C35.202 19.0282 34.9896 20.8919 35.4904 22.6187ZM34.5646 24.7475C34.5643 24.7649 34.5632 24.7821 34.5632 24.7996C34.5632 25.0384 34.5918 25.2706 34.6442 25.4937C33.0578 25.8406 31.3638 25.4307 30.1137 24.369C30.19 23.0267 30.6218 21.7788 31.315 20.7157C31.8251 22.4156 32.9916 23.8814 34.5646 24.7475ZM39.7068 26.9803C39.8866 26.8064 40.0452 26.6109 40.1779 26.3974C41.544 27.273 42.4519 28.7587 42.5863 30.3919C41.629 31.2466 40.4522 31.8599 39.1518 32.135C39.9953 30.5709 40.2077 28.707 39.7068 26.9803ZM40.6327 24.8516C40.633 24.8342 40.6341 24.8169 40.6341 24.7995C40.6341 24.5607 40.6055 24.3286 40.5531 24.1055C42.1396 23.7586 43.8336 24.1685 45.0836 25.2302C45.0072 26.5724 44.5755 27.8205 43.8822 28.8834C43.3722 27.1834 42.2057 25.7177 40.6327 24.8516ZM39.7795 22.6915C39.6056 22.5116 39.41 22.3531 39.1966 22.2204C40.0722 20.8542 41.5579 19.9463 43.1911 19.8119C44.0458 20.7692 44.6591 21.9459 44.9342 23.2465C43.37 22.4028 41.5062 22.1905 39.7795 22.6915ZM17.2901 15.7388C12.294 15.7388 8.22949 19.8034 8.22949 24.7995C8.22949 29.7956 12.2941 33.8601 17.2901 33.8601C22.2861 33.8601 26.3508 29.7956 26.3508 24.7995C26.3508 19.8034 22.2861 15.7388 17.2901 15.7388ZM13.2063 31.0831C14.9062 30.573 16.372 29.4065 17.238 27.8335C17.2554 27.8338 17.2727 27.8349 17.2901 27.8349C17.529 27.8349 17.7611 27.8063 17.9842 27.754C18.3312 29.3403 17.9214 31.0343 16.8596 32.2844C15.5173 32.2081 14.2693 31.7763 13.2063 31.0831ZM9.95439 26.3511C10.9584 26.8928 12.0854 27.1759 13.221 27.1759C13.8547 27.1759 14.4908 27.0872 15.1094 26.9078C15.2832 27.0875 15.4788 27.246 15.6922 27.3788C14.8166 28.7449 13.3309 29.6527 11.6978 29.7873C10.8428 28.8295 10.2293 27.6523 9.95439 26.3511ZM21.374 18.516C19.674 19.026 18.2083 20.1925 17.3422 21.7655C17.3248 21.7652 17.3075 21.7641 17.29 21.7641C17.0513 21.7641 16.819 21.7927 16.5961 21.8451C16.2491 20.2586 16.659 18.5646 17.7208 17.3145C19.063 17.391 20.3109 17.8227 21.374 18.516ZM17.29 26.2724C16.4779 26.2724 15.8171 25.6116 15.8171 24.7995C15.8171 23.9874 16.4778 23.3266 17.29 23.3266C18.1022 23.3266 18.763 23.9874 18.763 24.7995C18.763 25.6116 18.1022 26.2724 17.29 26.2724ZM15.1819 22.6187C15.0021 22.7926 14.8436 22.9882 14.7108 23.2017C13.3448 22.3261 12.4369 20.8404 12.3024 19.2072C13.2598 18.3525 14.4365 17.7392 15.7371 17.4641C14.8935 19.0282 14.6811 20.8919 15.1819 22.6187ZM14.256 24.7475C14.2557 24.7649 14.2547 24.7821 14.2547 24.7996C14.2547 25.0384 14.2833 25.2706 14.3357 25.4937C12.7493 25.8406 11.0554 25.4307 9.80527 24.3691C9.88164 23.0268 10.3134 21.7788 11.0066 20.7158C11.5166 22.4157 12.683 23.8814 14.256 24.7475ZM19.3982 26.9803C19.578 26.8064 19.7366 26.6108 19.8693 26.3974C21.2355 27.273 22.1433 28.7587 22.2778 30.3919C21.3205 31.2466 20.1437 31.8599 18.8432 32.135C19.6868 30.5709 19.8991 28.707 19.3982 26.9803ZM20.3241 24.8516C20.3244 24.8342 20.3255 24.817 20.3255 24.7996C20.3255 24.5608 20.2969 24.3287 20.2445 24.1056C21.831 23.7587 23.525 24.1686 24.7751 25.2303C24.6986 26.5725 24.267 27.8206 23.5737 28.8835C23.0636 27.1834 21.8971 25.7176 20.3241 24.8516ZM19.471 22.6915C19.2971 22.5116 19.1015 22.3531 18.888 22.2204C19.7636 20.8542 21.2494 19.9463 22.8826 19.8119C23.7373 20.7692 24.3506 21.9459 24.6256 23.2466C23.0615 22.4029 21.1978 22.1906 19.471 22.6915Z" fill="#FF0808"/>
-                                              </img>
-                                        </div>
-                                        <div class="gt-content">
-                                            <h3>Attention to detail in every frame</h3>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="gt-icon">
-                                            <img src="assets/img/home-1/icon/icon-21.svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                                                <path d="M47.1491 12.8939H6.45117V9.77124C6.45117 9.33979 6.10137 8.98999 5.66992 8.98999H0.78125C0.349805 8.98999 0 9.33979 0 9.77124C0 10.2027 0.349805 10.5525 0.78125 10.5525H4.88867V16.0792H3.06123C2.62979 16.0792 2.27998 16.429 2.27998 16.8604V23.0802C2.27998 23.5117 2.62979 23.8615 3.06123 23.8615H4.88867V25.7375H3.06123C2.62979 25.7375 2.27998 26.0873 2.27998 26.5187V32.7385C2.27998 33.17 2.62979 33.5198 3.06123 33.5198H4.88867V40.2287C4.88867 40.6601 5.23848 41.0099 5.66992 41.0099C6.10137 41.0099 6.45117 40.6601 6.45117 40.2287V36.7051H9.45918V39.8797C9.45918 40.3112 9.80898 40.661 10.2404 40.661H21.1381C21.5695 40.661 21.9193 40.3112 21.9193 39.8797V36.7051H24.4962V39.8797C24.4962 40.3112 24.846 40.661 25.2774 40.661H44.6483C45.0798 40.661 45.4296 40.3112 45.4296 39.8797V36.7051H47.1491C48.7211 36.7051 50 35.4262 50 33.8542V15.7449C50 14.1728 48.7211 12.8939 47.1491 12.8939ZM3.84248 22.2991V17.6417H4.88867V22.299H3.84248V22.2991ZM3.84248 31.9574V27.3H4.88867V31.9574H3.84248ZM20.3568 39.0985H18.2867V38.1119C18.2867 37.6804 17.9369 37.3306 17.5055 37.3306C17.074 37.3306 16.7242 37.6804 16.7242 38.1119V39.0985H14.6542V38.1119C14.6542 37.6804 14.3044 37.3306 13.8729 37.3306C13.4415 37.3306 13.0917 37.6804 13.0917 38.1119V39.0985H11.0217V36.7051H20.3568V39.0985ZM43.8671 39.0985H42.2009V38.1119C42.2009 37.6804 41.8511 37.3306 41.4196 37.3306C40.9882 37.3306 40.6384 37.6804 40.6384 38.1119V39.0985H38.9725V38.1119C38.9725 37.6804 38.6227 37.3306 38.1912 37.3306C37.7598 37.3306 37.41 37.6804 37.41 38.1119V39.0985H35.7439V38.1119C35.7439 37.6804 35.3941 37.3306 34.9627 37.3306C34.5312 37.3306 34.1814 37.6804 34.1814 38.1119V39.0985H32.5155V38.1119C32.5155 37.6804 32.1657 37.3306 31.7343 37.3306C31.3028 37.3306 30.953 37.6804 30.953 38.1119V39.0985H29.2871V38.1119C29.2871 37.6804 28.9373 37.3306 28.5059 37.3306C28.0744 37.3306 27.7246 37.6804 27.7246 38.1119V39.0985H26.0586V36.7051H43.867V39.0985H43.8671ZM48.4375 33.8542C48.4375 34.5646 47.8596 35.1426 47.1491 35.1426H6.45117V32.7396C6.45117 32.7393 6.45117 32.7389 6.45117 32.7386C6.45117 32.7383 6.45117 32.738 6.45117 32.7376V26.5197C6.45117 26.5194 6.45117 26.519 6.45117 26.5187C6.45117 26.5184 6.45117 26.5181 6.45117 26.5177V23.0812C6.45117 23.0809 6.45117 23.0805 6.45117 23.0802C6.45117 23.0799 6.45117 23.0796 6.45117 23.0792V16.8614C6.45117 16.8611 6.45117 16.8607 6.45117 16.8604C6.45117 16.8601 6.45117 16.8598 6.45117 16.8594V14.4564H47.1491C47.8596 14.4564 48.4375 15.0344 48.4375 15.7448V33.8542ZM37.5986 15.7388C32.6025 15.7388 28.5379 19.8034 28.5379 24.7995C28.5379 29.7956 32.6025 33.8601 37.5986 33.8601C42.5947 33.8601 46.6593 29.7956 46.6593 24.7995C46.6593 19.8034 42.5947 15.7388 37.5986 15.7388ZM33.5148 31.0832C35.2147 30.5731 36.6805 29.4066 37.5465 27.8336C37.5639 27.8339 37.5812 27.835 37.5986 27.835C37.8375 27.835 38.0696 27.8064 38.2927 27.754C38.6396 29.3403 38.2299 31.0343 37.1681 32.2844C35.8259 32.2081 34.5778 31.7763 33.5148 31.0832ZM30.2629 26.351C31.2669 26.8927 32.3938 27.1759 33.5296 27.1759C34.1633 27.1759 34.7994 27.0872 35.418 26.9078C35.5919 27.0875 35.7874 27.246 36.0009 27.3788C35.1253 28.7449 33.6395 29.6527 32.0064 29.7873C31.1513 28.8295 30.5378 27.6523 30.2629 26.351ZM41.6825 18.516C39.9825 19.026 38.5168 20.1925 37.6508 21.7655C37.6334 21.7652 37.6161 21.7641 37.5986 21.7641C37.3598 21.7641 37.1276 21.7927 36.9046 21.8451C36.5576 20.2586 36.9675 18.5646 38.0293 17.3145C39.3716 17.391 40.6195 17.8227 41.6825 18.516ZM37.5986 26.2724C36.7864 26.2724 36.1257 25.6116 36.1257 24.7995C36.1257 23.9874 36.7864 23.3266 37.5986 23.3266C38.4107 23.3266 39.0716 23.9874 39.0716 24.7995C39.0716 25.6116 38.4108 26.2724 37.5986 26.2724ZM35.4904 22.6187C35.3106 22.7926 35.1521 22.9882 35.0193 23.2016C33.6532 22.326 32.7454 20.8403 32.6108 19.2071C33.5682 18.3524 34.7449 17.7391 36.0455 17.464C35.202 19.0282 34.9896 20.8919 35.4904 22.6187ZM34.5646 24.7475C34.5643 24.7649 34.5632 24.7821 34.5632 24.7996C34.5632 25.0384 34.5918 25.2706 34.6442 25.4937C33.0578 25.8406 31.3638 25.4307 30.1137 24.369C30.19 23.0267 30.6218 21.7788 31.315 20.7157C31.8251 22.4156 32.9916 23.8814 34.5646 24.7475ZM39.7068 26.9803C39.8866 26.8064 40.0452 26.6109 40.1779 26.3974C41.544 27.273 42.4519 28.7587 42.5863 30.3919C41.629 31.2466 40.4522 31.8599 39.1518 32.135C39.9953 30.5709 40.2077 28.707 39.7068 26.9803ZM40.6327 24.8516C40.633 24.8342 40.6341 24.8169 40.6341 24.7995C40.6341 24.5607 40.6055 24.3286 40.5531 24.1055C42.1396 23.7586 43.8336 24.1685 45.0836 25.2302C45.0072 26.5724 44.5755 27.8205 43.8822 28.8834C43.3722 27.1834 42.2057 25.7177 40.6327 24.8516ZM39.7795 22.6915C39.6056 22.5116 39.41 22.3531 39.1966 22.2204C40.0722 20.8542 41.5579 19.9463 43.1911 19.8119C44.0458 20.7692 44.6591 21.9459 44.9342 23.2465C43.37 22.4028 41.5062 22.1905 39.7795 22.6915ZM17.2901 15.7388C12.294 15.7388 8.22949 19.8034 8.22949 24.7995C8.22949 29.7956 12.2941 33.8601 17.2901 33.8601C22.2861 33.8601 26.3508 29.7956 26.3508 24.7995C26.3508 19.8034 22.2861 15.7388 17.2901 15.7388ZM13.2063 31.0831C14.9062 30.573 16.372 29.4065 17.238 27.8335C17.2554 27.8338 17.2727 27.8349 17.2901 27.8349C17.529 27.8349 17.7611 27.8063 17.9842 27.754C18.3312 29.3403 17.9214 31.0343 16.8596 32.2844C15.5173 32.2081 14.2693 31.7763 13.2063 31.0831ZM9.95439 26.3511C10.9584 26.8928 12.0854 27.1759 13.221 27.1759C13.8547 27.1759 14.4908 27.0872 15.1094 26.9078C15.2832 27.0875 15.4788 27.246 15.6922 27.3788C14.8166 28.7449 13.3309 29.6527 11.6978 29.7873C10.8428 28.8295 10.2293 27.6523 9.95439 26.3511ZM21.374 18.516C19.674 19.026 18.2083 20.1925 17.3422 21.7655C17.3248 21.7652 17.3075 21.7641 17.29 21.7641C17.0513 21.7641 16.819 21.7927 16.5961 21.8451C16.2491 20.2586 16.659 18.5646 17.7208 17.3145C19.063 17.391 20.3109 17.8227 21.374 18.516ZM17.29 26.2724C16.4779 26.2724 15.8171 25.6116 15.8171 24.7995C15.8171 23.9874 16.4778 23.3266 17.29 23.3266C18.1022 23.3266 18.763 23.9874 18.763 24.7995C18.763 25.6116 18.1022 26.2724 17.29 26.2724ZM15.1819 22.6187C15.0021 22.7926 14.8436 22.9882 14.7108 23.2017C13.3448 22.3261 12.4369 20.8404 12.3024 19.2072C13.2598 18.3525 14.4365 17.7392 15.7371 17.4641C14.8935 19.0282 14.6811 20.8919 15.1819 22.6187ZM14.256 24.7475C14.2557 24.7649 14.2547 24.7821 14.2547 24.7996C14.2547 25.0384 14.2833 25.2706 14.3357 25.4937C12.7493 25.8406 11.0554 25.4307 9.80527 24.3691C9.88164 23.0268 10.3134 21.7788 11.0066 20.7158C11.5166 22.4157 12.683 23.8814 14.256 24.7475ZM19.3982 26.9803C19.578 26.8064 19.7366 26.6108 19.8693 26.3974C21.2355 27.273 22.1433 28.7587 22.2778 30.3919C21.3205 31.2466 20.1437 31.8599 18.8432 32.135C19.6868 30.5709 19.8991 28.707 19.3982 26.9803ZM20.3241 24.8516C20.3244 24.8342 20.3255 24.817 20.3255 24.7996C20.3255 24.5608 20.2969 24.3287 20.2445 24.1056C21.831 23.7587 23.525 24.1686 24.7751 25.2303C24.6986 26.5725 24.267 27.8206 23.5737 28.8835C23.0636 27.1834 21.8971 25.7176 20.3241 24.8516ZM19.471 22.6915C19.2971 22.5116 19.1015 22.3531 18.888 22.2204C19.7636 20.8542 21.2494 19.9463 22.8826 19.8119C23.7373 20.7692 24.3506 21.9459 24.6256 23.2466C23.0615 22.4029 21.1978 22.1906 19.471 22.6915Z" fill="#FF0808"/>
-                                              </img>
-                                        </div>
-                                        <div class="gt-content">
-                                            <h3>Commitment to delivering animations that exceed expectations</h3>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-
-
-                <!-- GT Gaming Feature Section Start -->
-        <!-- <section class="gt-gaming-feature-section fix section-padding">
-            <div class="container">
-                <div class="gt-gaming-feature-wrapper">
-                    <div class="row g-4">
-                        <div class="col-lg-12">
-                            <div class="gt-gaming-feature-content">
-                                <div class="gt-section-title-2 mb-0">
-                                    <h2 class="tx-title sec_title  tz-itm-title tz-itm-anim">
-                                        Rigging & <br>
-                                        Character Setup
-                                    </h2>
-                                </div>
-                                <h5 class="gt-gaming-text">
-                                    Our rigging and character setup services ensure your characters are ready for any animation challenge.
-                                    We specialize in creating advanced rigs that bring your characters to life with seamless movement and precision.
-                                </h5>
-                            <h4 class="subtitle tz-sub-tilte tz-sub-anim tx-subTitle text-danger">Benefits of Our Rigging Services:</h4>
-                                <ul class="gt-icon-list">
-                                    <li>
-                                        <div class="gt-icon">
-                                            <img src="assets/img/home-2/vector.svg" alt="img">
-                                        </div>
-                                        <div class="gt-content">
-                                            <h4>Enhanced animation quality</h4>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="gt-icon">
-                                            <img src="assets/img/home-2/vector.svg" alt="img">
-                                        </div>
-                                        <div class="gt-content">
-                                            <h4>Streamlined production workflows</h4>
-                                        </div>
-                                    </li>
-                                                                        <li>
-                                        <div class="gt-icon">
-                                            <img src="assets/img/home-2/vector.svg" alt="img">
-                                        </div>
-                                        <div class="gt-content">
-                                            <h4>Compatibility with industry-standard tools</h4>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <h3 class="gt-gaming-text py-0 mb-0 text-danger">
-                                    What We Offer:</h3> <h5><i class="fa-solid fa-check"></i> &nbsp; Custom rigging solutions for unique character designs<br>
-                                    <i class="fa-solid fa-check"></i> &nbsp;Support for humanoid, creature, and mechanical rigs<br>
-                                    <i class="fa-solid fa-check"></i> &nbsp;Optimized rigs for real-time and cinematic applications
-                                    </h5>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-
 
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
@@ -1113,9 +925,6 @@
   </div>
 </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 
   <style>
     /* ===== Logo Carousel Styles ===== */
@@ -1199,26 +1008,6 @@
 
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const track1 = document.getElementById('logoTrack');
-            track1.innerHTML += track1.innerHTML; // duplicate first carousel logos
-
-            const track2 = document.getElementById('logoTrack2');
-            track2.innerHTML += track2.innerHTML; // duplicate second carousel logos
-
-            // Duplicate the logos to create the infinite scroll effect
-            // This is crucial for seamless looping when the animation resets
-            const logos = Array.from(logoTrack.children);
-            logos.forEach(logo => {
-                const clone = logo.cloneNode(true); // Deep clone to copy image and its attributes
-                logoTrack.appendChild(clone);
-            });
-
-            // If new logos are added dynamically later, this duplication logic would need to be re-run
-            // or the new logos would need to be added to both the original set and the cloned set.
-        });
-    </script>
 
 <!-- GT Contact Section Start -->
        
@@ -1248,11 +1037,11 @@
           />
           <input
             placeholder="Phone Number"
-            type="number"
+            type="tel"
             name="phone"
             class="grid-item-3 no-arrows"
             pattern="[0-9]{10,15}"
-            inputmode="numeric"
+            inputmode="tel"
           />
           <input
             placeholder="Email"
@@ -1833,92 +1622,100 @@
 
 
 
-
-
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const consent = JSON.parse(localStorage.getItem("cookieConsent"));
-    if (consent) {
-      const submitButton = document.getElementById('submitButton');
-      if (submitButton) {
-        submitButton.addEventListener('click', function () {
-          gtag('event', 'click', {
-            'event_category': 'button',
-            'event_label': 'submit_button'
-          });
-        });
-      }
+  document.addEventListener("DOMContentLoaded", function () {
+    // --- Sticky Header Scroll Behavior ---
+    const header = document.getElementById("header-sticky");
+    const logo = header?.querySelector(".logo");
+    const scrollThreshold = 100;
 
-      const contactForm = document.getElementById('contact-form');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          gtag('event', 'submit', {
-            'event_category': 'form',
-            'event_label': 'contact_form'
-          });
-          this.submit();
-        });
+    function handleScroll() {
+      if (window.scrollY > scrollThreshold) {
+        header?.classList.add("scrolled");
+        logo?.classList.remove("initial-large");
+      } else {
+        header?.classList.remove("scrolled");
+        logo?.classList.add("initial-large");
       }
+    }
 
-      window.addEventListener('scroll', function () {
-        var scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
-        if (scrollPercentage > 50) {
-          gtag('event', 'scroll', {
-            'event_category': 'page',
-            'event_label': '50_percent_scroll'
-          });
-        }
+    handleScroll(); // Initial check
+    window.addEventListener("scroll", handleScroll);
+
+    // --- Mobile Menu Toggle ---
+    const hamburger = document.querySelector(".header__hamburger .sidebar__toggle");
+    const mobileMenu = document.getElementById("mobile-menu")?.querySelector("ul.d-xl-none");
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener("click", function () {
+        mobileMenu.classList.toggle("mobile-menu-active");
       });
+    }
+
+    // --- Logo Track Carousel Clone for Infinite Scroll ---
+    const track1 = document.getElementById("logoTrack");
+    const track2 = document.getElementById("logoTrack2");
+
+    if (track1) {
+      track1.innerHTML += track1.innerHTML; // Duplicate contents once
+      const logos1 = Array.from(track1.children);
+      logos1.forEach((logo) => {
+        track1.appendChild(logo.cloneNode(true));
+      });
+    }
+
+    if (track2) {
+      track2.innerHTML += track2.innerHTML; // Duplicate contents once
+      const logos2 = Array.from(track2.children);
+      logos2.forEach((logo) => {
+        track2.appendChild(logo.cloneNode(true));
+      });
+    }
+
+    // --- Google Analytics Event Tracking (only if consent given) ---
+    const consent = JSON.parse(localStorage.getItem("cookieConsent"));
+    if (consent?.analytics && typeof gtag === "function") {
+      // Button Click Tracking
+      const submitButton = document.getElementById("submitButton");
+      if (submitButton) {
+        submitButton.addEventListener("click", function () {
+          gtag("event", "click", {
+            event_category: "button",
+            event_label: "submit_button",
+          });
+        });
+      }
+
+      // Form Submit Tracking
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          gtag("event", "submit", {
+            event_category: "form",
+            event_label: "contact_form",
+          });
+          this.submit(); // Proceed with actual submission
+        });
+      }
+
+      // 50% Page Scroll Tracking (fires only once)
+      function scrollTrackingHandler() {
+        const scrollPercentage =
+          ((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) * 100;
+
+        if (scrollPercentage > 50) {
+          gtag("event", "scroll", {
+            event_category: "page",
+            event_label: "50_percent_scroll",
+          });
+          window.removeEventListener("scroll", scrollTrackingHandler);
+        }
+      }
+
+      window.addEventListener("scroll", scrollTrackingHandler);
     }
   });
-</script>
-
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const consent = JSON.parse(localStorage.getItem("cookieConsent"));
-
-  if (consent && consent.analytics && typeof gtag === 'function') {
-
-    const submitButton = document.getElementById('submitButton');
-    if (submitButton) {
-      submitButton.addEventListener('click', function () {
-        gtag('event', 'click', {
-          'event_category': 'button',
-          'event_label': 'submit_button'
-        });
-      });
-    }
-
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        gtag('event', 'submit', {
-          'event_category': 'form',
-          'event_label': 'contact_form'
-        });
-
-        this.submit();
-      });
-    }
-
-    window.addEventListener('scroll', function scrollHandler() {
-      const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
-      if (scrollPercentage > 50) {
-        gtag('event', 'scroll', {
-          'event_category': 'page',
-          'event_label': '50_percent_scroll'
-        });
-        window.removeEventListener('scroll', scrollHandler);
-      }
-    });
-
-  }
-});
 </script>
 
 

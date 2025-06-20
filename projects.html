@@ -3,23 +3,30 @@
     <!--<< Header Area >>-->
     <head>
 
-        <!-- Google tag (gtag.js)
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TVLHYTJ8X"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-9TVLHYTJ8X');
-        </script> -->
-
-
        <!-- ========== Meta Tags ========== -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Sudhakar">
         <meta name="description" content="The Entity Studios">
+
+
+        <!-- Open Graph Meta Tags -->
+         <meta property="og:locale" content="en_US">
+        <meta property="og:title" content="The Entity Studios">
+        <meta property="og:description" content="AAA Veterans delivering elite game animation and production pipelines.">
+        <meta property="og:image" content="https://the-entity.studio/assets/img/meta/og-image.avif">
+        <meta property="og:url" content="https://the-entity.studio/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="The Entity Studios">
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="The Entity Studios">
+        <meta name="twitter:description" content="AAA Veterans delivering elite game animation and production pipelines.">
+        <meta name="twitter:image" content="https://the-entity.studio/assets/img/meta/og-image.avif">
+
+
         <!-- ======== Page title ============ -->
         <title>The Entity Studios</title>
         <!--<< Favcion >>-->
@@ -43,41 +50,6 @@
         <link rel="stylesheet" href="assets/css/test.css">  
         
 
-        <!-- <script>
-        document.getElementById('submitButton').addEventListener('click', function() {
-            gtag('event', 'click', {
-            'event_category': 'button',
-            'event_label': 'submit_button'
-            });
-        });
-        </script>
-
-        <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent form submission to track the event
-
-            // Track the form submission event
-            gtag('event', 'submit', {
-            'event_category': 'form',
-            'event_label': 'contact_form'
-            });
-
-            // Optional: After tracking, submit the form
-            this.submit();
-        });
-        </script>
-
-        <script>
-            window.addEventListener('scroll', function() {
-                var scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
-                if (scrollPercentage > 50) { // Track when 50% of the page is scrolled
-                gtag('event', 'scroll', {
-                    'event_category': 'page',
-                    'event_label': '50_percent_scroll'
-                });
-                }
-            });
-            </script> -->
 
 
     </head>
@@ -822,7 +794,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-6 mb-4">
-                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Cinematics\ And\ Facial.avif');">
+                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/Cinematics/ And/ Facial.avif');">
                     <a href="https://player.vimeo.com/video/1072208033" class="video-btn ripple video-popup">
                       <i class="fa-solid fa-play"></i>
                     </a>
@@ -846,7 +818,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-6 mb-4">
-                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/First\ Person.avif');">
+                  <div class="gt-video-wrapper mx-auto" style="background-image: url('assets/img/inner-page/thumbnails/First/ Person.avif');">
                     <a href="https://player.vimeo.com/video/1072208380" class="video-btn ripple video-popup">
                       <i class="fa-solid fa-play"></i>
                     </a>
@@ -942,19 +914,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- GT Contact Section Start -->
        
 <section class="hide-on-small">
@@ -983,11 +942,11 @@
           />
           <input
             placeholder="Phone Number"
-            type="number"
+            type="tel"
             name="phone"
             class="grid-item-3 no-arrows"
             pattern="[0-9]{10,15}"
-            inputmode="numeric"
+            inputmode="tel"
           />
           <input
             placeholder="Email"
@@ -1577,58 +1536,16 @@
 
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const consent = JSON.parse(localStorage.getItem("cookieConsent"));
-    if (consent) {
-      const submitButton = document.getElementById('submitButton');
-      if (submitButton) {
-        submitButton.addEventListener('click', function () {
-          gtag('event', 'click', {
-            'event_category': 'button',
-            'event_label': 'submit_button'
-          });
-        });
-      }
-
-      const contactForm = document.getElementById('contact-form');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          gtag('event', 'submit', {
-            'event_category': 'form',
-            'event_label': 'contact_form'
-          });
-          this.submit();
-        });
-      }
-
-      window.addEventListener('scroll', function () {
-        var scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
-        if (scrollPercentage > 50) {
-          gtag('event', 'scroll', {
-            'event_category': 'page',
-            'event_label': '50_percent_scroll'
-          });
-        }
-      });
-    }
-  });
-</script>
-
-
-
-<script>
 document.addEventListener('DOMContentLoaded', function () {
   const consent = JSON.parse(localStorage.getItem("cookieConsent"));
 
-  if (consent && consent.analytics && typeof gtag === 'function') {
-
+  if (consent && typeof gtag === 'function') {
     const submitButton = document.getElementById('submitButton');
     if (submitButton) {
-      submitButton.addEventListener('click', function () {
+      submitButton.addEventListener('click', () => {
         gtag('event', 'click', {
-          'event_category': 'button',
-          'event_label': 'submit_button'
+          event_category: 'button',
+          event_label: 'submit_button'
         });
       });
     }
@@ -1637,13 +1554,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (contactForm) {
       contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-
         gtag('event', 'submit', {
-          'event_category': 'form',
-          'event_label': 'contact_form'
+          event_category: 'form',
+          event_label: 'contact_form'
         });
-
-        this.submit();
+        this.submit(); // let EmailJS take care of it
       });
     }
 
@@ -1651,15 +1566,15 @@ document.addEventListener('DOMContentLoaded', function () {
       const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
       if (scrollPercentage > 50) {
         gtag('event', 'scroll', {
-          'event_category': 'page',
-          'event_label': '50_percent_scroll'
+          event_category: 'page',
+          event_label: '50_percent_scroll'
         });
         window.removeEventListener('scroll', scrollHandler);
       }
     });
-
   }
 });
+
 </script>
 
 
