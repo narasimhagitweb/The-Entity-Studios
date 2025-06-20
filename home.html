@@ -3,23 +3,30 @@
     <!--<< Header Area >>-->
     <head>
 
-        <!-- Google tag (gtag.js)
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TVLHYTJ8X"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-9TVLHYTJ8X');
-        </script> -->
-
-
        <!-- ========== Meta Tags ========== -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Sudhakar">
         <meta name="description" content="The Entity Studios">
+
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="The Entity Studios">
+        <meta property="og:description" content="AAA Veterans delivering elite game animation and production pipelines.">
+        <meta property="og:image" content="https://the-entity.studio/assets/img/meta/og-image.jpg">
+        <meta property="og:url" content="https://the-entity.studio/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="The Entity Studios">
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="The Entity Studios">
+        <meta name="twitter:description" content="AAA Veterans delivering elite game animation and production pipelines.">
+        <meta name="twitter:image" content="https://the-entity.studio/assets/img/meta/og-image.jpg">
+
+
+
         <!-- ======== Page title ============ -->
         <title>The Entity Studios</title>
         <!--<< Favcion >>-->
@@ -43,41 +50,6 @@
         <link rel="stylesheet" href="assets/css/test.css">  
         
 
-        <!-- <script>
-        document.getElementById('submitButton').addEventListener('click', function() {
-            gtag('event', 'click', {
-            'event_category': 'button',
-            'event_label': 'submit_button'
-            });
-        });
-        </script>
-
-        <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent form submission to track the event
-
-            // Track the form submission event
-            gtag('event', 'submit', {
-            'event_category': 'form',
-            'event_label': 'contact_form'
-            });
-
-            // Optional: After tracking, submit the form
-            this.submit();
-        });
-        </script>
-
-        <script>
-            window.addEventListener('scroll', function() {
-                var scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
-                if (scrollPercentage > 50) { // Track when 50% of the page is scrolled
-                gtag('event', 'scroll', {
-                    'event_category': 'page',
-                    'event_label': '50_percent_scroll'
-                });
-                }
-            });
-            </script> -->
 
 
     </head>
@@ -474,60 +446,17 @@
     </div>
 </header>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const header = document.getElementById("header-sticky");
-        const logo = header.querySelector(".logo");
-        const scrollThreshold = 100; // Adjust this value as needed
 
-        function handleScroll() {
-            if (window.scrollY > scrollThreshold) {
-                header.classList.add("scrolled");
-                logo.classList.remove("initial-large"); // Remove the large logo class, so it defaults to normal size
-            } else {
-                header.classList.remove("scrolled");
-                logo.classList.add("initial-large"); // Add it back when at the top to make it large
-            }
-        }
-
-        // Initial check in case the page is loaded already scrolled
-        handleScroll();
-
-        // Listen for scroll events
-        window.addEventListener("scroll", handleScroll);
-
-        // --- Mobile menu toggle (basic functionality) ---
-        const hamburger = document.querySelector(".header__hamburger .sidebar__toggle");
-        // Ensure you target the correct mobile menu UL.
-        // If #mobile-menu contains both desktop and mobile Uls,
-        // you might need a more specific selector, e.g.,
-        // const mobileMenu = document.querySelector("#mobile-menu ul.d-xl-none");
-        const mobileMenu = document.getElementById("mobile-menu").querySelector("ul.d-xl-none"); // Targeting the specific mobile UL
-
-        if (hamburger && mobileMenu) {
-            hamburger.addEventListener("click", function() {
-                mobileMenu.classList.toggle("mobile-menu-active");
-            });
-        }
-    });
-</script>
-
-
-
-    
-
-
-
-
+<main>
         <div id="smooth-wrapper">
             <div id="smooth-content">
-<section class="hero-section hero-1 fix bg-cover" style="background-image: url('assets/img/home-1/hero/hero-bg.jpg'); background-size: cover; background-position: center;">
+<section class="hero-section hero-1 fix bg-cover" style="background-image: url('assets/img/home-1/hero/hero-bg.avif'); background-size: cover; background-position: center;">
   <div class="container">
     <div class="row align-items-center">
       <!-- Hero Image Section -->
       <div class="col-lg-4 col-md-6 mb-4 mb-md-0 d-flex justify-content-center justify-content-lg-start">
         <div class="hero-image wow animated-image text-center w-100">
-          <img src="assets/img/home-1/hero/hammer.png" alt="overlay" class="overlay-img img-fluid" style="max-width: 100%; height: auto;">
+          <img loading="lazy" src="assets/img/home-1/hero/hammer.avif" alt="overlay" class="overlay-img img-fluid" style="max-width: 100%; height: auto;">
         </div>
       </div>
 
@@ -591,13 +520,13 @@
                         <div class="col-xl-7 col-lg-12 col-md-7">
                            <div class="fix">
                              <div class="gt-about-image left_view">
-                                <img src="assets/img/home-1/about/about-1.png" alt="img">
+                                <img loading="lazy" src="assets/img/home-1/about/about-1.avif" alt="img">
                             </div>
                            </div>
                         </div>
                         <div class="col-xl-5 col-lg-12 col-md-5">
                             <div class="gt-about-image gt-about-image-2 top_view">
-                                <img src="assets/img/home-1/about/about-2.png" alt="img">
+                                <img loading="lazy" src="assets/img/home-1/about/about-2.avif" alt="img">
                             </div>
                         </div>
                     </div>
@@ -643,7 +572,7 @@
         <!-- GT Marque Section Start -->
         <div class="gt-marque-section">
             <div class="overlay-shape">
-                <img src="assets/img/home-1/overlay.png" alt="img">
+                <img loading="lazy" src="assets/img/home-1/overlay.png" alt="img">
             </div>
         <div class="marquee-text-slider-3 style-11">
             <div class="swiper marquee-text-slider">
@@ -706,9 +635,9 @@
 
 
 <!-- GT Game-bg Section Start -->
-<section class="gt-game-bg-section fix bg-cover" style="background-image: url(assets/img/home-1/game/b1.jpg);">
+<section class="gt-game-bg-section fix bg-cover" style="background-image: url(assets/img/home-1/game/b1.avif);">
     <div class="text-shape">
-        <img src="assets/img/home-1/game/text.png" alt="img">
+        <img loading="lazy" src="assets/img/home-1/game/text.avif" alt="img">
     </div>
     <div class="container">
         <div class="gt-gaming-bg-wrapper">
@@ -1088,10 +1017,10 @@
       <div class="logo-carousel-wrapper">
         <div class="logo-track" id="logoTrack">
           <!-- Initial Logos -->
-          <div class="logo-item"><img src="assets/img/home-1/brand/b-1.png" alt="Logo 1"></div>
-          <div class="logo-item"><img src="assets/img/home-1/brand/b-2.png" alt="Logo 2"></div>
-          <div class="logo-item"><img src="assets/img/home-1/brand/b-3.png" alt="Logo 3"></div>
-          <div class="logo-item"><img src="assets/img/home-1/brand/b-4.png" alt="Logo 4"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/brand/b-1.avif" alt="Logo 1"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/brand/b-2.avif" alt="Logo 2"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/brand/b-3.avif" alt="Logo 3"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/brand/b-4.avif" alt="Logo 4"></div>
         </div>
       </div>
     </div>
@@ -1107,29 +1036,6 @@
 </script>
 
 
-
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const track1 = document.getElementById('logoTrack');
-            track1.innerHTML += track1.innerHTML; // duplicate first carousel logos
-
-            const track2 = document.getElementById('logoTrack2');
-            track2.innerHTML += track2.innerHTML; // duplicate second carousel logos
-
-            // Duplicate the logos to create the infinite scroll effect
-            // This is crucial for seamless looping when the animation resets
-            const logos = Array.from(logoTrack.children);
-            logos.forEach(logo => {
-                const clone = logo.cloneNode(true); // Deep clone to copy image and its attributes
-                logoTrack.appendChild(clone);
-            });
-
-            // If new logos are added dynamically later, this duplication logic would need to be re-run
-            // or the new logos would need to be added to both the original set and the cloned set.
-        });
-    </script>
 
 <!-- GT Contact Section Start -->
        
@@ -1157,14 +1063,15 @@
             name="lastName"
             class="grid-item-2"
           />
-          <input
+            <input
             placeholder="Phone Number"
-            type="number"
+            type="tel"
             name="phone"
-            class="grid-item-3 no-arrows"
-            pattern="[0-9]{10,15}"
-            inputmode="numeric"
-          />
+            pattern="[0-9+ ]{10,15}"
+            inputmode="tel"
+            class="grid-item-3"
+            />
+
           <input
             placeholder="Email"
             type="email"
@@ -1215,27 +1122,34 @@
 <script>
   emailjs.init("w8qNaOHR9Bi8IPEeC"); // Replace this with your actual public key
 
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    // Validate reCAPTCHA
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-      alert("Please complete the reCAPTCHA.");
-      return;
-    }
+  // ✅ Track submission
+  if (typeof gtag === 'function') {
+    gtag('event', 'submit', {
+      'event_category': 'form',
+      'event_label': 'contact_form'
+    });
+  }
 
-    // Send the form using EmailJS
-    emailjs.sendForm("The_Entity_Studios", "TES_conatct_us_tmlt_01", this)
-      .then(function () {
-        alert("Message sent successfully!");
-        document.getElementById("contact-form").reset();
-        grecaptcha.reset(); // reset reCAPTCHA after success
-      }, function (error) {
-        alert("Sending failed. Please try again later.");
-        console.error("EmailJS error:", error);
-      });
-  });
+  const recaptchaResponse = grecaptcha.getResponse();
+  if (!recaptchaResponse) {
+    alert("Please complete the reCAPTCHA.");
+    return;
+  }
+
+  emailjs.sendForm("The_Entity_Studios", "TES_conatct_us_tmlt_01", this)
+    .then(function () {
+      alert("Message sent successfully!");
+      document.getElementById("contact-form").reset();
+      grecaptcha.reset();
+    }, function (error) {
+      alert("Sending failed. Please try again later.");
+      console.error("EmailJS error:", error);
+    });
+});
+
 </script>
 
 
@@ -1487,18 +1401,18 @@
         <div class="logo-carousel-wrapper">
             <div class="logo-track" id="logoTrack2">
           <!-- Initial Logos -->
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-10.png" alt="Logo 1"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-11.png" alt="Logo 2"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-12.png" alt="Logo 3"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-13.png" alt="Logo 4"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-14.png" alt="Logo 5"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-15.png" alt="Logo 6"></div>
-                    <div class="logo-item"><img src="assets\img\home-1\icon\icon-10.png" alt="Logo 1"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-11.png" alt="Logo 2"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-12.png" alt="Logo 3"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-13.png" alt="Logo 4"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-14.png" alt="Logo 5"></div>
-          <div class="logo-item"><img src="assets\img\home-1\icon\icon-15.png" alt="Logo 6"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-11.png" alt="Logo 2"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-10.png" alt="Logo 1"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-12.png" alt="Logo 3"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-13.png" alt="Logo 4"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-14.png" alt="Logo 5"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-15.png" alt="Logo 6"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-10.png" alt="Logo 1"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-11.png" alt="Logo 2"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-12.png" alt="Logo 3"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-13.png" alt="Logo 4"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-14.png" alt="Logo 5"></div>
+          <div class="logo-item"><img loading="lazy" src="assets/img/home-1/icon/icon-15.png" alt="Logo 6"></div>
 
 
             </div>
@@ -1511,7 +1425,7 @@
 <div class="col-lg-8 col-md-8">
     <div class="d-flex justify-content-center justify-content-md-start align-items-center mb-3">
         <a href="home.html" class="header-logo">
-            <img src="assets/img/logo/black-logo.png" alt="logo-img">
+            <img loading="lazy" src="assets/img/logo/black-logo.png" alt="logo-img">
         </a>
     </div>
     <p class="footer-description py-3">
@@ -1707,7 +1621,7 @@
 
 
 
-
+</main>
         
          
         <!--<< All JS Plugins >>-->
@@ -1751,91 +1665,82 @@
 
 
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const consent = JSON.parse(localStorage.getItem("cookieConsent"));
-    if (consent) {
-      const submitButton = document.getElementById('submitButton');
-      if (submitButton) {
-        submitButton.addEventListener('click', function () {
-          gtag('event', 'click', {
-            'event_category': 'button',
-            'event_label': 'submit_button'
-          });
+
+
+                <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const consent = JSON.parse(localStorage.getItem("cookieConsent"));
+
+            // GTAG tracking
+            if (consent && typeof gtag === 'function') {
+            const submitButton = document.getElementById('submitButton');
+            if (submitButton) {
+                submitButton.addEventListener('click', function () {
+                gtag('event', 'click', {
+                    'event_category': 'button',
+                    'event_label': 'submit_button'
+                });
+                });
+            }
+
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                gtag('event', 'submit', {
+                    'event_category': 'form',
+                    'event_label': 'contact_form'
+                });
+                this.submit();
+                });
+            }
+
+            window.addEventListener('scroll', function scrollHandler() {
+                const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+                if (scrollPercentage > 50) {
+                gtag('event', 'scroll', {
+                    'event_category': 'page',
+                    'event_label': '50_percent_scroll'
+                });
+                window.removeEventListener('scroll', scrollHandler);
+                }
+            });
+            }
+
+            // Mobile menu toggle logic
+            const header = document.getElementById("header-sticky");
+            const logo = header.querySelector(".logo");
+            const scrollThreshold = 100;
+            function handleScroll() {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add("scrolled");
+                logo.classList.remove("initial-large");
+            } else {
+                header.classList.remove("scrolled");
+                logo.classList.add("initial-large");
+            }
+            }
+            handleScroll();
+            window.addEventListener("scroll", handleScroll);
+
+            const hamburger = document.querySelector(".header__hamburger .sidebar__toggle");
+            const mobileMenu = document.getElementById("mobile-menu").querySelector("ul.d-xl-none");
+            if (hamburger && mobileMenu) {
+            hamburger.addEventListener("click", function () {
+                mobileMenu.classList.toggle("mobile-menu-active");
+            });
+            }
+
+            // Clone logo carousel
+            const logoTrack1 = document.getElementById('logoTrack');
+            if (logoTrack1) logoTrack1.innerHTML += logoTrack1.innerHTML;
+
+            const logoTrack2 = document.getElementById('logoTrack2');
+            if (logoTrack2) logoTrack2.innerHTML += logoTrack2.innerHTML;
         });
-      }
-
-      const contactForm = document.getElementById('contact-form');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          gtag('event', 'submit', {
-            'event_category': 'form',
-            'event_label': 'contact_form'
-          });
-          this.submit();
-        });
-      }
-
-      window.addEventListener('scroll', function () {
-        var scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
-        if (scrollPercentage > 50) {
-          gtag('event', 'scroll', {
-            'event_category': 'page',
-            'event_label': '50_percent_scroll'
-          });
-        }
-      });
-    }
-  });
-</script>
+        </script>
 
 
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const consent = JSON.parse(localStorage.getItem("cookieConsent"));
-
-  if (consent && consent.analytics && typeof gtag === 'function') {
-
-    const submitButton = document.getElementById('submitButton');
-    if (submitButton) {
-      submitButton.addEventListener('click', function () {
-        gtag('event', 'click', {
-          'event_category': 'button',
-          'event_label': 'submit_button'
-        });
-      });
-    }
-
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        gtag('event', 'submit', {
-          'event_category': 'form',
-          'event_label': 'contact_form'
-        });
-
-        this.submit();
-      });
-    }
-
-    window.addEventListener('scroll', function scrollHandler() {
-      const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
-      if (scrollPercentage > 50) {
-        gtag('event', 'scroll', {
-          'event_category': 'page',
-          'event_label': '50_percent_scroll'
-        });
-        window.removeEventListener('scroll', scrollHandler);
-      }
-    });
-
-  }
-});
-</script>
 
 
 <!-- Bootstrap Bundle (for modal support) -->
